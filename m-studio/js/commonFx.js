@@ -6,13 +6,22 @@ $(function(){
 		var thisDrop = thisSelect.siblings('.drop-cont');
 
 		thisSelect.on('click',function(){
-			$(this).addClass('active');
-			thisDrop.slideDown(200);
+
+			if(thisSelect.hasClass('active')) {
+				$(this).removeClass('active');
+				thisDrop.slideUp(300);;
+				console.log('있다')
+			} else {
+				$(this).addClass('active');
+				thisDrop.slideDown(200);
+				console.log('없다');
+			}
 		});
 
 		$(document).mouseup(function (){
 			var dropbox = $(".drop-cont");
 			if(dropbox.has(thisDrop).length === 0){
+				thisSelect.removeClass('active');
 				dropbox.slideUp(300);
 			}
 		});
@@ -67,23 +76,33 @@ $(function(){
 		$(this).parents('.form').removeClass('active');
 	});
 
-	// 글자 수
+	// 설명글 글자 수(600자)
 	$('.form textarea').keyup(function(){
-
 		var textNum = $('.text-num span');
 		var inpLength = $(this).val().length;
-
 		if (inpLength == 0 || inpLength == '') { 
 			textNum.text('0'); 
 		} else { 
 			textNum.text(inpLength); 
 		}
-
 		if (inpLength > 600){
 			textNum.val($(this).val().substring(0, 600));
 		}
 	});
 
+	// 제목 입력 글자수(30자)
+	$('.form.search input').keyup(function (e) { 
+		let content = $(this).val(); 
+		if (content.length == 0 || content == '') { 
+			$('.text-num span').text('0'); 
+		} else { 
+			$('.text-num span').text(content.length); 
+		} 
+		if (content.length > 30) {
+			 $(this).val($(this).val().substring(0, 30));
+		}; 
+	});
+	
 	// 레이아웃 잠금 토글
 	$('.ico-btn.lock').on('click',function(){
 		$(this).toggleClass('active');
@@ -98,4 +117,16 @@ $(function(){
 	$('.screen-rate .btn-txt').on('click',function(){
 		$(this).siblings('.late-list').fadeToggle();
 	});
+
+	// 리스트형 체크시 배경
+	$('.tbl-check input').each(function(){
+		$(this).on('click',function(){
+			if($(this).is(":checked") == true) {
+				$(this).parents('tr').addClass('active');
+			} else {
+				$(this).parents('tr').removeClass('active');
+			}
+		});
+	});
+	
 });

@@ -6,7 +6,7 @@ body {min-width:1280px;min-height:800px;}
 .wrap {/*position:fixed;top:0;left:0;overflow:hidden;*/display:flex;width:100%;min-height:100%;max-height:max-content;  height:100%;}
 
 /* left 메뉴 */
-.aside {position:fixed;top:0;bottom:0;left:0;z-index:100; display:flex;flex-direction:column;justify-content:space-between;width:84px;padding:15px 12px 44px;background:#2a2e33;}
+.aside {position:fixed;top:0;bottom:0;left:0;z-index:110; display:flex;flex-direction:column;justify-content:space-between;width:84px;padding:15px 12px 44px;background:#2a2e33;}
 .aside .top {width:100%;}
 .aside .logo {width:50px;height:50px;margin:0 auto;background:url(../img/logo.png) no-repeat;background-size:100%;}
 .aside .logo a {display:block;width:100%;height:100%;font-size:0;}
@@ -103,7 +103,7 @@ header .right .btn + .btn {margin-left:17px;}
 .wrap.list header .title {justify-content:flex-start;width:auto;}
 .wrap.list header .title h2 {font-size:28px;font-weight:600;color:#131415;}
 .wrap.list .main {height:calc(100% - 100px); margin:0;padding:40px;}
-.wrap.list .content {overflow:unset;width:100%;min-width:1180px;padding:0;}
+.wrap.list .content {overflow:unset;width:100%;padding:0;}
 
 
 

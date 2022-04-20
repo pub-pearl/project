@@ -145,7 +145,7 @@ button.st-2 {background:#fff;border:1px solid #d6d6d6;color:#131415;}
 button.st-3 {background:#33383c;}
 button.st-4 {background:#4b4f53;}
 button.st-5 {background:#f0508e;}
-button.st-5:disabled {background:#fafafa;border:#e8e8e8;color:#c9c9c9;}
+button.st-5:disabled {background:#fafafa !important;border:1px solid #e8e8e8;color:#c9c9c9;cursor:initial;}
 
 .ico-btn {display:inline-flex;justify-content:center;align-items:center;width:40px;height:40px;border-radius:4px;transition:.3s ease-in-out;}
 .ico-btn:hover {background-color:#3b4046;}
@@ -259,10 +259,11 @@ button.st-5:disabled {background:#fafafa;border:#e8e8e8;color:#c9c9c9;}
 .tbl-wrap table {width:100%;table-layout:fixed;border-radius:4px;border:1px solid #e8e8e8;}
 .tbl-wrap table thead th {height:52px;padding:10px 20px;background:#373738;font-weight:500;}
 .tbl-wrap table tbody tr {border-top:1px solid #e8e8e8;transition:.3s ease-in-out;}
-.tbl-wrap table tbody tr:hover {background:#f4f5ff;cursor: pointer;}
+.tbl-wrap table tbody tr:hover {background:#f5f5f5;cursor: pointer;}
+.tbl-wrap table tbody tr.active {background:#f4f5ff;}
 .tbl-wrap table tbody td {height:60px;padding:4px 20px 5px;color:#131415;text-align:center;font-size:13px;line-height:1.31;letter-spacing:-.13px;}
 .tbl-wrap table tbody td[align="left"] {text-align:left;}
-.tbl-wrap table tbody td p {max-width:90%;color:inherit;}
+.tbl-wrap table tbody td > p {max-width:90%;color:inherit;}
 .tbl-wrap table tbody .no-data:hover {background:none;cursor:default;}
 
 .tbl-wrap .tbl-check {display:inline-block;position:relative;min-width:20px;height:20px;}

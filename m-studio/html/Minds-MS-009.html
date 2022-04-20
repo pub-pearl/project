@@ -50,14 +50,14 @@
     
                     <!-- iframe -->
                     <div class="iframe-wrap">
-                        <!-- 비디오 화면 -->
-                        <div class="video">
+                        <!-- 비디오 화면 : 로딩시 loading 클래스 추가 -->
+                        <div class="video loading">
                             
                             <!-- iframe --><iframe width="1280" height="720" src="https://www.youtube.com/embed/gdZLi9oWNZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <button type="button" class="ico-btn play"><span>재생</span></button>
-                            <div class="script">
-                                <p>오늘은 UI디자인 시스템 가이드에 대해서 설명해 보겠습니다.</p>
-                            </div>
+
+                            <!-- video loading -->
+                            <div class="loader center"><span></span></div>
                         </div>
                         <!-- //비디오 화면 -->
     
