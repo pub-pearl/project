@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+*{-webkit-text-size-adjust:none;word-break:break-all;} /* 뷰표트 변환시 폰트크기 자동확대 방지 */
+*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;-moz-box-sizing:border-box;vertical-align:middle;-webkit-appearance:none;appearance:none;-moz-appearance:none;resize:none;outline:0;}
+*{font-family:'Apple SD Gothic','맑은고딕',sans-serif;font-weight:400;font-size:14px;line-height:1.1;color:#ffffff;}
+html,body{position:relative;width:100%;height:100%;-webkit-tap-highlight-color:rgba(255,255,255,0);}
+body,object,iframe,
+h1,h2,h3,h4,h5,h6,div,span,p,blockquote,pre,abbr,acronym,address,cite,code,del,dfn,em,img,figure,
+ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,
+form,fieldset,legend,a,textarea,input,select,option,button,label,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{
+	margin:0;padding:0;border:0;outline:0;background:transparent;-webkit-box-sizing:border-box;box-sizing:border-box;-moz-box-sizing:border-box;
+}
+/* =====  Media ===== */
+audio:not([controls]){display:none;height:0;}
+
+/* =====  Link ===== */
+a {text-decoration:none;outline:none;}
+a:link{text-decoration:none;color:inherit;outline:none;}
+a:focus{outline:thin dotted;color:inherit;outline:none;}
+a:active,a:hover{outline:0;text-decoration:none;color:inherit;}
+a:visited{text-decoration:none;color:inherit;outline:none;}
+
+/* =====  Typography ===== */
+h1, h2, h3, h4, h5, h6{font-family:inherit;font-size:inherit;font-weight:inherit;color:inherit;}
+b{font-weight:inherit;}
+strong{font-weight:inherit;vertical-align:unset;}
+hr{display:none;box-sizing:content-box;height:0;}
+address, caption, cite, code, dfn, em, var{font-style:normal;font-weight:inherit;}
+abbr, acronym, img, button{border:0;}
+pre{white-space:pre-wrap;}
+q{quotes:"\201C" "\201D" "\2018" "\2019";}
+sub, sup{line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+span,em{vertical-align:unset;}
+
+main {display:block;}
+
+/* List */
+ul, ol, li{list-style:none;}
+
+/* =====  Figures ===== */
+figure{margin:0;}
+
+/* =====  Forms ===== */
+button{cursor:pointer;}
+button, input, select, textarea{border:0 none;outline:0 none;background-color:transparent;}
+/*input, button, a {font-size:inherit;color:inherit;}*/
+input {border-radius:0;word-break:normal;}
+/* search, number 초기화 */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration{-webkit-appearance: none}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none;}
+
+/* button, select{text-transform:none;} */
+textarea{vertical-align:top;}
+
+/* =====  Table ===== */
+table{border-collapse:collapse;empty-cells:show;border-spacing:0;table-layout:fixed;}
+table caption, fieldset legend{display:none;}
+
+
+abbr[title]{border-bottom:1px dotted;}
+
+
+/* scrollbar */
+::-webkit-scrollbar {width:6px;height:6px;}
+::-webkit-scrollbar-thumb {background-color: #656565;border-radius:6px;}
+::-webkit-scrollbar-track {background-color: #24282c;border-radius:6px;}
