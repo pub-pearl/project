@@ -1,1 +1,1 @@
-# publising
+# publishing
