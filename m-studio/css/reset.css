@@ -72,3 +72,8 @@ abbr[title]{border-bottom:1px dotted;}
 ::-webkit-scrollbar {width:6px;height:6px;}
 ::-webkit-scrollbar-thumb {background-color: #656565;border-radius:6px;}
 ::-webkit-scrollbar-track {background-color: #24282c;border-radius:6px;}
+
+:root{
+	scrollbar-color: rgb(210,210,210) rgb(46,54,69) !important;
+	scrollbar-width: 6px !important;
+  }
