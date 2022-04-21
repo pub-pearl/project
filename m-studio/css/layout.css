@@ -93,7 +93,7 @@ header .right .btn + .btn {margin-left:17px;}
 .wrap.list .aside .top > ul {margin-top:30px;}
 .wrap.list .aside .top > ul li {margin:4px 0}
 .wrap.list .aside .top > ul li .ico-btn {justify-content:flex-start;padding:0 20px;}
-.wrap.list .aside .top > ul li .ico-btn span {display:block;width:100%;background-size:24px;line-height:1.8;text-align:left;text-indent:34px;font-size:16px;letter-spacing:-.16px;}
+.wrap.list .aside .top > ul li .ico-btn span {display:block;width:100%;background-size:24px;line-height:1.8;text-align:left;text-indent:34px;font-size:16px;letter-spacing:-.16px;background-position:left center !important;}
 .wrap.list .my-info {width:100%;}
 .wrap.list .my-info .ico-btn {justify-content:flex-start;width:100%;padding:8px 20px;}
 .wrap.list .my-info .ico-btn span {display:-ms-flexbox;display:-webkit-flex;display:flex;align-items:center;width:100%;font-size:16px;text-indent:10px;}
