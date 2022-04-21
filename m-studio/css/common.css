@@ -149,7 +149,7 @@ button.st-5:disabled {background:#fafafa !important;border:1px solid #e8e8e8;col
 
 .ico-btn {display:-ms-flexbox;display:-webkit-flex;display:inline-flex;justify-content:center;align-items:center;width:40px;height:40px;border-radius:4px;transition:.3s ease-in-out;}
 .ico-btn:hover {background-color:#3b4046;}
-.ico-btn span {display:inline-block;font-size:0;width:20px;height:20px;border-radius:4px;background-repeat:no-repeat;background-size:100%;line-height:1.5;}
+.ico-btn span {display:inline-block;font-size:0;width:20px;height:20px;border-radius:4px;background-repeat:no-repeat;background-repeat:no-repeat;background-position:center center;background-size:100%;line-height:1.5;}
 .ico-btn.back span {background-image:url(../img/btn/ico_btn-back.png);}
 .ico-btn.edit {width:32px;height:32px;}
 .ico-btn.edit span {width:24px;height:24px;background-image:url(../img/btn/ico_btn-edit.png);background-size:24px;}
