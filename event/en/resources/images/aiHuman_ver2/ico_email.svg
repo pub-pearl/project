@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_2029" data-name="사각형 2029" width="24" height="24" transform="translate(457.833 458.111)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="icn_email" transform="translate(-457.833 -458.111)" clip-path="url(#clip-path)">
+    <g id="icn_email-2" data-name="icn email">
+      <path id="pth" d="M477.834,462.111h-16a2,2,0,0,0-1.99,2l-.01,12a2.007,2.007,0,0,0,2,2h16a2.005,2.005,0,0,0,2-2v-12A2.005,2.005,0,0,0,477.834,462.111Zm-.4,4.25-7.07,4.42a1.011,1.011,0,0,1-1.06,0l-7.07-4.42a.849.849,0,1,1,.9-1.44h0l6.7,4.19,6.7-4.19a.849.849,0,1,1,.9,1.44Z" fill="#b0c6ff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-M8VMWCJ');</script>
+        <!-- End Google Tag Manager -->
+        <!-- Cache reset -->
+        <meta http-equiv="Expires" content="Mon, 06 Jan 2016 00:00:01 GMT" />
+        <meta http-equiv="Expires" content="-1" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <!-- Open Graph Tag -->
+        <meta property="og:title" content="인공인간 (AI Human)" />
+        <meta property="og:type" content="website" />
+        <!-- 웹 페이지 타입 -->
+        <meta property="og:url" content="이벤트 페이지 링크 넣어주세요" />
+        <!-- [D] 이벤트 페이지 링크 넣어주세요 -->
+        <meta property="og:image" content="resources/images/aiHuman_ver2/img_thumbnail.png" />
+        <meta property="og:description" content="당신만을 위한 인공인간을 제작하고, 새로운 고객 경험을 제공해보세요!" />
+        <!-- icon_favicon -->
+        <link rel="icon" type="image/png" sizes="64x64" href="resources/images/aiHuman_ver2/favicon-64.png" />
+        <link rel="icon" type="image/png" sizes="76x76" href="resources/images/aiHuman_ver2/favicon-76.png" />
+        <link rel="icon" type="image/png" sizes="128x128" href="resources/images/aiHuman_ver2/favicon-128.png" />
+
+        <!---------------------- General Resources ---------------------->
+        <!-- General CSS -->
+        <link rel="stylesheet" type="text/css" href="resources/css/swiper-4.5.1.min.css" />
+        <link rel="stylesheet" type="text/css" href="resources/css/aiHumanEvent_ver2.css" />
+        <!-- General Script -->
+        <script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="resources/js/jquery-migrate-3.3.1.min.js"></script>
+        <script type="text/javascript" src="resources/js/swiper-4.5.1.min.js"></script>
+        <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=70944a41"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122649087-10"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-122649087-10');
+        </script>
+        <title>Event || AI HUMAN</title>
+    </head>
+    <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8VMWCJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- .page loading -->
+    <div id="pageldg">
+        <span class="out_bg">
+            <em>
+            <strong>&nbsp;</strong>
+            <strong>&nbsp;</strong>
+            <strong>&nbsp;</strong>
+            <b>&nbsp;</b>
+            </em>
+        </span>
+    </div>
+    <!-- //.page loading -->
+
+
+    <!-- #wrap -->
+    <div id="wrap" class="event">
+        <div id="header">
+            <div class="contBox">   
+                <h1 class="logo"><a href="https://maum.ai/" target="_blank" title="maum.ai로 이동"><img src="resources/images/logo_maumAi_clr.svg" alt="maum ai logo"></a></h1> 
+            </div>
+        </div>
+        <!-- #container -->
+        <div id="container">
+            <!-- .visual -->
+            <!-- <div class="stn visual">         
+                <div class="contBox">
+                    <h1 class="logo"><a href="https://maum.ai/" target="_blank" title="maum.ai로 이동"><img src="resources/images/logo_maumAi_w.svg" alt="AI HUMAN logo"></a></h1> 
+
+                    <div class="svc_txt">
+                        <div class="titBox">
+                            <h2 class="main_tit">AI Human</h2>
+                            <p class="sub_tit">artificial intelligence human</p>
+                        </div>
+                        <div class="descBox">
+                            <p class="main_desc">당신의 인공인간을 제작해 드리겠습니다.</p>
+                            <button type="button" class="btn_go_contact">제작 문의하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="videoBox">
+                    <video autoplay muted loop playsinline>
+                        <source src="resources/videos/aiHuman_main.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div> -->
+            <!-- //.visual -->
+
+            <!-- .use_case -->
+            <div class="stn use_case">
+                <div class="contBox">
+                    <p class="stn_tit">"이미 많은 직업의 사람들이 <strong>자신의 인공인간을 만들어</strong><br> 새로운 수익을 올리고 있습니다."</p>
+                    <ul class="ai_human_list">
+                        <li>
+                            <div class="img">
+                                <img src="resources/images/aiHuman_ver2/img_AI_chef.png" alt="chef">
+                            </div>
+                            <dl class="desc">
+                                <dt>인공인간 <strong>요리사</strong></dt>
+                                <dd>요리연구가 윤예성씨는 인공인간을 만들어 촬영 편집 없이 쉽게 요리 유튜브 방송을 시작하였습니다.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="resources/images/aiHuman_ver2/img_AI_professor.png" alt="professor">
+                            </div>
+                            <dl class="desc">
+                                <dt>인공인간 <strong>교수</strong></dt>
+                                <dd>국민대 손병희 교수님은 인공인간을 만들어 중국학생들에게 중국어로 강의를 할 수 있게 되었습니다.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="resources/images/aiHuman_ver2/img_AI_caster.png" alt="caster">
+                            </div>
+                            <dl class="desc">
+                                <dt>인공인간 <strong>기상캐스터</strong></dt>
+                                <dd>전 YTN 기상 캐스터 유승민 아나운서는 인공인간을 만들어 직접 방송국에 가지 않고도 여수 MBC에서 기상 방송을 진행할 수 있게 되었습니다.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="resources/images/aiHuman_ver2/img_AI_announcer.png" alt="announcer">
+                            </div>
+                            <dl class="desc">
+                                <dt>인공인간 <strong>아나운서</strong></dt>
+                                <dd>박철민 아나운서는 인공인간 아나운서를 만들어 CBS 라디오 방송과 여수 MBC 라디오 방송을 동 시간대에 모두 진행할 수 있게 되었습니다.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="resources/images/aiHuman_ver2/img_AI_worker.png" alt="worker">
+                            </div>
+                            <dl class="desc">
+                                <dt>인공인간 <strong>직장인</strong></dt>
+                                <dd>리포터 출신 회사원 정소라씨는 인공인간 쇼호스트를 만들어 실시간 라이브 방송을 진행할 수 있게 되었습니다.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="resources/images/aiHuman_ver2/img_AI_teacher02.png" alt="teacher">
+                            </div>
+                            <dl class="desc">
+                                <dt>인공인간 <strong>강사</strong></dt>
+                                <dd>유명 온라인 영어 강사 로건 선생님은 본인의 인공인간 강사를 만들어 일대일 코칭 강의를 시작하게 되었습니다.</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <div class="btnBox">
+                        <button type="button" class="btn_go_contact">제작 문의하기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //.use_case -->
+
+            <!-- .pricing -->
+        <div class="stn pricing">
+            <div class="contBox">
+                <p class="stn_tit">인공인간 <strong>제작 가격정책</strong></p>
+                <ul class="price_list">
+                    <li>
+                        <div class="tit">기본형 <span>330 만원부터</span></div>
+                        <div class="cont">
+                            <dl>
+                                <dt>모델사이즈</dt>
+                                <dd>전신, 반신, 상반신</dd>
+                            </dl>
+                            <dl>
+                                <dt>지원 화질</dt>
+                                <dd>4K 이상 <small>(해상도: 4096 X 2160)</small></dd>
+                            </dl>
+                            <dl>
+                                <dt>사용 용도</dt>
+                                <dd>소형 화면용 <small>(웹, 모바일 등)</small></dd>
+                            </dl>
+                            <dl>
+                                <dt>동작 개수</dt>
+                                <dd>정지 동작 기본 영상 제공 <small>(행동 영상 하나 당 추가 100만원)</small></dd>
+                            </dl>
+                            <dl>
+                                <dt>동작 활용</dt>
+                                <dd>단일 동작을 이용하여 짧은 영상에 활용</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tit">엔터프라이즈 <span>기업맞춤형</span></div>
+                        <div class="cont">
+                            <dl>
+                                <dt>모델사이즈</dt>
+                                <dd>전신, 반신, 상반신</dd>
+                            </dl>
+                            <dl>
+                                <dt>지원 화질</dt>
+                                <dd>4K 이상 <small>(해상도: 4096 X 2160)</small></dd>
+                            </dl>
+                            <dl>
+                                <dt>사용 용도</dt>
+                                <dd>소, 대형 화면용 <small>(웹, 모바일, 디지털 사이니지, 키오스크 (55,65 인치), 대형 모니터 등)</small></dd>
+                            </dl>
+                            <dl>
+                                <dt>동작 개수</dt>
+                                <dd>기본 10개 영상 제공 <small>(추가 협의 가능)</small></dd>
+                            </dl>
+                            <dl>
+                                <dt>동작 활용</dt>
+                                <dd>다수 동작을 연결하여 긴 영상에 활용</dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //.pricing -->
+        
+
+            <!-- .process -->
+            <div class="stn process">
+                <div class="contBox">
+                    <p class="stn_tit">인공인간 <strong>제작 프로세스</strong></p>
+                    <ol class="process_list">
+                        <li>
+                            <dl>
+                                <dt>제작 문의 상담</dt>
+                                <dd>제작 문의하기를 통해 제작 유형(기본형/엔터프라이즈)을 선택합니다.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>촬영 콘셉트 확정</dt>
+                                <dd>촬영 콘셉트 및 일정이 확정되면 촬영 대본을 전달해드립니다.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>인공인간 제작을 위한 촬영 </dt>
+                                <dd>
+                                    <ol class="record">
+                                        <li>
+                                            <dl>
+                                                <dt>사전 준비</dt>
+                                                <dd>메이크업과 스타일링은 사전에 직접 준비합니다.</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>프로필 이미지 촬영</dt>
+                                                <dd>약 10분 동안 프로필 이미지를 촬영합니다.</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>행동 영상 촬영</dt>
+                                                <dd>기본형: 약 30분  / 엔터프라이즈: 약 2시간 동안 행동 영상을 촬영합니다.</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>대본 읽기 촬영</dt>
+                                                <dd>약 3시간 30분 동안 1,000 문장의 대본 읽는 영상을 촬영합니다. </dd>
+                                            </dl>
+                                        </li>
+                                    </ol>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>후보정 및 데이터 학습</dt>
+                                <dd>촬영된 영상을 후보정 한 후에 인공지능 학습 전문가가 데이터를 이용하여 학습합니다. </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>AI Human Builder 업로드</dt>
+                                <dd>
+                                    <p>AI Human Builder (http://builder.maum.ai) 에 제작된 인공인간 모델이 업로드되며, 고객이 원하는 영상 제작에 활용됩니다.</p>
+                                    <p>
+                                        AI Human Builder 접속
+                                        <em class="fas fa-angle-double-right"></em>
+                                        라이선스 등록
+                                        <em class="fas fa-angle-double-right"></em>
+                                        템플릿 선택
+                                        <em class="fas fa-angle-double-right"></em>
+                                        영상 제작
+                                        <em class="fas fa-angle-double-right"></em>
+                                        영상 다운로드
+                                    </p>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ol>
+                    <div class="btnBox">
+                        <a href="https://drive.google.com/drive/folders/122cVOMZQSTCrwT6X2xCLvSNLn4U54-Ir?usp=sharing" target="_blank" title="새창으로 열기">인공인간 제작 프로세스 다운받기</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //.process -->
+
+            <!-- .contact -->
+            <div class="stn contact">
+                <div class="contBox">
+                    <p class="stn_tit">인공인간 <strong>제작 문의</strong></p>
+                    <p class="stn_desc">당신의 인공인간을 만들어 드립니다.</p>
+
+                    <div class="contact_info">
+                        문의 <a href="tel:16613222"><img src="resources/images/aiHuman_ver2/ico_phone.svg" alt="phone icon"> 1661-3222</a>
+                        <a href="mailto:hello@mindslab.ai"><img src="resources/images/aiHuman_ver2/ico_email.svg" alt="email icon"> hello@mindslab.ai</a>
+                    </div>
+
+                    <form action="" class="user_info">
+                        <fieldset>
+                            <legend>개인 정보</legend>
+
+                            <dl class="dual">
+                                <dt>이름 <span>(필수)</span></dt>
+                                <dd><input type="text" id="userName" class="ipt_txt" autocomplete="off"></dd>
+                            </dl>
+                            <dl class="dual">
+                                <dt>연락처 <span>(필수)</span></dt>
+                                <dd><input type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" id="userTel" class="ipt_txt" placeholder="'-'없이 연락처를 입력해 주세요."></dd>
+                            </dl>
+                            <dl>
+                                <dt>이메일 <span>(필수)</span></dt>
+                                <dd><input type="text" id="userEmail" class="ipt_txt" autocomplete="off"></dd>
+                            </dl>
+                            <dl>
+                                <dt>인공인간 제작 옵션 선택 <span>(필수)</span></dt>
+                                <dd>
+                                    <div class="radioBox">
+                                        <input type="radio" name="makingType" id="standard" value="기본형" >
+                                        <label for="standard">기본형</label>
+                                    </div>
+                                    <div class="radioBox">
+                                        <input type="radio" name="makingType" id="enterprise" value="엔터프라이즈">
+                                        <label for="enterprise">엔터프라이즈</label>
+                                    </div>                                    
+                                </dd>
+                            </dl>  
+                            <dl>
+                                <dt>인공인간 제작 목적 <span>(예 : 강사, 아나운서…)</span></dt>
+                                <dd><input type="text" id="producePurpose" class="ipt_txt" autocomplete="off"></dd>
+                            </dl>  
+                            <dl>
+                                <dt>개인정보 수집 동의</dt>
+                                <dd>
+                                    <div class="assentBox">
+                                        <p>수집하는 개인정보 항목: 이름, 연락처<br>                                    
+                                            작성해주시는 개인 정보는 문의 접수 및 고객 불만 해결을 위해 1년간 보관됩니다.<br>
+                                            본 동의를 거부할 수 있으나, 미동의 시 문의 접수가 불가능합니다.
+                                        </p>  
+                                        <div class="checkBox">
+                                            <input type="checkbox" name="assent" id="assent">
+                                            <label for="assent">동의합니다.</label>
+                                        </div>                            
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <button type="button" id="inquireBtn">문의하기</button>
+                        </fieldset>
+                    </form>
+
+                    <p class="info_msg">※ 전문 상담사가 영업일 기준 3일 이내<br class="mobile"> 개별적으로 연락드립니다.</p>
+                </div>
+            </div>
+            <!-- //.contact -->
+        </div>
+        <!-- //#container -->
+
+        <!--  21.12.09 추가 -->
+        <!-- #footerLanding -->
+        <div id="footerLanding" class="section" data-anchor="stn_footer">
+            <div class="ft_top">
+                <div class="footer_inner">
+                    <div class="col links fl">
+                        <a href="https://mindslab.ai:8080/kr/company" target="_blank">회사소개</a>
+                        <a href="https://maum.ai/home/krTermsMain" target="_blank">이용약관</a>
+                        <a href="https://maum.ai/home/krTermsMain#conditions" target="_blank">개인정보처리방침</a>
+                    </div>
+    
+                    <div class="col contact">
+                        <a href="tel:16613222">
+                            <img src="resources/images/ico_phone_20.svg" alt="전화 걸기">
+                            <span>1661-3222</span>
+                        </a>
+                        <br>
+                        <a href="mailto:hello@mindslab.ai">
+                            <img src="resources/images/ico_email_20.svg" alt="메일 보내기">
+                            <span>hello@mindslab.ai</span>
+                        </a>
+                    </div>
+    
+                    <div class="col sns fr">
+                        <a href="https://www.facebook.com/mindsinsight" target="_blank" title="페이스북 바로가기">
+                            <img src="resources/images/ico_facebook_40.svg" alt="페이스북 아이콘">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC8ocQaJFp-adzGtwcBuS3iQ?view_as=subscriber" target="_blank" title="유튜브 바로가기">
+                            <img src="resources/images/ico_youtube_40.svg" alt="유튜브 아이콘">
+                        </a>
+                        <a href="https://post.naver.com/my.nhn?memberNo=45704243" target="_blank" title="네이버 블로그 바로가기">
+                            <img src="resources/images/ico_blog_40.svg" alt="네이버블로그 아이콘">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ft_btm">
+                <div class="footer_inner">
+                    <div class="col company fl">					
+                        <address>
+                            <span>대표 유태준 |</span>
+                            <span>사업자 등록번호 314-86-55446 |</span>
+                            <span>통신판매업신고번호 2019-대전유성-0094</span><br>
+                            <span>(주) 마인즈랩 경기도 성남시 분당구 대왕판교로644번길 49 다산타워 6층</span><br>							
+                            <span>상담시간 : 09:00 ~ 18:00 (점심시간 12:30 ~ 13:30)</span>							
+                        </address>
+                        <p class="copyright">
+                            Copyright © 2022 MINDsLab. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //#footerLanding -->
+    </div>
+    <!-- //#wrap -->
+
+    <!---------------------- Local resources ---------------------->
+    <!-- page Landing -->
+    <script type="text/javascript">
+        $(window).load(function () {
+            //page loading delete
+            $("#pageldg").addClass("pageldg_hide").delay(300).queue(function () {
+                $(this).remove();
+            });
+        });
+    </script>
+
+    <!-- Local Script -->
+    <script type="text/javascript">
+
+        var typecheck = $('input[name=makingType]:checked').val()
+
+        function checkcheck(){
+            console.log("typecheck : " + typecheck);
+            console.log("makingType : " + makingType);
+            console.log("userName : " + userName);
+        }
+
+
+        jQuery.event.add(window, "load", function () {
+            $(document).ready(function () {
+                // [D] 21.09.29 NBR 추가
+                // 동영상 레이어 팝업
+                $(".btn_video_play").on("click", function () {
+                    $("body").css("overflow", "hidden");
+
+                    $("body").append(
+                        '<div class="lyr_bg_dim"></div>\
+                        <div id="lyr_video_player" class="lyrPlayBox">\
+                            <div class="lyr_ct">\
+                                <video controls autoplay>\
+                                    <source src="resources/videos/shinhan_aiHuman.mp4" type="video/mp4">\
+                                </video>\
+                            </div>\
+                            <button type="button" class="btn_lyr_close">\
+                                <em class="fas fa-times" title="닫기버튼"></em>\
+                            </button>\
+                        </div>'
+                    );
+
+                    $(".btn_lyr_close, .lyr_bg_dim").on("click", function () {
+                        $("body").css("overflow", "");
+                        $(".lyr_bg_dim").remove();
+                        $("#lyr_video_player").remove();
+                    });
+                });
+
+                //Layer popup open
+                $(".btn_lyr_open").on("click", function () {
+                    var winHeight = $(window).height() * 0.7,
+                    hrefId = $(this).attr("href");
+
+                    $("body").css("overflow", "hidden");
+                    $("body").find(hrefId).wrap('<div class="lyrWrap"></div>');
+                    $("body").find(hrefId).before('<div class="lyr_bg"></div>');
+
+                    //Layer popup close
+                    $(".btn_lyr_close, .lyr_bg").on("click", function () {
+                    $("body").css("overflow", "");
+                    $("body").find(hrefId).unwrap();
+                    $(".lyr_bg").remove();
+                });
+            });
+                //[D] 21.09.29 NBR 추가
+
+                // swiper
+                new Swiper(".itv_wrap", {
+                    slidesPerGroup: 1,
+                    slidesPerView: 1,
+                    loop: true,
+                    observer: true,
+                    observeParents: true,
+                    navigation: {
+                        prevEl: ".swiper-button-prev",
+                        nextEl: ".swiper-button-next",
+                    },
+                    autoplay: {
+                        delay: 6000,
+                        disableOnInteraction: false,
+                    },
+                });
+
+                // '문의하기' 버튼 클릭 시 스크롤 이동
+                $(".btn_go_contact").on("click", function () {
+                    var contactOffset = $(".contact").offset();
+                    $("html").animate({ scrollTop: contactOffset.top }, 300);
+                });
+
+                // 문의 영역 연락처폼 숫자 입력 제한
+                $("#userTel").on("keyup", function () {
+                    $(this).val(
+                        $(this).val().replace(/[^0-9]/g, "")
+                    );
+                });
+
+                // 문의하기 필수 내용 입력, 동의체크 시 버튼 컬러 활성화
+                $("#userName").on("input", checkInput);
+                $("#userTel").on("input", checkInput);
+                $("#userEmail").on("input", checkInput);
+                $("#assent").on("click", checkInput);
+                $('#makingType').on("checked", checkInput);
+
+                function checkInput() {
+                    var userName = $("#userName").val();
+                    var userTel = $("#userTel").val();
+                    var userEmail = $("#userEmail").val();
+                    var makingType = $("#makingType").val();
+                    // var typecheck = $('input[name=makingType]:checked').val()
+                    var assentCheck = $("#assent");
+                    var inquireButton = $("#inquireBtn");
+
+                    if (
+                        userName == "" ||
+                        userTel == "" ||
+                        userEmail == "" ||
+                        assentCheck.is(":checked") == false
+                    ) {
+                        inquireButton.prop("disabled", true);
+                    } else {
+                        inquireButton.prop("disabled", false);
+                    }
+                }
+
+                //문의하기 메일 발송 2021.08.11 LYJ
+                $("#inquireBtn").on("click", function () {
+                    var agreeCheck = $("input[type=checkbox]:checked").is(":checked");
+                    var checkText;                    
+                    var makingType = $("input[name=makingType]:checked").val();
+
+                    agreeCheck ? (checkText = "동의") : (checkText = "비동의");       
+                    // console.log("checkText : "+checkText);
+                    // console.log("makingType : "+makingType);
+
+
+                    jQuery.ajax({
+                        url: "https://human.maum.ai/support/sendMail",                        
+                        data: {
+                            fromaddr: "human_event_page@mindslab.ai",
+                            toaddr: "hello@mindslab.ai",
+                            subject:
+                                "[인공인간 이용 및 제작 문의] " +
+                                $("#userName").val() +
+                                "님의 문의 사항입니다.",
+                            message:
+                                "이름 : " +
+                                $("#userName").val() +
+                                "<br>연락처 : " +
+                                $("#userTel").val() +
+                                "<br>이메일  : " +
+                                $("#userEmail").val() +
+                                "<br>인공인간 제작 옵션 선택 : " +
+                                makingType +
+                                "<br>인공인간 제작 목적 : " +
+                                $("#producePurpose").val() +
+                                "<br>개인 정보 수신 동의 : " +
+                                checkText,
+                            },
+                        method: "POST",
+                        dataType: "json",
+                    })
+                    .done((s) => {
+                        $("#userName").val("");
+                        $("#userTel").val("");
+                        $("#userEmail").val("");
+                        $("#makingType").val("");
+                        $("#producePurpose").val("");
+                        $("#assent").prop("checked", false);
+
+                        alert("문의가 완료되었습니다.");
+                        window.location.href = "http://maum.ai/";
+                    })
+                    .error((e) => {
+                        console.log("error", e);
+                        alert(
+                            "문의 요청이 실패되었습니다. 잠시 후에 다시 시도해 주세요."
+                        );
+                    });
+                });
+            });
+        });
+        //여긴 지옥이야..
+    </script>
+  </body>
+</html>

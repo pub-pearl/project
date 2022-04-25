@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="52">
+    <defs>
+        <clipPath id="a">
+            <path transform="translate(0 -.292)" style="stroke:#707070;fill:#707080" d="M0 0h32v52H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="icn_arrow_&lt;" transform="translate(0 .292)" style="clip-path:url(#a)">
+        <path data-name="&lt;" d="M306.168-71.132h2.273a1.4 1.4 0 0 1 1.069.5l20.925 24.73a1.2 1.2 0 0 1 0 1.549L309.51-19.628a1.4 1.4 0 0 1-1.069.5h-2.273a.5.5 0 0 1-.382-.823l20.758-24.531a1 1 0 0 0 0-1.292l-20.758-24.535a.5.5 0 0 1 .382-.823z" transform="translate(-298.719 71.133)" style="fill:#707080"/>
+    </g>
+</svg>
