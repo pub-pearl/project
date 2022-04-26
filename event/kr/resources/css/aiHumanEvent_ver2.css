@@ -347,12 +347,17 @@
     #wrap.event .visual .videoBox video {width:auto;}
 }
 
+/* query 깨지는 부분 추가 pearl(1290, 1145) */
 @media screen and (max-width:1290px) {
     #wrap.event .stn {min-width:auto;}
     #wrap.event .contBox {width:calc(100% - 40px);padding:0 20px;}
     #wrap.event .use_case .contBox .ai_human_list {justify-content:center;gap:20px;}
     #wrap.event .use_case .contBox .ai_human_list li:nth-child(n+4) {margin-top:0;}
     #footerLanding .footer_inner {width:100% !important;}
+}
+
+@media screen and (max-width:1145px) {
+    #wrap.event .use_case:before {top:430px}
 }
 
 @media screen and (max-width:768px){
