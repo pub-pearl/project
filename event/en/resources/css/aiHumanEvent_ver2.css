@@ -245,7 +245,7 @@
 
 /* use_case - 22.04.22 pearl 수정 */
 #wrap.event .use_case {padding:180px 0 80px;}
-#wrap.event .use_case:before {content:'';position:absolute;top:316px;left:0;right:0;bottom:0;z-index:-1;background-color:#f6f8ff;}
+#wrap.event .use_case:before {content:'';position:absolute;top:384px;left:0;right:0;bottom:0;z-index:-1;background-color:#f6f8ff;}
 #wrap.event .use_case .contBox .stn_tit {font-size:50px;color:#40415a;line-height:1.23;letter-spacing:-.5px;}
 #wrap.event .use_case .contBox .stn_tit span.block:first-child {display:inline-block;}
 #wrap.event .use_case .contBox .stn_tit strong {display:inline-block;color:#283d7b;}
