@@ -30,7 +30,7 @@ img {width:100%;object-fit:contain;}
     right: 50px;
     bottom: 0;
     display: inline-block;
-    background:url(../images/company/ico-top.svg) no-repeat center center;
+    background:url(../images/company/ico-top.svg) no-repeat center center #fff;
     width: 60px;
     height: 60px;
     opacity: 0;
