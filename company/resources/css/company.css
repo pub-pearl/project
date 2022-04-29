@@ -13,7 +13,7 @@
 ::-webkit-scrollbar-button {display: none;}  /* 위 아래 버튼 (버튼 없애기를 함) */
 
 * {box-sizing: border-box;scroll-behavior: smooth;}
-img {width:100%;object-fit:contain;}
+img {width:100%;object-fit:contain;image-rendering: -webkit-optimize-contrast;transform: translateZ(0);}
 
 /* -------------------- common -------------------- */
 /* float */
@@ -25,20 +25,8 @@ img {width:100%;object-fit:contain;}
 
 .fc-blue {color:#14b7cc !important;line-height:inherit;font-size:inherit;letter-spacing:inherit;}
 
-#top_btn{
-    position: fixed;
-    right: 50px;
-    bottom: 0;
-    display: inline-block;
-    background:url(../images/company/ico-top.svg) no-repeat center center #fff;
-    width: 60px;
-    height: 60px;
-    opacity: 0;
-    transition: 0.7s ease;
-    font-size: 0;
-    fill:#000;
-  }
-#top_btn:hover {background:url(../images/company/ico-hover.svg) no-repeat center center #14b7cc;}
+#top_btn{position: fixed;right: 50px;bottom: 0;display: inline-block;width: 60px;height: 60px;background:url(../images/company/ico-top.svg) no-repeat center center #fff;opacity: 0;transition: all .5s ease;font-size: 0;}
+#top_btn:hover {background:url(../images/company/ico-hover.svg) no-repeat center center #14b7cc;filter:none;}
 #top_btn.on{opacity: 1;cursor: pointer;bottom: 50px;}
 
 .company-wrap {width:100%;}
@@ -218,7 +206,7 @@ iframe[name="footerFrame"] {width:100%;}
 #footerLanding .footer_inner .contact br + a {margin-left:10px;}
 #footerLanding .footer_inner .contact a img,
 #footerLanding .footer_inner .contact a span {vertical-align:middle;}
-#footerLanding .footer_inner .contact a img {display:inline-block; margin-right:6px;}
+#footerLanding .footer_inner .contact a img {display:inline-block; margin-right:6px;width:20px;}
 #footerLanding .footer_inner .contact br {display:none;}
 #footerLanding .footer_inner .cs_info {margin:20px 0 0; color:#fff; font-size:14px; font-weight:400; line-height:20px; word-break:keep-all;}
 #footerLanding .footer_inner .cs_info dt {display:inline-block;}
@@ -251,7 +239,7 @@ iframe[name="footerFrame"] {width:100%;}
     .provide .box + .box {flex-direction:column-reverse; margin-top:80px;}
     .provide .box > * {width:100%;margin:0;}
     .provide .box > *:nth-child(2n) {margin-left:0;}
-    .provide .box > span {overflow:hidden;width:100%;height:0;padding-bottom:92.81%;}
+    .provide .box > span {overflow:hidden;position:relative;width:100%;height:0;padding-bottom:92.81%;}
     .provide .box > span img {position:absolute;top:0;right:0;bottom:0;left:0;width:auto;height:100%;object-fit: cover;}
     .provide .box p {margin-top:16px;padding:0;}
 
@@ -273,17 +261,18 @@ iframe[name="footerFrame"] {width:100%;}
     .history .tab-cont dl dt {position:static;}
     .history .tab-cont dl dd {padding:0;}
 
-    .map .img {overflow:auto;width:100%;height:0;margin:40px 0 0;padding-bottom:128.1%;}
+    .map .img {position:relative;overflow:auto;width:100%;height:0;margin:40px 0 0;padding-bottom:128.1%;}
     .map .img img {position:absolute;top:0;left:0;width:auto;height:100%;}
     
     .info .tbl-wrap {margin:20px 20px 0;}
     .info .tbl-wrap table tr th, .info .tbl-wrap table tr td {padding:5px 0px;}
 
     .btn-wrap {flex-direction:column;gap:12px;margin:20px 20px 0;}
-    .btn-wrap .btn {display:flex;justify-content:space-between;align-items:center;}
+    .btn-wrap .btn {display:flex;justify-content:space-between;align-items:center;padding:0 24px;}
 
     .partner {padding:80px 20px;}
-    .partner ul li {flex:1 1 auto;gap:8px;width:auto;animation:none !important;padding:10px;height:auto;}
+    .partner ul li {flex:0 1 auto;display:inline-flex;justify-content:center;align-items:center;gap:8px;width:calc(50% - 5px);animation:none !important;padding:10px;height:auto;}
+    .partner ul li img {min-width:114px;}
 
 
     #footerLanding {text-align:left;}
@@ -320,244 +309,3 @@ iframe[name="footerFrame"] {width:100%;}
 
 
 
-
-
-/* header */
-/* header */
-.maumUI #header {display:block; clear:both; position:relative; width:100%; text-align:center; background-color:rgba(255,255,255,1.0); z-index:2000;}
-.maumUI #header h1 {float:left; overflow:hidden; width:114px; height:46px; margin:17px 0 0 50px; background:url("../images/logo_maumAi_clr.svg") 50% 50% no-repeat; background-size:100% 100%; text-indent:-999px;}
-.maumUI #header h1 a {display:block;width:100%;height:100%;}
-
-/* header-maum_sta */
-.maumUI #header .maum_sta {display:block; height:80px; transition:background-color 0.3s ease-out;}
-
-/* header-maum_sta-gnb */
-.maumUI .maum_sta .maum_gnb {float:left; margin:0 0 0 50px;}
-.maumUI .maum_sta .maum_gnb .nav {clear:both; overflow:hidden; line-height:79px;}
-.maumUI .maum_sta .maum_gnb .nav li {display:inline-block; padding:0 25px; vertical-align:middle;}
-.maumUI .maum_sta .maum_gnb .nav li:last-child {margin:0;}
-.maumUI .maum_sta .maum_gnb .nav li a {display:block; position:relative; padding:0 1px; border-bottom:2px solid transparent; color:#222222; font-size:16px; font-weight:500; line-height:36px;}
-.maumUI .maum_sta .maum_gnb .nav li a:after {content:''; position:absolute; bottom:0; left:50%; width:0%; height:3px; background:#0078f2; opacity:0; transition:all 0.3s ease-out;}
-.maumUI .maum_sta .maum_gnb .nav li a:hover {color:#0078f2; transition:all 0.3s ease-out;}
-.maumUI .maum_sta .maum_gnb .nav li a.active:after {left:0; width:100%; opacity:1.0; transition:all 0.3s ease-out;}
-/*.maumUI .maum_sta .maum_gnb .nav li:last-child a {font-weight:normal;}*/
-
-/* header-maum_sta-maum_etc */
-.maumUI .maum_sta .maum_etc {float:right; margin:24px 30px 0 0;}
-.maumUI .maum_sta .maum_etc .nav {clear:both;}
-.maumUI .maum_sta .maum_etc .nav>li {position:relative; float:left;}
-.maumUI .maum_sta .maum_etc .nav>li>a {display:block; padding:0 25px; color:#222222; font-size:14px; font-weight:500; line-height:30px; border-radius:4px;}
-.maumUI .maum_sta .maum_etc .nav>li>a.btn_ico {overflow:hidden; box-sizing:border-box; background-size:20px 20px;}
-.maumUI .maum_sta .maum_etc .nav>li>a.btn_ico:hover:not(.lang) {color:inherit;}
-.maumUI .maum_sta .maum_etc .nav>li>a.btn_ico span {overflow:hidden; display:inline-block; vertical-align:middle; text-indent:-999px;}
-.maumUI .maum_sta .maum_etc .nav>li>a>img {width:22px; height:22px; vertical-align:middle;}
-
-.maumUI .maum_sta .maum_etc .nav>li>a.btn_ico.user .fa-user-circle,
-.maumUI .maum_sta .maum_etc .nav>li>a.btn_ico.lang .fa-globe {display:inline-block; /*vertical-align:middle; font-size:22px;*/}
-.maumUI .maum_sta .maum_etc .nav>li>a.btn_ico.lang {padding:0 36px; background:url("../images/ico_global_bk.svg") 50% 50% no-repeat; background-size:20px;}
-.maumUI .maum_sta .maum_etc .nav>li>a.btn_ico.app {padding:0 36px; background:url("../images/ico_app_bk.svg") 50% 50% no-repeat; background-size:20px;}
-.maumUI .maum_sta .maum_etc .nav>li>a.btn_ico.mindsLab {padding:0 3px;background:url("../images/ico_mindsLab_g.svg") 50% 50% no-repeat; background-size:28px 20px !important;}
-
-/* header-maum_sta-maum_etc-lstBox */
-.maumUI .maum_sta .maum_etc .nav>li .lstBox {display:none; position:absolute; top:35px; left:50%; border:1px solid #e6e9f3; border-radius:4px; background:#fff; transform:translate(-50%,0); box-shadow:0 1px 4px 0 rgba(44,63,81,0.1);  z-index:10;}
-.maumUI .maum_sta .maum_etc .nav>li .lstBox .lst {display:block; position:relative; min-width:150px; padding:7px 0;}
-.maumUI .maum_sta .maum_etc .nav>li .lstBox .lst:before {content:''; position:absolute; top:0; left:50%; width:6px; height:6px; border-top:1px solid #e6e9f3; border-left:1px solid #e6e9f3; background:#fff; transform-origin:6px -3px; transform:rotate(45deg);}
-.maumUI .maum_sta .maum_etc .nav>li .lstBox .lst li {display:block; clear:both; overflow:hidden;}
-.maumUI .maum_sta .maum_etc .nav>li .lstBox .lst li a {display:block; padding:7px 14px; color:#2c3f51; font-size:13px; text-align:left; transition:all 0.3s ease-out;}
-.maumUI .maum_sta .maum_etc .nav>li .lstBox .lst li a:hover {background:#f3f5fa; transition:all 0.3s ease-out;}
-.maumUI .maum_sta .maum_etc .nav>li .lstBox .lst li.lang_li a {text-align:left;}
-.maumUI .maum_sta .maum_etc .nav>li .lstBox .lst li.userInfo {width:200px; margin:0 0 7px 0; padding:3px 14px 7px 14px; text-align:left; vertical-align:top; border-bottom:1px solid #e6e9f3; box-sizing:border-box;}
-.maumUI .maum_sta .maum_etc .nav>li .lstBox .lst li.userInfo .thumb {float:left; width:30px; height:30px; padding:4px 0 0 0;}
-.maumUI .maum_sta .maum_etc .nav>li .lstBox .lst li.userInfo .txt {float:left; padding:0 0 0 14px;}
-.maumUI .maum_sta .maum_etc .nav>li .lstBox .lst li.userInfo .txt .userName {display:block; color:#2c3f51; font-size:15px; font-weight:700;}
-.maumUI .maum_sta .maum_etc .nav>li .lstBox .lst li.userInfo .txt .loginID {display:block; overflow:hidden; max-width:125px; padding:3px 0; color:#5c688c; font-size:11px; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal;}
-
-/* header-maum_sta-maum_etc-appBox */
-.maumUI .maum_sta .maum_etc .nav>li .appBox {display:none; position:absolute; top:35px; right:-10px; border:1px solid #e6e9f3; border-radius:4px; background:#fff; box-shadow:0 1px 4px 0 rgba(44,63,81,0.1); z-index:10;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox:before {content:''; position:absolute; top:0; right:36px; width:6px; height:6px; border-top:1px solid #e6e9f3; border-left:1px solid #e6e9f3; background:#fff; transform-origin:6px -3px; transform:rotate(45deg);}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .tit {display:block; padding:8px 15px; color:#2c3f51; font-size:11px; font-weight:700; text-align:center; border-bottom:1px solid #e6e9f3;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst {display:block; clear:both; overflow:hidden; position:relative; width:300px; padding:7px 0; background:#f7f8fc;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li {float:left; width:33.33333%; margin:0 0 10px 0; text-align:center;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li a {display:block; margin:0 5px; box-sizing:border-box;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li a span {display:inline-block; width:42px; height:42px; margin:4px 0 0 0;  border-radius:7px; border:solid 1px #b6c5d1; background:#fff url("../images/img_landing_cloudAPI.png") 50% 50% no-repeat ; background-size:29px; transition:all 0.3s ease-out;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li a em {display:block; line-height:14px; font-size:12px;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li:nth-child(2) a span {background:#fff url("../images/img_landing_aibuilder.png") 50% 50% no-repeat; background-size:34px;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li:nth-child(3) a span {background:#fff url("../images/img_landing_maumMinutes.png") 50% 50% no-repeat; background-size:22px;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li:nth-child(4) a span {background:#fff url("../images/img_landing_fastai.png") 50% 50% no-repeat; background-size:28px;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li:nth-child(5) a span {background:#fff url("../images/img_landing_tts.svg") 50% 50% no-repeat; background-size:34px;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li:nth-child(6) a span {background:#fff url("../images/img_landing_edgeAiPlatform.svg") 50% 50% no-repeat; background-size:34px;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li:nth-child(7) a span {background:#fff url("../images/img_landing_mauamdata.svg") 50% 50% no-repeat; background-size:41px;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li:nth-child(8) a span {background:#fff url("../images/img_landing_mStudio.svg") 50% 50% no-repeat; background-size:contain;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li:nth-child(9) a span {background:#fff url("../images/img_landing_aiStore.png") 50% 50% no-repeat; background-size:41px;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li a:hover span {border:1px solid #407ae5;transition:all 0.3s ease-out;}
-.maumUI .maum_sta .maum_etc .nav>li .appBox .lst li a:hover em {color:#407ae5; transition:all 0.3s ease-out;}
-.maumUI .maum_sta .maum_etc .nav>li.active .lstBox {display:block;}
-.maumUI .maum_sta .maum_etc .nav>li.active .appBox {display:block;}
-
-/* header-maum_sta-모바일 햄버거메뉴 */
-.maumUI .maum_sta .btn_maum_ham {display:none; overflow:hidden; position:absolute; top:46%; right:0; width:40px; height:40px; line-height:15px; text-indent:-999px; transform:translate(0,-50%);}
-.maumUI .maum_sta .btn_maum_ham span {display:block; width:22px; height:2px; margin-bottom:5px; border-radius:5px; background:#000; transform:rotate(0deg); transition:.2s ease all;}
-.maumUI.transform.trans .maum_sta .btn_maum_ham span {background:rgba(255,255,255,0.7);}
-.maumUI .maum_sta .btn_maum_ham span:last-child {margin-bottom:0;}
-.maumUI .maum_sta .btn_maum_ham:focus {outline-width:0;}
-
-.maumUI #header .maum_sta .btn_maum_ham.active {top:0; left:0; width:44px; height:60px; border:1px solid #b6c5d1; box-sizing:border-box; background:#fff url('../images/landing/ico_aside_close.svg') 50% 50% no-repeat; transform:none;}
-.maumUI #header .maum_sta .btn_maum_ham.active span {display:none; height:1px; background:#b6c5d1;}
-.maumUI .maum_sta .btn_maum_ham.active span:nth-child(1) {transform:rotate(45deg); transform-origin:18% 50%;}
-.maumUI .maum_sta .btn_maum_ham.active span:nth-child(2) {opacity:0;}
-.maumUI .maum_sta .btn_maum_ham.active span:nth-child(3) {transform:rotate(-45deg); transform-origin:18% 50%;}
-
-/* header-scroll transform */
-.maumUI.transform #header .maum_sta {position:fixed; z-index:50; top:0; left:0; width:100%; min-width:1280px; height:80px; border-bottom:1px solid #f5f5f5; box-sizing:border-box; background-color:#fff;}
-.maumUI.transform #header h1 {margin-top:17px;}
-.maumUI.transform .maum_sta .maum_gnb .nav li a {line-height:36px;}
-.maumUI .maum_sta .maum_gnb .nav li.current a {border-bottom:2px solid #1faac1;}
-.maumUI.transform .maum_sta .maum_etc {margin-top:24px;}
-/* .maumUI.transform .maum_sta .maum_etc .nav>li>a.btn_ico.app {background-size:19px;} */
-
-/* 모바일 메뉴 */
-.maumUI .maum_aside {display:none !important; overflow:hidden; position:fixed; top:0; right:0; width:0; height:100%; z-index:3000; background-color:#fff;}
-.maumUI .maum_aside .aside_top {display:block; border-bottom:1px solid rgba(182,197,209,0.5); box-sizing:border-box;}
-.maumUI .maum_aside .aside_top h1 {display:block; text-align:center;height:46px;}
-.maumUI .maum_aside .aside_top h1 img {height:100%;}
-.maumUI .maum_aside .aside_top a.btn_sign {display:block;width:100%; height:60px; box-sizing:border-box; line-height:40px; font-size:1rem; color:#1db6cc;}
-.maumUI .maum_aside .aside_top a.btn_sign span {overflow:hidden; display:inline-block; width:calc(100% - 35px); vertical-align:middle; text-overflow:ellipsis; }
-.maumUI .maum_aside .aside_top a.btn_sign .fa-user-circle {display:inline-block; font-size:1.5rem; margin-right:10px; color:#1db6cc; vertical-align:middle;}
-.maumUI .maum_aside .aside_top a.btn_sign.login_pop_m {padding:0 37px; box-sizing:border-box; color:#1f2e3b; font-size:18px; font-weight:500; line-height:60px; text-align:right; text-transform:uppercase;}
-
-.maumUI .maum_aside .aside_mid {display:block; height:calc(100% - 200px);overflow:auto;}
-.maumUI .maum_aside .aside_mid .m_nav {clear:both; overflow:hidden;}
-.maumUI .maum_aside .aside_mid .m_nav li {clear:both; overflow:hidden;}
-.maumUI .maum_aside .aside_mid .m_nav > li {border-bottom:1px solid rgba(182, 197, 209, 0.5);}
-.maumUI .maum_aside .aside_mid .m_nav li h2 {display:block;}
-.maumUI .maum_aside .aside_mid .m_nav li h2 a {display:block; height:60px; padding:0 37px; line-height:60px; font-size:18px; font-weight:500; color:#1f2e3b; text-align:right; text-transform:uppercase;}
-.maumUI .maum_aside .aside_mid .m_nav > li.userNav h2 a,
-.maumUI .maum_aside .aside_mid .m_nav > li.aiHuman h2 a {background:url('../images/landing/ico_arw_down_g.svg') top 50% right 16px no-repeat;}
-.maumUI .maum_aside .aside_mid .m_nav > li.userNav h2 a.slideChk,
-.maumUI .maum_aside .aside_mid .m_nav > li.aiHuman h2 a.slideChk {background:url('../images/landing/ico_arw_top_b.svg') top 50% right 16px no-repeat; color:#5b6ae2;}
-.maumUI .maum_aside .aside_mid .m_nav > li h2 a.maum_logout {color:rgba(31, 46, 59, 0.7);}
-.maumUI .maum_aside .aside_mid .m_nav li h2 span {display:block; color:#999; font-size:15px; font-weight:500; line-height:45px; text-align:center;}
-.maumUI .maum_aside .aside_mid .m_nav li h2 a svg {font-size:1rem; margin-right:10px; color:#1db6cc;}
-.maumUI .maum_aside .aside_mid .m_nav li h2 a .fa-chevron-down {font-size:0.95rem; margin-left:5px; color:#333b60;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst {display:none; padding:10px 0; border-top:solid 1px #d2dde4; background:#f6fbff;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li {display:block;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li h3 {clear:both; overflow:hidden;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li h3 a {display:block; height:40px; padding:0 35px; line-height:40px; font-size:1rem; font-weight:normal; color:#002b49; text-align:right;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li h3 a.depth3 {background:#eef1fa url(../images/ico_plus.png) right 18px center no-repeat; background-size:10px;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li h3 a.depth3.active {background:url(../images/ico_minus.png) right 18px center no-repeat; background-color:#fff; background-size:10px;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li h3 a span {display:inline-block; padding:0 0 0 30px; background-size:20px !important;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li ul.m_lst_sub {display:none; padding:5px 18px; background:#f8f9fe;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li ul.m_lst_sub li {display:block;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li ul.m_lst_sub li a {display:block; min-height:30px; color:#161d2f; font-size:13px; line-height:18px;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li ul.m_lst_sub li a b {font-weight:normal;  margin:0 5px 0 0;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li ul.m_lst_sub li a.active {color:#3375fa;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li ul.m_lst_sub li a em.new {display:inline-block; padding:3px 5px; color:#fff; font-size:10px; line-height:10px;  border-radius:3px; background:#23c5de;}
-.maumUI .maum_aside .aside_mid .m_nav li ul.m_lst li ul.m_lst_sub li b {display:block; min-height:30px; color:#999; font-size:13px; line-height:22px; font-weight:normal;}
-.maumUI .maum_aside .aside_mid .m_nav li.userNav,
-.maumUI .maum_aside .aside_mid .m_nav li.maum_logout {display:none;}
-.maumUI .maum_aside .aside_mid .m_nav li.maum_logout h2 a {color:rgba(31, 46, 59, 0.7);}
-.maumUI .maum_aside .aside_btm {display:block; border-top:1px solid rgba(182, 197, 209, 0.5);}
-.maumUI .maum_aside .aside_btm ul {clear:both; overflow:hidden; line-height:60px; text-align:center;}
-.maumUI .maum_aside .aside_btm ul li {display:inline-block; margin-right:28px; text-align:center;}
-.maumUI .maum_aside .aside_btm ul li:last-child{margin:0;}
-.maumUI .maum_aside .aside_btm ul li span {font-size:0.875rem;font-weight:500;font-stretch:normal;letter-spacing:-0.31px;text-align:center;color:#5b6ae2; text-transform:uppercase;}
-.maumUI .maum_aside .aside_btm ul li span a {color:rgba(31, 46, 59, 0.5);}
-.maumUI .maum_aside .aside_btm .maum_logout a {display:block; height:50px; padding-top:15px; border-top:1px solid rgba(182,197,209,0.5); font-size:1rem; font-weight:500; color:#333b60; text-align:center;}
-.maumUI .maum_aside .aside_btm .maum_logout a .fa-sign-out-alt {display:inline-block;}
-
-.maumUI .maum_aside.logged_in .aside_mid {height:calc(100% - 120px);}
-.maumUI .maum_aside.user_login .aside_top {display:none;}
-.maumUI .maum_aside.user_login .aside_mid {height:calc(100% - 60px);}
-.maumUI .maum_aside.user_login .aside_mid .m_nav li.userNav,
-.maumUI .maum_aside.user_login .aside_mid .m_nav li.maum_logout {display:block;}
-
-
-.maumUI.visual_header #header {position:absolute; top:0; left:0; background-color:transparent;}
-.maumUI.visual_header .top_banner_area ~ #header {top:50px}
-.maumUI.visual_header #header h1 {top:10px; background-image:url(../images/logo_maumAi_w.svg);}
-.maumUI.visual_header .maum_sta .btn_maum_ham span {background:#fff;}
-.maumUI.visual_header .maum_sta .maum_gnb .nav li a,
-.maumUI.visual_header .maum_sta .maum_etc .nav>li>a {color:#fff;}
-.maumUI.visual_header .maum_sta .maum_etc .nav>li>a.btn_ico.app {background-image:url(../images/landing/ico_app_wh.svg);}
-
-.maumUI.sub_header #header {position:fixed; top:0; left:0; background-color:#fff;border-bottom:1px solid #f5f5f5;}
-.maumUI.sub_header .top_banner_area ~ #header {top:50px}
-.maumUI.sub_header #header h1 {top:10px; background-image:url(../images/logo_maumAi_clr.svg);}
-.maumUI.sub_header .maum_sta {transition:none !important;}
-.maumUI.sub_header .maum_sta .btn_maum_ham span {background:#2c3f51;}
-.maumUI.sub_header .maum_sta .maum_gnb {margin-left:110px;}
-.maumUI.sub_header .maum_sta .maum_gnb .nav li.active>a {border-bottom:2px solid #1faac1;}
-.maumUI.sub_header .maum_sta .maum_gnb .nav li a,
-.maumUI.sub_header .maum_sta .maum_etc .nav>li>a {color:#1e1e1e;}
-.maumUI.sub_header .maum_sta .maum_etc .nav>li>a.btn_ico.app {background-image:url(../images/ico_app_bk.svg);}
-
-/* 헤더 style :.maumUI.visual_header transform */
-.maumUI.visual_header.transform #header {top:0; margin-top:0; background-color:transparent;}
-.maumUI.visual_header.transform #header h1 {top:10px; background-image:url(../images/logo_maumAi_clr.svg);}
-.maumUI.visual_header.transform .maum_sta .btn_maum_ham span {background:#000;}
-.maumUI.visual_header.transform .maum_sta .maum_gnb .nav li a,
-.maumUI.visual_header.transform .maum_sta .maum_etc .nav>li>a {color:#222222;}
-.maumUI.visual_header.transform .maum_sta .maum_etc .nav>li>a.btn_ico.app {background-image:url(../images/landing/ico_app_bk.svg);}
-
-.maumUI.sub_header.transform #header {top:0; margin-top:0;}
-
-
-
-/* footerLanding */
-#footerLanding {height:auto !important; padding:0; background:#1e2027; text-align:center;}
-#footerLanding .fp-tableCell {height:auto !important;}
-#footerLanding .footer_inner {display:inline-block; position:relative; width:1240px; padding:30px 20px; box-sizing:border-box; text-align:left; vertical-align:top;}
-#footerLanding .footer_inner .col {position:relative;}
-#footerLanding .footer_inner .col:last-child {text-align:left;}
-#footerLanding .footer_inner .col .col_inner {overflow:hidden;}
-#footerLanding .footer_inner .sns {float:right;}
-#footerLanding .footer_inner .company {width:50%;}
-#footerLanding .footer_inner address {color:#777777; font-size:15px; letter-spacing:-0.15px; line-height:22px;}
-#footerLanding .footer_inner .copyright {margin-top:27px; color:#535353; font-size:12px; letter-spacing:-0.12px; line-height:18px;}
-#footerLanding .footer_inner .contact {position:absolute; top:113px; right:20px; z-index:50;}
-#footerLanding .footer_inner .contact a {display:inline-block; width:200px; padding:10px 0; border-radius:20px; background:rgba(255, 255, 255, 0.06); color:#777777; font-size:15px; letter-spacing:-0.15px; text-align:center;}
-#footerLanding .footer_inner .contact br + a {margin-left:10px;}
-#footerLanding .footer_inner .contact a img,
-#footerLanding .footer_inner .contact a span {vertical-align:middle;}
-#footerLanding .footer_inner .contact a img {display:inline-block; margin-right:6px;width: 20px;}
-#footerLanding .footer_inner .contact br {display:none;}
-#footerLanding .footer_inner .cs_info {margin:20px 0 0; color:#fff; font-size:14px; font-weight:400; line-height:20px; word-break:keep-all;}
-#footerLanding .footer_inner .cs_info dt {display:inline-block;}
-#footerLanding .footer_inner .cs_info dd {display:inline-block;}
-#footerLanding .footer_inner .sns a {display:inline-block; width:40px; height:40px; border-radius:50%; box-sizing:border-box; background:rgba(255, 255, 255, 0.06); text-align:center; vertical-align:baseline;}
-#footerLanding .footer_inner .sns a + a {margin-left:15px;}
-#footerLanding .footer_inner .links {margin:10px 0;}
-#footerLanding .footer_inner .links a {display:inline-block; margin-right:30px; color:#d5d5d5; font-size:15px; letter-spacing:-0.15px; line-height:22px;}
-
-#footerLanding .ft_top {border-bottom:1px solid #303237;}
-#footerLanding .ft_top .footer_inner {padding:20px;}
-
-/* media query */
-@media screen and (max-width:768px) {
-    #footerLanding {text-align:left;}
-    #footerLanding .footer_inner {width:100%; padding:30px;}
-    #footerLanding .footer_inner .col {float:none; width:auto; text-align:left;}
-    #footerLanding .footer_inner .cs_info dt {vertical-align:top;}
-    #footerLanding .footer_inner .cs_info dd {width:calc(100% - 60px);}
-    #footerLanding .footer_inner .cs_info dd span {display:inline-block;}
-    #footerLanding .footer_inner .sns {float:none; margin-top:20px; margin-left:0; text-align:center !important;}
-    #footerLanding .footer_inner .links {float:none; margin:0; text-align:center;}
-    #footerLanding .footer_inner .links a:last-child {margin-right:0;}
-    #footerLanding .footer_inner .contact {position:static; margin:20px 0 0; text-align:center;}
-    #footerLanding .footer_inner .contact a {width:auto; padding:5px 15px; font-size:13px; margin:0 16px 0 0;}
-    #footerLanding .footer_inner .contact br + a {margin:0;}
-    #footerLanding .footer_inner .links a {font-size:15px;}
-    #footerLanding .footer_inner address {position:static; font-size:14px; line-height:22px; word-break:keep-all;}
-    #footerLanding .footer_inner .copyright {margin-top:30px; font-size:12px; text-align:center;}
-
-    #footerLanding .ft_top {padding:0 20px; border:none;}
-    #footerLanding .ft_top .footer_inner {padding:30px 0; border-bottom:1px solid #303237;}
-    #footerLanding .ft_btm .footer_inner {padding:30px 20px 40px;}
-}
-
-@media screen and (max-width:359px) {
-    #footerLanding .footer_inner .links a {margin-right:20px;}
-    #footerLanding .footer_inner .contact {text-align:left;}
-    #footerLanding .footer_inner .contact br {display:block;}
-    #footerLanding .footer_inner .contact br + a {margin:16px 0 0;}
-}
