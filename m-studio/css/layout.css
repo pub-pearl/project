@@ -88,7 +88,7 @@ header .right .btn + .btn {margin-left:17px;}
 /***************** 리스트형 메인 *****************/
 .wrap.list main {height:max-content;padding-left:240px;background:#fff;color:#131415 !important;}
 
-.wrap.list .aside {align-items:flex-start; width:240px;padding:30px 15px 44px;}
+.wrap.list .aside {align-items:flex-start; width:240px;padding:20px 15px 44px;}
 .wrap.list .logo {width:182px;background: url(../img/logo_Mstudio.png) no-repeat;background-size:100%;}
 .wrap.list .aside .top > ul {margin-top:30px;}
 .wrap.list .aside .top > ul li {margin:4px 0}
@@ -100,9 +100,10 @@ header .right .btn + .btn {margin-left:17px;}
 .wrap.list .my-info .ico-btn span:before {width:40px;}
 .wrap.list .my-info .more-cont {left:100%;}
 
-.wrap.list header {align-items:flex-end;height:100px;padding:34px 40px 24px; background:#fff;border-bottom:1px solid #d9d9d9;}
+.wrap.list header {align-items:center;height:80px;padding:25px 40px 24px; background:#fff;border-bottom:1px solid #d9d9d9;}
 .wrap.list header .title {justify-content:flex-start;width:auto;}
-.wrap.list header .title h2 {font-size:28px;font-weight:600;color:#131415;}
+.wrap.list header .title h2 {margin-top:10px;font-size:28px;font-weight:600;color:#131415;}
+.wrap.list header .right {position:unset;}
 .wrap.list .main {height:calc(100% - 100px); margin:0;padding:40px;}
 .wrap.list .content {overflow:unset;width:100%;padding:0;}
 
