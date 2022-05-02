@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <defs>
+        <clipPath id="gmk56fb75a">
+            <path data-name="사각형 3194" transform="translate(1825 5499)" style="fill:#643a3a" d="M0 0h28v28H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Icon feather-download" transform="translate(-1825 -5499)" style="clip-path:url(#gmk56fb75a)">
+        <path data-name="패스 12950" d="m0 0 11 10.269L22 0" transform="rotate(180 925 2755.635)" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+        <path data-name="패스 12951" d="M0 23.059V0" transform="rotate(180 919.5 2762.5)" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+    </g>
+</svg>
