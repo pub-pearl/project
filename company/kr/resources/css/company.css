@@ -51,7 +51,7 @@ img {width:100%;object-fit:contain;image-rendering: -webkit-optimize-contrast;tr
 .visual .inner {padding-top:208px;opacity:1;/*animation:slideup 1.5s ease-in-out both;*/}
 .visual strong {font-size:16px;letter-spacing:8px;font-weight:200;}
 .visual h2 {color:#fff;font-size:42px;letter-spacing:-.84px;font-weight:normal;}
-.visual p {margin-top:12px;font-size:18px;color:#fff;font-weight:200;letter-spacing:-.36px;line-height:1.60;}
+.visual p {margin-top:12px;font-size:18px;color:#fff;font-weight:200;letter-spacing:-.36px;line-height:1.60;word-break:keep-all;}
 @keyframes visual {
     0% {
         background-position: 0 0;
@@ -247,12 +247,14 @@ iframe[name="footerFrame"] {width:100%;}
     .company-wrap .inner {width:100%;}
     .company-wrap .inner.col-2 {flex-direction:column;}
     .company-wrap .inner h3 {padding:0 20px;font-size:20px;line-height:1.25;word-break:keep-all;}
+    .company-wrap .inner h3 br {display:none;}
 
     /* .visual {height:568px;} */
     .visual::before {background-image:url(../images/company/visual_M.png);background-position:0 80%;}
-    .visual .inner {padding:118px 36px 0 20px;}
+    .visual .inner {padding:118px 70px 0 20px;}
     .visual h2 {font-size:30px;line-height:1.33;}
     .visual p {font-size:15px;}
+    .visual strong {letter-spacing: 7.2px;}
 
     .provide .inner {padding:0 20px;}
     .provide .box {flex-direction:column;}
