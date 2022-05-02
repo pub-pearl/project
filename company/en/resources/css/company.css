@@ -37,7 +37,7 @@ img {width:100%;object-fit:contain;image-rendering: -webkit-optimize-contrast;tr
 .company-wrap .inner.col-2 {display:flex;}
 .company-wrap .inner.col-2 h3 {width:400px;margin-right:4px;}
 .company-wrap .inner.col-2 h3 + div {flex:1;}
-.company-wrap .inner h3 {font-size:30px;color:#002b49;letter-spacing:-.6px;font-weight:normal;line-height:1.41;}
+.company-wrap .inner h3 {font-size:30px;color:#002b49;font-weight:normal;line-height:1.41;}
 
 .reveal{position: relative;transform: translateY(150px);opacity: 0;transition: 1s all ease;}
 .reveal.active{transform: translateY(0);opacity: 1;}
@@ -49,8 +49,8 @@ img {width:100%;object-fit:contain;image-rendering: -webkit-optimize-contrast;tr
 .visual {position:relative;overflow:hidden;width:100%;height:600px;}
 .visual::before {content:'';position:absolute;left:0;bottom:0;z-index:-1;width:100%;height:100%;background:url(../images/company/visual.jpeg);background-position:0 39%; background-repeat:none;background-size:cover;animation: visual2 3s linear both;transform-style: preserve-3d;}
 .visual .inner {padding-top:208px;opacity:1;/*animation:slideup 1.5s ease-in-out both;*/}
-.visual strong {font-size:16px;letter-spacing:8px;font-weight:200;}
-.visual h2 {color:#fff;font-size:42px;letter-spacing:-.42px;font-weight:normal;}
+.visual strong {font-size:16px;font-weight:200;}
+.visual h2 {color:#fff;font-size:42px;font-weight:normal;}
 .visual p {margin-top:12px;font-size:18px;color:#fff;font-weight:200;line-height:1.45;}
 @keyframes visual {
     0% {
@@ -84,7 +84,7 @@ img {width:100%;object-fit:contain;image-rendering: -webkit-optimize-contrast;tr
 .platform .img {overflow:hidden;display:block;height:360px;}
 .platform .txt-box {margin-top:32px;}
 .platform .txt-box strong {display:inline-block;color:#002b49;font-size:18px;font-weight:500;line-height:1.28;}
-.platform .txt-box p {margin-top:18px;color:#333;font-size:16px;letter-spacing:-.32px;line-height:1.38;word-break:keep-all;}
+.platform .txt-box p {margin-top:18px;color:#333;font-size:16px;line-height:1.38;word-break:keep-all;}
 
 .history .tab-wrap{flex:1;display:flex;padding-top:7px;}
 .history .tab, .history .tab-cont dl {position:relative;}
@@ -119,8 +119,8 @@ img {width:100%;object-fit:contain;image-rendering: -webkit-optimize-contrast;tr
 .btn-wrap .download:hover:after {background-image:url(../images/company/ico-download_on.png);}
 
 .partner {padding:120px 0;background:#333;}
-.partner .inner h3 {color:#fff;font-size:30px;font-weight:normal;letter-spacing:-.6px;line-height:40px;}
-.partner .inner h3 span {display:block;margin-bottom:4px;font-size:24px;letter-spacing:-.48px;font-weight:200;line-height:35px;}
+.partner .inner h3 {color:#fff;font-size:30px;font-weight:normal;line-height:40px;}
+.partner .inner h3 span {display:block;margin-bottom:4px;font-size:24px;font-weight:200;line-height:35px;}
 .partner ul {display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:40px;}
 .partner ul li {width:232px;height:100px;padding:20px 16px;border:1px solid #555;}
 
@@ -204,10 +204,10 @@ iframe[name="footerFrame"] {width:100%;}
 #footerLanding .footer_inner .col .col_inner {overflow:hidden;}
 #footerLanding .footer_inner .sns {float:right;}
 #footerLanding .footer_inner .company {width:50%;}
-#footerLanding .footer_inner address {color:#777777; font-size:15px; letter-spacing:-0.15px; line-height:22px;}
-#footerLanding .footer_inner .copyright {margin-top:27px; color:#535353; font-size:12px; letter-spacing:-0.12px; line-height:18px;}
+#footerLanding .footer_inner address {color:#777777; font-size:15px; line-height:22px;}
+#footerLanding .footer_inner .copyright {margin-top:27px; color:#535353; font-size:12px;line-height:18px;}
 #footerLanding .footer_inner .contact {position:absolute; top:113px; right:20px; padding:0; background:none; z-index:50;}
-#footerLanding .footer_inner .contact a {display:inline-block; width:200px; padding:10px 0; border-radius:20px; background:rgba(255, 255, 255, 0.06); color:#777777; font-size:15px; letter-spacing:-0.15px; text-align:center;}
+#footerLanding .footer_inner .contact a {display:inline-block; width:200px; padding:10px 0; border-radius:20px; background:rgba(255, 255, 255, 0.06); color:#777777; font-size:15px; text-align:center;}
 #footerLanding .footer_inner .contact br + a {margin-left:10px;}
 #footerLanding .footer_inner .contact a img,
 #footerLanding .footer_inner .contact a span {vertical-align:middle;}
@@ -220,7 +220,7 @@ iframe[name="footerFrame"] {width:100%;}
 #footerLanding .footer_inner .sns a {display:inline-block; width:40px; height:40px; border-radius:50%; box-sizing:border-box; background:rgba(255, 255, 255, 0.06); text-align:center; vertical-align:baseline;}
 #footerLanding .footer_inner .sns a + a {margin-left:15px;}
 #footerLanding .footer_inner .links {margin:10px 0; line-height:22px;}
-#footerLanding .footer_inner .links a {display:inline-block; margin-right:30px; color:#d5d5d5; font-size:15px; letter-spacing:-0.15px; line-height:22px; vertical-align:top;}
+#footerLanding .footer_inner .links a {display:inline-block; margin-right:30px; color:#d5d5d5; font-size:15px;line-height:22px; vertical-align:top;}
 
 #footerLanding .ft_top {border-bottom:1px solid #303237;}
 #footerLanding .ft_top .footer_inner {padding:20px;}
@@ -252,7 +252,7 @@ iframe[name="footerFrame"] {width:100%;}
 
     /* .visual {height:568px;} */
     .visual::before {background-image:url(../images/company/visual_M.png);background-position:0 80%;}
-    .visual .inner {padding:118px 36px 0 20px;}
+    .visual .inner {padding:118px 20px 0 20px;}
     .visual h2 {font-size:30px;line-height:1.33;}
     .visual p {font-size:15px;}
 
@@ -300,7 +300,7 @@ iframe[name="footerFrame"] {width:100%;}
     .btn-wrap .btn {display:flex;justify-content:space-between;align-items:center;padding:0 24px;}
 
     .partner {padding:80px 20px;}
-    .partner .inner h3 {padding:0;line-height:1.45;letter-spacing:-.4px;}
+    .partner .inner h3 {padding:0;line-height:1.45;}
     .partner .inner h3 span {margin-bottom:3px;font-size:18px;line-height:1.5;}
     .partner ul li {flex:0 1 auto;display:inline-flex;justify-content:center;align-items:center;gap:8px;width:calc(50% - 5px);animation:none !important;padding:10px;height:auto;}
     .partner ul li img {min-width:114px;}
@@ -331,7 +331,8 @@ iframe[name="footerFrame"] {width:100%;}
     .company-wrap br {display:block;}
     .company-wrap .inner h3 {font-size:18px;}
 
-    .visual strong {font-size:15px;letter-spacing:7.4px;}
+    .visual h2 {font-size:27px;}
+    .visual strong {font-size:15px;}
 
     .platform h3 br {display:none;}
 
