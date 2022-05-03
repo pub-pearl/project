@@ -294,7 +294,8 @@ iframe[name="footerFrame"] {width:100%;}
     .map .img img {position:absolute;top:0;left:0;width:auto;height:100%;}
     
     .info .tbl-wrap {margin:20px 20px 0;}
-    .info .tbl-wrap table tr th, .info .tbl-wrap table tr td {padding:5px 8px 5px;font-size:15px;}
+    .info .tbl-wrap table tr th, .info .tbl-wrap table tr td {padding:5px 0;font-size:15px;}
+    .info .tbl-wrap table tr th {padding-right:8px;}
 
     .btn-wrap {flex-direction:column;gap:12px;margin:20px 20px 0;}
     .btn-wrap .btn {display:flex;justify-content:space-between;align-items:center;padding:0 24px;}
@@ -334,13 +335,16 @@ iframe[name="footerFrame"] {width:100%;}
     .visual h2 {font-size:27px;}
     .visual strong {font-size:15px;}
 
-    .platform h3 br {display:none;}
+    .platform h3 br, .platform .txt-box strong br, .platform .txt-box p br {display:none;}
 
     .provide .box p {font-size:16px;}
 
     .history .tab-cont dl dt, .history .tab-cont dl dd {font-size:15px;line-height:1.4;}
 
     .partner .inner h3 span {font-size:16px;}
+
+    /* .info .tbl-wrap table tr th {width:35%;}
+    .info .tbl-wrap table tr td */
 
     #footerLanding .footer_inner .links a {margin-right:20px;}
     #footerLanding .footer_inner .contact {text-align:left;}
