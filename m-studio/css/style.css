@@ -132,8 +132,12 @@
 
 /* .main-list-wrap tr th {min-width:1180px;} */
 
-.tbl-wrap .ico-btn.download:hover span, .tbl-wrap .ico-btn.download:active span {background-image:url(../img/btn/ico_btn-download-on.png);}
-.tbl-wrap .ico-btn.video:hover span, .tbl-wrap .ico-btn.video:active span {background-image:url(../img/btn/ico_btn-video-on.png);}
+.tbl-wrap .ico-btn.download:hover span, 
+.tbl-wrap .ico-btn.download:active span {background-image:url(../img/btn/ico_btn-download-on.png);}
+.tbl-wrap .ico-btn.video:hover span, 
+.tbl-wrap .ico-btn.video:active span {background-image:url(../img/btn/ico_btn-video-on.png);}
+.tbl-wrap .ico-btn.duplicate:hover span,
+.tbl-wrap .ico-btn.duplicate:active span {background-image:url(../img/btn/ico_btn-duplicate-on.png);}
 
 
 /* 동영상 */
