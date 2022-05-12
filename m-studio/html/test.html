@@ -69,11 +69,16 @@ function VKI_buildKeyboardInputs() {
   //  source code
 
   this.VKI_layout.KR = [ // Korea Standard Keyboard
-    [["`", "~"], ["1", "!"], ["2", "@"], ["3", "#"], ["4", "$"], ["5", "%"], ["6", "^"], ["7", "&"], ["8", "*"], ["9", "("], ["0", ")"], ["-", "_"], ["=", "+"], ["Bksp", "Bksp"]],
-    [["Tab", "Tab"], ["ㅂ", "ㅃ"], ["ㅈ", "ㅉ"], ["ㄷ", "ㄸ"], ["ㄱ", "ㄲ"], ["ㅅ", "ㅆ"], ["ㅛ", "ㅛ"], ["ㅕ", "ㅕ"], ["ㅑ", "ㅑ"], ["ㅐ", "ㅒ"], ["ㅔ", "ㅖ"], ["[", "{"], ["]", "}"], ["\\", "|"]],
-    [["Caps", "Caps"], ["ㅁ", "ㅁ"], ["ㄴ", "ㄴ"], ["ㅇ", "ㅇ"], ["ㄹ", "ㄹ"], ["ㅎ", "ㅎ"], ["ㅗ", "ㅗ"], ["ㅓ", "ㅓ"], ["ㅏ", "ㅏ"], ["ㅣ", "ㅣ"], [";", ":"], ["'", '"'], ["Enter", "Enter"]],
-    [["Shift", "Shift"], ["ㅋ", "ㅋ"], ["ㅌ", "ㅌ"], ["ㅊ", "ㅊ"], ["ㅍ", "ㅍ"], ["ㅠ", "ㅠ"], ["ㅜ", "ㅜ"], ["ㅡ", "ㅡ"], [",", "<"], [".", ">"], ["/", "?"], ["Shift", "Shift"]],
-    [[" ", " "]]
+    [["1", "!"], ["2", "@"], ["3", "#"], ["4", "$"], ["5", "%"], ["6", "^"], ["7", "&"], ["8", "*"], ["9", "("], ["0", ")"]],
+    [["ㅂ", "ㅃ"], ["ㅈ", "ㅉ"], ["ㄷ", "ㄸ"], ["ㄱ", "ㄲ"], ["ㅅ", "ㅆ"], ["ㅛ", "ㅛ"], ["ㅕ", "ㅕ"], ["ㅑ", "ㅑ"], ["ㅐ", "ㅒ"], ["ㅔ", "ㅖ"]],
+    [["ㅁ", "ㅁ"], ["ㄴ", "ㄴ"], ["ㅇ", "ㅇ"], ["ㄹ", "ㄹ"], ["ㅎ", "ㅎ"], ["ㅗ", "ㅗ"], ["ㅓ", "ㅓ"], ["ㅏ", "ㅏ"], ["ㅣ", "ㅣ"]],
+    [["Shift", "Shift"], ["ㅋ", "ㅋ"], ["ㅌ", "ㅌ"], ["ㅊ", "ㅊ"], ["ㅍ", "ㅍ"], ["ㅠ", "ㅠ"], ["ㅜ", "ㅜ"], ["ㅡ", "ㅡ"], ["Bksp", "Bksp"]],
+    [[".,!?", "Caps"], ["한영", "AltGr"], [" ", " "], ["입력", "Enter"]]
+    // [["`", "~"], ["1", "!"], ["2", "@"], ["3", "#"], ["4", "$"], ["5", "%"], ["6", "^"], ["7", "&"], ["8", "*"], ["9", "("], ["0", ")"], ["-", "_"], ["=", "+"], ["Bksp", "Bksp"]],
+    // [["Tab", "Tab"], ["ㅂ", "ㅃ"], ["ㅈ", "ㅉ"], ["ㄷ", "ㄸ"], ["ㄱ", "ㄲ"], ["ㅅ", "ㅆ"], ["ㅛ", "ㅛ"], ["ㅕ", "ㅕ"], ["ㅑ", "ㅑ"], ["ㅐ", "ㅒ"], ["ㅔ", "ㅖ"], ["[", "{"], ["]", "}"], ["\\", "|"]],
+    // [["Caps", "Caps"], ["ㅁ", "ㅁ"], ["ㄴ", "ㄴ"], ["ㅇ", "ㅇ"], ["ㄹ", "ㄹ"], ["ㅎ", "ㅎ"], ["ㅗ", "ㅗ"], ["ㅓ", "ㅓ"], ["ㅏ", "ㅏ"], ["ㅣ", "ㅣ"], [";", ":"], ["'", '"'], ["Enter", "Enter"]],
+    // [["Shift", "Shift"], ["ㅋ", "ㅋ"], ["ㅌ", "ㅌ"], ["ㅊ", "ㅊ"], ["ㅍ", "ㅍ"], ["ㅠ", "ㅠ"], ["ㅜ", "ㅜ"], ["ㅡ", "ㅡ"], [",", "<"], [".", ">"], ["/", "?"], ["Shift", "Shift"]],
+    // [[" ", " "]]
   ];
 
   this.VKI_layout.US = [ // US Standard Keyboard
@@ -104,8 +109,7 @@ function VKI_buildKeyboardInputs() {
               keybut.src = "http://www.blueb.co.kr/SRC/javascript/image8/keyboard.png";
               keybut.alt = "Keyboard interface";
               keybut.className = "keyboardInputInitiator";
-              keybut.title = "Display graphical keyboard interface";
-              keybut.onclick = (function(a) { return function() { self.VKI_show(a); }; })(keyid);
+              keybut.onload = (function(a) { return function() { self.VKI_show(a); }; })(keyid);
           ex.parentNode.insertBefore(keybut, ex.nextSibling);
           if (!window.sidebar && !window.opera) {
             ex.onclick = ex.onkeyup = ex.onselect = function() {
@@ -125,6 +129,7 @@ function VKI_buildKeyboardInputs() {
 
   var layouts = 0;
   for (ktype in this.VKI_layout) if (typeof this.VKI_layout[ktype] == "object") layouts++;
+  
 
   var thead = document.createElement('thead');
     var tr = document.createElement('tr');
@@ -231,6 +236,13 @@ function VKI_buildKeyboardInputs() {
                 td.ondblclick = function() { return false; };
 
               switch (lkey[1]) {
+                case "한영":
+                kblist.value = this.VKI_kt;
+                  kblist.onchange = function() {
+                    self.VKI_kt = this.value;
+                    self.VKI_buildKeys();
+                    self.VKI_position();
+                  };
                 case "Caps":
                 case "Shift":
                 case "Alt":
