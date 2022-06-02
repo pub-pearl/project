@@ -20,8 +20,8 @@
 		<div class="top">
 			<h1 class="logo"><a href="#">logo</a></h1>
 			<ul>
-				<li><button class="ico-btn file"><span>파일 목록</span></button></li>
-				<li><button class="ico-btn video"><span>영상 목록</span></button></li>
+				<li><a href="#" class="ico-btn file"><span>파일목록</span></a></li>
+				<li class="active"><a href="#" class="ico-btn video"><span>영상목록</span></a></li>
 			</ul>
 		</div>
 
@@ -62,7 +62,7 @@
                         </fieldset>
                     </div>
                     <div class="right">
-                        <div class="form dropdown"> 
+                        <!-- 20220602 삭제 <div class="form dropdown"> 
 							<div class="select">
 								<strong>정렬</strong>
 							</div>
@@ -76,7 +76,7 @@
                                     <li>추출완료</li>
                                 </ul>
                             </div>
-						</div>
+						</div> -->
 
                         <div class="tab-list-type">
                             <label class="tab-rdo card"><input type="radio" name="list-1" /><span>카드형</span></label>
@@ -107,8 +107,9 @@
                                     </th>
                                     <th>No.</th>
                                     <th>영상썸네일</th>
-                                    <th align="left">제목</th> 
-                                    <th align="left">생성일</th>
+                                    <!-- [D] sorting 시 .active 추가 -->
+                                    <th align="left" class="sort">제목</th> 
+                                    <th align="left" class="sort active">생성일</th>
                                     <th align="left">슬라이드 개수</th>
                                     <th>다운로드</th>
                                     <th>영상</th>

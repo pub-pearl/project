@@ -231,7 +231,7 @@ transition:
 
 /* 목록형 썸네일 progress */
 .circle-percent {position:absolute;top:0;right:0;bottom:0;left:0;z-index:10;background:rgba(18, 45, 70, .84);}
-.circle-percent svg {position: relative;width: 50px;height: 50px;transform: rotate(-90deg);}
+.circle-percent svg {position:absolute;top:calc(50% - 25px);left:calc(50% - 25px);width: 50px;height: 50px;transform: rotate(-90deg);}
 .circle-percent svg circle {width: 100%;height: 100%;fill: none;stroke: #486581;stroke-width: 3;stroke-linecap: round;}
 .circle-percent svg circle:last-of-type {stroke-dasharray: 85px;stroke-dashoffset: calc(85px - (85px * var(--percent)) / 100);stroke: #30f5cd;}
 .circle-percent .number {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}

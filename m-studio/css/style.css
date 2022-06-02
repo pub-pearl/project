@@ -36,10 +36,10 @@
 .swiper-box .img-list li .name {width:100%;text-align:center;color:#7e7f83;}
 .swiper-box .img-list li.active .img:before {box-shadow: 0 0 0 1px #e74ced inset;}
 .swiper-box .img-list li.active .name {color:#fff;}
-.swiper-box .swiper-button-next, .swiper-box .swiper-button-prev {top: 25px;font-size:0;}
+.swiper-box .swiper-button-next, .swiper-box .swiper-button-prev {top:10px;font-size:0;}
 .swiper-box .swiper-button-next:after, .swiper-box .swiper-button-prev:after {width:14px;height:30px;border-radius:4px;background:url(../img/icon/ico-slide-arrow.png) no-repeat center center #33383c;background-size:12px;}
-.swiper-box .swiper-button-prev {left:-6px;}
-.swiper-box .swiper-button-next {right:-6px;}
+.swiper-box .swiper-button-prev {left:0px;}
+.swiper-box .swiper-button-next {right:0px;}
 .swiper-box .swiper-button-next:after{transform: rotate(180deg);}
 
 /* 색상 선택 */
@@ -61,8 +61,8 @@
 .editor-wrap .form-editor {display:-ms-flexbox;display:-webkit-flex;display:flex;flex-direction:column;width:100%;margin-top:40px;padding:8px;border-radius:10px;background:#fff;}
 .editor-wrap .form-editor .form {position:relative;}
 .editor-wrap .form-editor .form:not(:last-child) {margin-bottom:8px;}
-.editor-wrap .form-editor .autosize {max-height: 220px;}
-.editor-wrap .form-editor .autosize textarea {max-height: 220px;}
+.editor-wrap .form-editor .autosize {height: 220px;}
+.editor-wrap .form-editor .autosize textarea {height:100%;resize:none;}
 .autosize textarea::-webkit-scrollbar {width:15px;}
 .autosize textarea::-webkit-scrollbar-thumb {background-color:#fff;border:1px solid #c4c4c4;border-radius:0;}
 .autosize textarea::-webkit-scrollbar-track {background-color:transparent;}
@@ -130,7 +130,9 @@
 .search-wrap .form.dropdown .select.active:after {transform:rotate(-180deg);}
 .search-wrap .form.dropdown .select strong {font-size:14px;font-weight:500;}
 
-/* .main-list-wrap tr th {min-width:1180px;} */
+
+/* 목록 */
+.main-list-wrap {margin-top:17px;}
 
 .tbl-wrap .ico-btn.download:hover span, 
 .tbl-wrap .ico-btn.download:active span {background-image:url(../img/btn/ico_btn-download-on.png);}
@@ -138,6 +140,42 @@
 .tbl-wrap .ico-btn.video:active span {background-image:url(../img/btn/ico_btn-video-on.png);}
 .tbl-wrap .ico-btn.duplicate:hover span,
 .tbl-wrap .ico-btn.duplicate:active span {background-image:url(../img/btn/ico_btn-duplicate-on.png);}
+
+/* 카드형 */
+.card-type {display:flex;flex-wrap:wrap;gap:20px;width:100%;}
+.card-type li {flex:1 1 24%;max-width:calc(25% - 15px);max-height:238px;}
+.card-type li .card {overflow:hidden;position:relative;z-index:0;display:flex;justify-content:center;align-items:center;width:100%;max-height:215px;padding-bottom:55.84%;border:1px solid #cacdd5;border-radius:4px;transition:all .3s ease-in-out;}
+.card-type li:not(.no-data) .card::before {content:'';position:absolute;z-index:-1;top:0;right:0;bottom:0;left:0;transition:all .3s ease-in-out;}
+.card-type li:not(.no-data) .card:hover::before {background:rgba(43, 82, 188, .67);}
+
+.card-type .card img {position:absolute;z-index:-2;top:0;left:0;width:100%;height:100%;object-fit:cover;}
+.card-type .card a {display:none;position:absolute;top:calc(50% - 17px);align-items:center;padding:7px 10px;border-radius:4px;background:#fff;color:#131415;font-size:13px;letter-spacing:-.13px;}
+.card-type .card a:before {content:'';display:block;}
+.card-type .card .file:before {width:20px;height:20px;margin-right:10px;background:url(../img/icon/ico-tool.png)no-repeat center center;background-size:20px;}
+.card-type .card .detail:before {width:0;height:0;margin-right:0;border-bottom:5px solid transparent;border-top: 5px solid transparent;border-left: 8px solid #2a2e33;border-right: 8px solid transparent;}
+.card-type .card:hover a {display:flex;}
+.card-type .card .btn-box {display:none;position:absolute;top:8px;right:8px;}
+.card-type .card:hover .btn-box {display:block;}
+.card-type .card .btn-box .ico-btn {width:32px;height:32px;background-color:#fff;}
+.card-type .card .btn-box .ico-btn:hover {background-color:#d7d8e2;}
+.card-type .card .btn-box button + button {margin-left:6px;}
+
+.card-type .no-data .card {border-radius:0;}
+.card-type .no-data p {position:absolute;top:50%;left:50%;width:100%;transform:translate(-50%, -50%); color:#1d1a1a;text-align:center;}
+
+.card .circle-percent svg circle {stroke-width: 4;}
+.card .circle-percent svg circle:last-of-type {stroke-dasharray:130px;stroke-dashoffset:calc(130px - (130px * var(--percent)) / 100);}
+
+.card-type .my-edit-status {display:flex;align-items:center;margin-top:6px;}
+.card-type .my-edit-status p {overflow:hidden;max-width:calc(100% - 50px);margin-right:10px;text-overflow:ellipsis;white-space:nowrap;font-size:13px;color:#131415;}
+.card-type .my-edit-status span {display:inline-block;min-width:40px;margin-top:-1px;padding:0 3px;border-radius:4px;font-size:10px;line-height:14px;letter-spacing:-.1px;text-align:center;}
+.card-type .my-edit-status span:before {display:none;}
+.card-type .my-edit-status .editing {background:#fcc8d0;color:#b70621;}
+.card-type .my-edit-status .done {background:#c6efac;color:#1f4605;}
+.card-type .my-edit-status .making {background:#fde6a9;color:#5d4102;}
+.card-type .my-edit-status .duplicate {background:#d5eaff;color:#1e4f81;}
+.card-type + .pagination {margin-top:40px;}
+
 
 
 /* 동영상 */
