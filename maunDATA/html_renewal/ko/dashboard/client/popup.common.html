@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Cache reset -->
+<meta http-equiv="Expires" content="Mon, 06 Jan 2016 00:00:01 GMT">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<!-- Open Graph Tag -->
+<meta property="og:title"         content="마음데이터 - AI 데이터 가공의 시작">
+<meta property="og:type"          content="website"> <!-- 웹 페이지 타입 -->
+<!-- <meta property="og:url"           content=""> -->
+<meta property="og:image"         content="">
+<meta property="og:description"   content="비즈니스 맞춤형 AI 데이터를 제공합니다.">
+
+<!-- icon_favicon -->
+<!-- <link rel="apple-touch-icon-precomposed" href="">
+<link rel="shortcut icon" type="image/x-icon" href=""> -->
+
+<!---------------------- General Resources ---------------------->
+<!-- General CSS -->
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/dashboard.css">
+
+<!-- General Script -->
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-migrate-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/dashboard.js"></script>
+
+<style>
+    .btn_lyr_open {margin:0 10px; padding:10px; border-radius:4px; background:#2a354a; color:#fff; font-weight:500;}
+</style>
+
+<title>워크스페이스 관리(Client) - Main || Dashboard</title>
+</head>
+<body>
+<!-- #wrap -->
+<div id="wrap">
+    <!-- #container -->
+    <div id="container">
+        <!-- #snb -->
+        <div id="snb">
+            <div class="topBox">
+                <h1 class="logo">
+                    <a href="workspace_main.html">
+                        <img src="../../../../assets_renewal/images/logo_maumData_m.svg" alt="maum DATA logo">
+                    </a>
+                </h1>
+                <button type="button" class="btn_ham">
+                    <span>전체 메뉴</span>
+                </button>
+            </div>
+            <div class="account"><span>H&M(=헤네스앤모리츠)슈퍼</span></div>
+            <ul class="nav">
+                <li class="active">
+                    <a href="workspace_main.html"><span>워크스페이스 관리</span></a>
+                </li>
+                <li>
+                    <a href="project_main.html"><span>프로젝트 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업현황 통계</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업자 관리</span></a>
+                </li>
+                <li>
+                    <a href="inquiry_main.html"><span>문의 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>계약서 관리</span></a>
+                </li>
+                <li>
+                    <a href="delete_project_list.html"><span>삭제 목록 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>로그아웃</span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- //#snb -->
+
+        <!-- #contents -->
+        <div id="contents">
+            <!-- .content -->
+            <div class="content">
+                <div class="titArea">
+                    <h3>공통 팝업 모음</h3>
+                </div>
+
+                <button type="button" class="btn_lyr_open" data-lyr-name="confirm">확인</button>
+                <button type="button" class="btn_lyr_open" data-lyr-name="cancelConfirm">취소, 확인</button>
+                <button type="button" class="btn_lyr_open" data-lyr-name="icldInput">취소, 확인, input[type="text"]</button>
+            </div>
+            <!-- //.content -->
+        </div> 
+        <!-- //#contents -->
+    </div>
+    <!-- //#container -->
+</div>
+<!-- //#wrap -->
+
+<!-- 확인 -->
+<div id="confirm" class="lyrWrap">
+    <div class="lyrCont">
+        <div class="lyr_top">
+            <p class="tit">삭제</p>
+            <button type="button" class="btn_lyr_close"><span class="hide">닫기버튼</span></button>
+        </div>
+        <div class="lyr_mid">
+            <p class="alert_txt">업로드된 파일을 삭제하시겠습니까?</p>
+        </div>
+        <div class="lyr_btm">
+            <button tyle="button" class="btn_primary btn_confirm">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //확인 -->
+
+<!-- 취소, 확인 -->
+<div id="cancelConfirm" class="lyrWrap">
+    <div class="lyrCont">
+        <div class="lyr_top">
+            <p class="tit">삭제</p>
+            <button type="button" class="btn_lyr_close"><span class="hide">닫기버튼</span></button>
+        </div>
+        <div class="lyr_mid">
+            <p class="alert_txt">업로드된 파일을 삭제하시겠습니까?</p>
+        </div>
+        <div class="lyr_btm">
+            <button tyle="button" class="btn_primary btn_lyr_close">취소</button>
+            <button tyle="button" class="btn_primary btn_confirm">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //취소, 확인 -->
+
+<!-- 취소, 확인, input[type="text"] -->
+<div id="icldInput" class="lyrWrap">
+    <div class="lyrCont">
+        <div class="lyr_top">
+            <p class="tit">태그 그룹 목록 만들기</p>
+            <button type="button" class="btn_lyr_close"><span class="hide">닫기버튼</span></button>
+        </div>
+        <div class="lyr_mid">
+            <p class="alert_txt"> <span class="ft_point_blue">‘그룹 목록 명’</span> 을 입력하여 새로운 태그를<br> 만들 수 있습니다.</p>
+            <input type="text" class="ipt_txt" placeholder="그룹 목록 명을 입력하세요.">
+        </div>
+        <div class="lyr_btm">
+            <button tyle="button" class="btn_primary btn_lyr_close">취소</button>
+            <button tyle="button" class="btn_primary btn_confirm">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //취소, 확인, input[type="text"] -->
+
+<!---------------------- Local Resources ---------------------->
+<!-- Local Script -->
+<script type="text/javascript">
+jQuery.event.add(window,"load",function(){
+    $(document).ready(function(){
+        
+    });
+});
+</script>
+</body>
+</html>

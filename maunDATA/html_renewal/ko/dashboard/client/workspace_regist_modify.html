@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Cache reset -->
+<meta http-equiv="Expires" content="Mon, 06 Jan 2016 00:00:01 GMT">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<!-- Open Graph Tag -->
+<meta property="og:title"         content="마음데이터 - AI 데이터 가공의 시작">
+<meta property="og:type"          content="website"> <!-- 웹 페이지 타입 -->
+<!-- <meta property="og:url"           content=""> -->
+<meta property="og:image"         content="">
+<meta property="og:description"   content="비즈니스 맞춤형 AI 데이터를 제공합니다.">
+
+<!-- icon_favicon -->
+<!-- <link rel="apple-touch-icon-precomposed" href="">
+<link rel="shortcut icon" type="image/x-icon" href=""> -->
+
+<!---------------------- General Resources ---------------------->
+<!-- General CSS -->
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/dashboard.css">
+
+<!-- General Script -->
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-migrate-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/dashboard.js"></script>
+
+<title>워크스페이스 관리(Client) - 등록/수정 || Dashboard</title>
+</head>
+<body>
+<!-- #wrap -->
+<div id="wrap">
+    <!-- #container -->
+    <div id="container">
+        <!-- #snb -->
+        <div id="snb">
+            <div class="topBox">
+                <h1 class="logo">
+                    <a href="workspace_main.html">
+                        <img src="../../../../assets_renewal/images/logo_maumData_m.svg" alt="maum DATA logo">
+                    </a>
+                </h1>
+                <button type="button" class="btn_ham" title="전체메뉴">
+                    <span>전체 메뉴</span>
+                </button>
+            </div>
+            <div class="account"><span>H&M(=헤네스앤모리츠)슈퍼</span></div>
+            <ul class="nav">
+                <li class="active">
+                    <a href="workspace_main.html"><span>워크스페이스 관리</span></a>
+                </li>
+                <li>
+                    <a href="project_main.html"><span>프로젝트 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업현황 통계</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업자 관리</span></a>
+                </li>
+                <li>
+                    <a href="inquiry_main.html"><span>문의 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>계약서 관리</span></a>
+                </li>
+                <li>
+                    <a href="delete_project_list.html"><span>삭제 목록 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>로그아웃</span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- //#snb -->
+
+        <!-- #contents -->
+        <div id="contents">
+            <!-- .content -->
+            <div class="content workspace_regist">
+                <div class="titArea">
+                    <!-- [D] 작성 상태에 따라 addClass('on')하면 보여짐 -->
+                    <h3 class="on">워크스페이스 등록</h3>
+                    <h3>워크스페이스 수정</h3>
+                </div>
+
+                <div class="contArea">
+                    <div class="contBox define_group">
+                        <dl>
+                            <dt>워크스페이스 명</dt>
+                            <dd>
+                                <input type="text" class="ipt_txt" placeholder="워크스페이스 명을 입력하세요.">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>담당자</dt>
+                            <dd>
+                                <input type="text" class="ipt_txt" placeholder="담당자명">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>작업 기간</dt>
+                            <dd class="dateRange">
+                                <input type="text" class="ipt_txt fromDate" placeholder="시작일">
+                                <em class="dash">-</em>
+                                <input type="text" class="ipt_txt toDate" placeholder="종료일">
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="contBox">
+                        <!-- [D] 수정 불가 항목에 addClass('disabled')하면 비활성화 처리됨 -->
+                        <dl class="disabled">
+                            <dt>워크스페이스 게시 여부</dt>
+                            <dd>
+                                <div class="radioBox">
+                                    <!-- [D] input[type="radio"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                    <!-- [D] 같은 선택범위의 input[type="radio"]은 name을 동일하게 줘야함 -->
+                                    <input type="radio" name="post_state" id="post_state01" checked>
+                                    <label for="post_state01">프로젝트 등록 후 게시</label>
+                                </div>
+                                <div class="radioBox">
+                                    <!-- [D] input[type="radio"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                    <!-- [D] 같은 선택범위의 input[type="radio"]은 name을 동일하게 줘야함 -->
+                                    <input type="radio" name="post_state" id="post_state02">
+                                    <label for="post_state02">프로젝트 등록 후 게시</label>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="contBox">
+                        <dl>
+                            <dt>워크스페이스 접근 권한</dt>
+                            <dd>
+                                <div class="radioBox">
+                                    <!-- [D] input[type="radio"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                    <!-- [D] 같은 선택범위의 input[type="radio"]은 name을 동일하게 줘야함 -->
+                                    <input type="radio" name="workspace_auth" id="workspace_auth01" checked>
+                                    <label for="workspace_auth01"><span>허용</span> 지원자를 받은 후, 지정된 워커들만 접근하는 비공개 워크스페이스</label>
+                                </div>
+                                <div class="radioBox">
+                                    <!-- [D] input[type="radio"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                    <!-- [D] 같은 선택범위의 input[type="radio"]은 name을 동일하게 줘야함 -->
+                                    <input type="radio" name="workspace_auth" id="workspace_auth02">
+                                    <label for="workspace_auth02"><span>제한 없음</span> 모든 크라우드 워커가 접근할 수 있는 공개 워크스페이스</label>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="contBox">
+                        <dl>
+                            <dt>계약서 유형</dt>
+                            <dd>
+                                <div class="radioBox">
+                                    <!-- [D] input[type="radio"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                    <!-- [D] 같은 선택범위의 input[type="radio"]은 name을 동일하게 줘야함 -->
+                                    <input type="radio" name="contract_type" id="contract_type01" checked>
+                                    <label for="contract_type01"><span>온라인 작업 동의서</span> 업무시간의 제약이 없고 작업 완료된 건에 한해 보수를 지급하는 내용에 동의하는 기본 계약서</label>
+                                </div>
+                                <div class="radioBox">
+                                    <!-- [D] input[type="radio"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                    <!-- [D] 같은 선택범위의 input[type="radio"]은 name을 동일하게 줘야함 -->
+                                    <input type="radio" name="contract_type" id="contract_type02">
+                                    <label for="contract_type02"><span>용역계약서</span> 정해진 업무시간에 목표치만큼 작업하고 정해진 월급 등으로 보수를 지급하는 계약서</label>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <div class="define_group detail_set disabled">
+                            <dl>
+                                <dt>지급 방식</dt>
+                                <dd>
+                                    <select class="select">
+                                        <option value="">지급방식을 선택하세요.</option>
+                                        <option value="">월급</option>
+                                        <option value="">주급</option>
+                                        <option value="">일급</option>
+                                        <option value="">시급</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>금액(원)</dt>
+                                <dd>
+                                    <!-- [D] 입력 시 천단위 콤마(,) 넣는 script 작업 되어있음 -->
+                                    <input type="text" class="ipt_txt price" placeholder="금액을 입력하세요.">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>계약 기간</dt>
+                                <dd class="dateRange">
+                                    <input type="text" class="ipt_txt fromDate" placeholder="계약 시작">
+                                    <em class="dash">-</em>
+                                    <input type="text" class="ipt_txt toDate" placeholder="계약 종료">
+                                </dd>
+                            </dl>
+                        </div>
+                        <p class="guide_msg">※ (<strong>워크스페이스 게시 여부, 워크스페이스 접근 권한, 계약서 유형</strong>)은 워크스페이스 등록 후 <span class="ft_point_red">수정이 불가능</span>합니다.</p>
+                    </div>
+
+                    <div class="contBox">
+                        <dl>
+                            <dt>프로젝트 소개</dt>
+                            <dd>
+                                <textarea class="textarea" placeholder="프로젝트 내용, 데이터 가공방식, 작업시 주의사항 등을 입력하세요."></textarea>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="btnBox">
+                        <a href="workspace_main.html" class="btn_primary_rect">취소</a>
+                        <a href="workspace_main.html" class="btn_primary_rect blue">등록</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- //#contents -->
+    </div>
+    <!-- //#container -->
+</div>
+<!-- //#wrap -->
+
+<!---------------------- Local Resources ---------------------->
+<!-- Local CSS -->
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/bootstrap-datetimepicker.css">
+
+<!-- Local Script Library -->
+<script type="text/javascript" src="../../../../assets_renewal/js/bootstrap-datetimepicker.js"></script>
+
+<!-- Local Script -->
+<script type="text/javascript">
+jQuery.event.add(window,"load",function(){
+    $(document).ready(function(){
+        // datepicker
+        $('.dateRange').each(function(){
+            var thisFromDate = $(this).find('.fromDate'),
+                thisToDate = $(this).find('.toDate');
+
+            thisFromDate.datetimepicker({
+                format: 'yyyy-mm-dd', 
+                minView: 'month',
+                pickTime : false, 
+                autoclose: 1,
+            }).on('changeDate', function(selected){
+                var startDate = new Date(selected.date.valueOf());
+                thisToDate.datetimepicker('setStartDate', startDate);
+            }).on('clearDate', function(selected){
+                thisToDate.datetimepicker('setStartDate', null);
+            });
+
+            thisToDate.datetimepicker({
+                format: 'yyyy-mm-dd', 
+                minView: 'month',
+                pickTime : false, 
+                autoclose: 1,
+            }).on('changeDate', function(selected){
+                var endDate = new Date(selected.date.valueOf());
+                thisFromDate.datetimepicker('setEndDate', endDate);
+            }).on('clearDate', function(selected){
+                thisFromDate.datetimepicker('setEndDate', null);
+            });
+        });
+
+
+        // 용역계약서 선택 시 세부 항목 활성화
+        $('input[type="radio"][name="contract_type"]').on('click', function(){
+            if($(this).is('#contract_type02')){
+                $(this).parents('.contBox').find('.detail_set').removeClass('disabled');
+            }else{
+                $(this).parents('.contBox').find('.detail_set').addClass('disabled');
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

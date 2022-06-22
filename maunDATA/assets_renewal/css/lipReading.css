@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* MINDsLab. NBR. 20210708 */
+
+/* 공통 CSS */
+@import url("reset.css");
+@import url("font.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css");
+
+
+/* -------------------- layout -------------------- */
+body {overflow:hidden;}
+#wrap {overflow:hidden; width:100%; min-width:320px; height:100%;}
+.contents {width:100%; height:100%;}
+
+
+/* -------------------- common -------------------- */
+/* float */
+.fl {float:left;}
+.fr {float:right;}
+
+/* hidden */
+.hide {display:block; overflow:hidden; text-indent:-9999px; line-height:0; white-space:nowrap;}
+
+/* font point */
+.ft_point_pink {color:#fdcbca;}
+.ft_point_blue {color:#81ced4;}
+.ft_point_yellow {color:#f7e195;}
+
+
+/* -------------------- contents -------------------- */
+/* tutorial */
+#wrap.tutorial .tutorial_bg {position:fixed; top:0; right:0; bottom:0; left:0; width:100%; min-width:320px; height:100%; background:rgba(0, 0, 0, 0.7); z-index:100;}
+#wrap.tutorial .tutorial_bg:before {content:''; display:block; position:absolute; top:0; left:0; width:100%; height:100%; background:url('../images/builder/lipReading/img_tutorial.png') 50% 18% no-repeat; background-size:auto 143px;}
+#wrap.tutorial .tutorial_bg .btn_ttra_close {position:absolute; top:7px; right:13px; width:40px; height:40px;}
+#wrap.tutorial .tutorial_bg .btn_ttra_close:before {content:''; display:block; position:absolute; top:50%; left:50%; width:3px; height:20px; border-radius:1px; background:#fff; transform:translate(-50%, -50%) rotate(45deg);}
+#wrap.tutorial .tutorial_bg .btn_ttra_close:after {content:''; display:block; position:absolute; top:50%; left:50%; width:3px; height:20px; border-radius:1px; background:#fff; transform:translate(-50%, -50%) rotate(-45deg);}
+#wrap.tutorial .cont_top .learning_progress .progressBar .current .learningNum {z-index:200;}
+#wrap.tutorial .cont_top .learning_progress .progressBar .current .learningNum:after {content:'학습 완료 개수'; display:flex; align-items:flex-end; position:absolute; top:0; left:14px; width:100px; height:65px; background:url('../images/builder/lipReading/img_dashed_arw01.svg') top 7px left 22px no-repeat; color:#fff; font-size:17px; font-weight:500; letter-spacing:-0.53px; line-height:20px; white-space:nowrap;}
+#wrap.tutorial .cont_btm .controlArea .btnGroup .btnBox button {pointer-events:none;}
+#wrap.tutorial .cont_btm .controlArea .btnGroup .btnBox.stage01 button {z-index:200;}
+#wrap.tutorial .cont_btm .controlArea .btnGroup .btnBox.stage01 button:before {content:'녹음 버튼'; display:flex; position:absolute; top:-35px; left:-7px; width:65px; height:67px; padding:0 0 0 20px; background:url('../images/builder/lipReading/img_dashed_arw04.svg') bottom 0 left 0 no-repeat; color:#fff; font-size:17px; font-weight:500; letter-spacing:-0.53px; line-height:20px; white-space:nowrap;}
+#wrap.tutorial .cont_btm .controlArea .viewBox {z-index:200; background:#fdcbca url('../images/builder/lipReading/img_lip_guide.png') 50% 50% no-repeat; background-size:cover;}
+#wrap.intro .cont_btm .controlArea .viewBox {background:#fdcbca url('../images/builder/lipReading/img_lip_guide.png') 50% 50% no-repeat; background-size:cover;}
+#wrap.tutorial .cont_btm .controlArea .viewBox:before {content:'카메라 중앙에 입술을 두고 말해 보세요.'; display:block; position:absolute; top:-83px; right:14px; width:95px; height:138px; background:url('../images/builder/lipReading/img_dashed_arw05.svg') bottom 0 left 50% no-repeat; color:#fff; font-size:17px; font-weight:500; letter-spacing:-0.53px; line-height:22px; text-align:center; word-break:keep-all;}
+
+/* cameraBox */
+.cameraBox {position:fixed; top:0; right:0; bottom:0; left:0; width:100%; height:100%; background:#000; z-index:-10;}
+
+/* introWrap */
+.introWrap {display:none; position:fixed; top:0; right:0; bottom:0; left:0; width:100%; min-width:320px; height:100%; background:rgba(0, 0, 0, 0.7); z-index:100;}
+.introWrap p {position:absolute; bottom:84px; left:0; width:100%; padding:0 20px; box-sizing:border-box; color:#fff; font-size:17px; font-weight:500; letter-spacing:-0.53px; line-height:24px; text-align:center; word-break:keep-all;}
+.introWrap .btn_start {position:absolute; bottom:0; left:0; width:100%; height:60px; background:#f7827f; color:#fff; font-size:24px; font-weight:500; letter-spacing:-0.75px;}
+
+/* contWrap */
+.contWrap {position:relative; width:100%; height:100%;}
+
+/* cont_top */
+.cont_top {padding:16px 25px 0; background:#445ea9;}
+.cont_top .learning_progress .point_text {margin:0 0 20px; color:#d0ddff; font-size:12px; letter-spacing:-0.38px; line-height:1;}
+.cont_top .learning_progress .progressBar {clear:both; position:relative; width:100%; height:6px; border-radius:3px; box-shadow:inset 0 1px 4px 0 rgba(154, 154, 154, 0.5); background:#eee;}
+.cont_top .learning_progress .progressBar .current {position:absolute; top:0; left:0; width:0; height:100%; border-radius:3px; background:#f7a4a2;}
+.cont_top .learning_progress .progressBar .current:before {content:''; display:block; position:absolute; top:-4px; right:-7px; width:10px; height:10px; border:2px solid #fff; border-radius:50%; background:#f7827f;}
+.cont_top .learning_progress .progressBar .current .learningNum {display:block; position:absolute; top:-20px; right:-18px; height:14px; padding:0 11px; border-radius:8px; background:#f7827f; color:#fff; font-size:12px; font-weight:800; letter-spacing:-0.38px; line-height:14px;}
+.cont_top .learning_progress .progressBar .current .learningNum:before {content:''; display:block; position:absolute; bottom:-4px; left:50%; border-top:4px solid #f7827f; border-right:2px solid transparent; border-left:2px solid transparent; transform:translate(-50%, 0);}
+
+/* cont_mid */
+.cont_mid {width:100%; height:calc(50% + 60px); box-sizing:border-box; background:#445ea9;}
+.cont_mid .stageGroup {display:table; width:100%; height:100%;}
+.cont_mid .stageGroup > div {display:none; width:100%; padding:0 25px 118px; box-sizing:border-box; vertical-align:middle;}
+.cont_mid .stageGroup > div.active {display:table-cell;}
+.cont_mid .stageGroup .topBox {width:100%; text-align:right;}
+.cont_mid .stageGroup .topBox .letter_badge {display:inline-block; width:50px; height:50px; margin:2px 0; border-radius:50%; background:#fdcbca; text-align:center; line-height:50px; letter-spacing:-0.88px;}
+.cont_mid .stageGroup .topBox .letter_badge span {color:#445ea9; font-size:28px;}
+.cont_mid .stageGroup .btmBox {display:flex; align-items:center; width:100%; height:105px; margin:10px 0 0; text-align:center;}
+.cont_mid .stageGroup .btmBox p {width:100%; color:#fff; font-family:'Roboto', sans-serif; font-size:30px; font-weight:500; letter-spacing:-1.1px; line-height:35px; word-break:keep-all;}
+.cont_mid .stageGroup .btmBox p span {margin:0 -1px; font-family: 'Roboto', sans-serif; font-size:30px; font-weight:500; letter-spacing:-1.1px; line-height:35px;}
+.cont_mid .stageGroup .btmBox .eval_txt,
+.cont_mid .stageGroup .btmBox .eval_txt span {font-size:25px; letter-spacing:-0.78px;}
+.cont_mid .stageGroup .stage01 {text-align:right;}
+.cont_mid .stageGroup .stage01 .topBox {height:54px; background:url('../images/builder/lipReading/img_lipReading01.svg') 0 50% no-repeat;}
+.cont_mid .stageGroup .stage03,
+.cont_mid .stageGroup .stage04 {background:url('../images/builder/lipReading/img_lipReading02.svg') right -32px bottom 5px no-repeat; background-size:auto 87%;}
+.cont_mid .stageGroup .stage05 .topBox {height:74px; background:url('../images/builder/lipReading/img_lipReading03.svg') 50% 50% no-repeat;}
+
+/* cont_btm */
+.cont_btm {display:flex; flex-direction:column; justify-content:flex-end; position:absolute; bottom:0; left:0; width:100%; height:50%; padding:18px 0 0; box-sizing:border-box;}
+.cont_btm .guide_msg {position:absolute; top:-14px; left:0; width:100%; color:#d0ddff; font-size:14px; font-weight:500; letter-spacing:-0.44px; line-height:1; text-align:center;}
+.cont_btm .guide_msg p {display:none;}
+.cont_btm .guide_msg p.active {display:block;}
+.cont_btm .controlArea {position:relative; width:100%; height:calc(100% - 45px); border-radius:30px 30px 0 0;}
+.cont_btm .controlArea > div {position:absolute; width:100%; top:1px; left:0;}
+.cont_btm .controlArea .btnGroup {height:50px;}
+.cont_btm .controlArea .btnGroup > div {display:none; position:absolute; bottom:0; left:0; width:100%; height:100%; border-radius:30px 30px 0 0; text-align:center;}
+.cont_btm .controlArea .btnGroup > div.active {display:block;}
+.cont_btm .controlArea .btnGroup > div.stage01 {background:#fdcbca;}
+.cont_btm .controlArea .btnGroup > div.stage02 {background:#fdcbca;}
+.cont_btm .controlArea .btnGroup > div.stage03 {background:#81ced4;}
+.cont_btm .controlArea .btnGroup > div.stage04 {background:#81ced4;}
+.cont_btm .controlArea .btnGroup > div.stage05 {background:#f7e195;}
+.cont_btm .controlArea .btnGroup .btnBox button {position:relative; top:-45px; width:90px; height:90px; margin:0 4px; border-radius:50%; box-sizing:border-box; color:#fff; font-size:16px; font-weight:500; letter-spacing:-0.5px; line-height:1;}
+.cont_btm .controlArea .btnGroup .btnBox button em {display:block; margin:0 0 10px; font-size:25px;}
+.cont_btm .controlArea .btnGroup .btnBox button.btn_record_on {background:#f7827f url('../images/builder/lipReading/ico_record_on.svg') 50% 50% no-repeat;}
+.cont_btm .controlArea .btnGroup .btnBox button.btn_record_off {background:#f7827f url('../images/builder/lipReading/ico_record_off.svg') 50% 50% no-repeat; z-index:50;}
+.cont_btm .controlArea .btnGroup .btnBox button.btn_retry {padding:0 0 5px; background:#2fbac4;}
+.cont_btm .controlArea .btnGroup .btnBox button.btn_next {padding:0 0 5px; background:#1e88a7;}
+.cont_btm .controlArea .btnGroup .btnBox.stage05 button {position:relative; padding:37px 0 0; font-size:18px; letter-spacing:-0.56px;}
+.cont_btm .controlArea .btnGroup .btnBox.stage05 button img {display:block; position:absolute; bottom:45px; left:50%; transform:translate(-50%, 0);}
+.cont_btm .controlArea .btnGroup .btnBox button.btn_eval_good {background:#fcc566; color:#2a3756;}
+.cont_btm .controlArea .btnGroup .btnBox button.btn_eval_bad {background:#2a3756; color:#f7e195;}
+.cont_btm .controlArea .viewBox {top:auto; bottom:0; height:calc(100% - 50px); background:url('../images/builder/lipReading/img_lip_guide.svg') 50% 50% no-repeat; background-size:150px auto;}
+
+/* record UI */
+@keyframes recording_effect {
+    0% {background:rgba(249, 152, 150, 0.1); transform:translate(-50%, 0) scale(0.7);}
+    100% {background:rgba(249, 152, 150, 0.5); transform:translate(-50%, 0) scale(1);}
+}
+.recording_effect {position:absolute; top:-57px; left:50%; width:114px; height:114px; border-radius:50%; background:rgba(249, 152, 150, 0.5); transform:translate(-50%, 0); animation-name:recording_effect; animation-duration:0.8s; animation-iteration-count:infinite; animation-direction:alternate; animation-timing-function:ease-out; z-index:10;}
+.recording_effect:before {content:''; display:block; position:absolute; top:7px; left:50%; width:100px; height:100px; border-radius:50%; background:rgba(249, 152, 150, 0.5); transform:translate(-50%, 0); z-index:20;}
+
+/* loading UI */
+@keyframes loading_spinner {
+    0% {transform:rotate(0);}
+    100% {transform:rotate(360deg);}
+}
+.loadingBox .spinner_ring .spinner_inner div {box-sizing:border-box !important;}
+.loadingBox .spinner_ring .spinner_inner > div {position:absolute; top:10px; left:10px; width:72px; height:72px; border:8px solid #000; border-color:#c5f8ff transparent #c5f8ff transparent; border-radius:50%; animation:loading_spinner 1s linear infinite;}
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(2),
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(4) {top:19px; left:19px; width:54px; height:54px; animation:loading_spinner 1s linear infinite reverse;}
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(2) {border-color:transparent #fff transparent #fff;}
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(3) {border-color:transparent;}
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(3) div {position:absolute; width:100%; height:100%; transform:rotate(45deg);}
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(3) div:before,
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(3) div:after {content:''; display:block; position:absolute; top:-8px; left:24px; width:8px; height:8px; border-radius:50%; box-shadow:0 64px 0 0 #c5f8ff; background:#c5f8ff;}
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(3) div:after {top:24px; left:-8px; box-shadow:64px 0 0 0 #c5f8ff;}
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(4) {border-color:transparent;}
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(4) div {position:absolute; width:100%; height:100%; transform:rotate(45deg);}
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(4) div:before,
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(4) div:after {content:''; display:block; position:absolute; top:-8px; left:15px; width:8px; height:8px; border-radius:50%; box-shadow:0 46px 0 0 #ffffff; background:#fff;}
+.loadingBox .spinner_ring .spinner_inner > div:nth-child(4) div:after {top:15px; left:-8px; box-shadow:46px 0 0 0 #fff;}
+.loadingBox .spinner_ring {display:inline-block; overflow:hidden; position:relative; top:-45px; width:90px; height:90px; border-radius:50%; background:#2fbac4;}
+.loadingBox .spinner_ring .spinner_inner {position:relative; width:100%; height:100%; transform:translateZ(0) scale(0.7); backface-visibility:hidden;}
+.loadingBox .spinner_ring .spinner_inner div {box-sizing:content-box;}
+

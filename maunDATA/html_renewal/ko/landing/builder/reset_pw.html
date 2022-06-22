@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Cache reset -->
+<meta http-equiv="Expires" content="Mon, 06 Jan 2016 00:00:01 GMT">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<!-- Open Graph Tag -->
+<meta property="og:title"         content="마음데이터 - AI 데이터 가공의 시작">
+<meta property="og:type"          content="website"> <!-- 웹 페이지 타입 -->
+<!-- <meta property="og:url"           content=""> -->
+<meta property="og:image"         content="">
+<meta property="og:description"   content="비즈니스 맞춤형 AI 데이터를 제공합니다.">
+
+<!-- icon_favicon -->
+<!-- <link rel="apple-touch-icon-precomposed" href="">
+<link rel="shortcut icon" type="image/x-icon" href=""> -->
+
+<!---------------------- General Resources ---------------------->
+<!-- General CSS -->
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/builder_landing.css">
+
+<!-- General Script -->
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-migrate-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/builder_landing.js"></script>
+
+<title>비밀번호 리셋 || Builder</title>
+</head>
+<body>
+<!-- #wrap -->
+<div id="wrap" class="account">
+    <!-- .joinArea -->
+    <div class="joinArea">
+        <!-- .joinWrap -->
+        <div class="joinWrap">
+            <a href="#none" class="btn_back">이전페이지 가기</a>
+
+            <div class="joinBox">
+                <div class="logoBox">
+                    <h1><img src="../../../../assets_renewal/images/logo_maumData_mw.svg" alt="maum DATA"></h1> 
+                    <p>Reset Password</p>
+                </div>
+                
+                <div class="formBox account_set reset_pw">
+                    <h2>비밀번호 리셋하기</h2>
+
+                    <div class="userForm">
+                        <dl>
+                            <dt>변경 비밀번호</dt>
+                            <dd>
+                                <input type="password" class="ipt_txt pswd_org">
+                                <small>영문,숫자, 특수문자를 조합하여 8-20자 이내로 입력해주세요.</small>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>비밀번호 확인</dt>
+                            <dd>
+                                <!-- [D] 비밀번호 일치 여부 확인 기능 하단 script 참고 -->
+                                <input type="password" class="ipt_txt pswd_chk">
+                                <p class="tooltip">*비밀번호가 일치하지 않습니다.</p>
+                            </dd>
+                        </dl>
+                        <a href="#none" class="btn_next btn_lyr_open fr" data-lyr-name="notice_account">변경하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //.joinWrap -->
+    </div>
+    <!-- //.joinArea -->
+</div>
+<!-- //#wrap -->
+
+<!-- 비밀번호 변경완료 팝업 -->
+<div id="notice_account" class="lyrWrap">
+    <div class="lyrCont">
+        <div class="lyr_top">
+            <button type="button" class="btn_lyr_close"><span>닫기버튼</span></button>
+        </div>
+        <div class="lyr_mid">
+            <p class="tit">비밀번호 변경완료</p>
+            <p class="ntc_txt">비밀번호 변경이 정상적으로 완료되었습니다.<br> 로그인 페이지로 이동하시겠습니까?</p>
+        </div>
+        <div class="lyr_btm">
+            <button type="button" class="btn_primary btn_lyr_close">닫기</button>
+            <a href="login.html" class="btn_primary">로그인</a>
+        </div>
+    </div>
+</div>
+
+<!---------------------- Local Resources ---------------------->
+<!-- Local Script -->
+<script type="text/javascript">
+jQuery.event.add(window,"load",function(){
+    $(document).ready(function(){
+        // 비밀번호 일치 여부 확인
+        $('.pswd_chk').keyup(function(){
+            var originalPassword = $('.pswd_org').val(),
+                checkPassword =  $('.pswd_chk').val();
+
+            if(originalPassword != '' || checkPassword != ''){
+                if(originalPassword != checkPassword){
+                    $('.ipt_txt').addClass('error');
+                    $('.pswd_chk').addClass('error');
+                }else{
+                    $('.ipt_txt').removeClass('error');
+                    $('.pswd_chk').removeClass('error');
+                }
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

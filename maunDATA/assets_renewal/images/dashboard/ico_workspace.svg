@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-2{stroke:#5488d6;stroke-width:1.3px}.cls-3{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_workspace_24px" transform="translate(-37 -214)">
+        <path id="사각형_25" d="M0 0H24V24H0z" class="cls-1" transform="translate(37 214)"/>
+        <g id="그룹_29" transform="translate(0 2)">
+            <g id="사각형_20" class="cls-2" transform="translate(41 216)">
+                <rect width="6" height="11" class="cls-3" rx="1"/>
+                <rect width="4.7" height="9.7" x=".65" y=".65" class="cls-1" rx=".35"/>
+            </g>
+            <g id="사각형_21" class="cls-2" transform="translate(48 216)">
+                <rect width="10" height="8" class="cls-3" rx="1"/>
+                <rect width="8.7" height="6.7" x=".65" y=".65" class="cls-1" rx=".35"/>
+            </g>
+            <g id="사각형_22" class="cls-2" transform="translate(48 225)">
+                <rect width="10" height="8" class="cls-3" rx="1"/>
+                <rect width="8.7" height="6.7" x=".65" y=".65" class="cls-1" rx=".35"/>
+            </g>
+            <g id="사각형_23" class="cls-2" transform="translate(41 228)">
+                <rect width="6" height="5" class="cls-3" rx="1"/>
+                <rect width="4.7" height="3.7" x=".65" y=".65" class="cls-1" rx=".35"/>
+            </g>
+        </g>
+    </g>
+</svg>

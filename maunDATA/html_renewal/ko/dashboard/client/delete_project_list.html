@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Cache reset -->
+<meta http-equiv="Expires" content="Mon, 06 Jan 2016 00:00:01 GMT">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<!-- Open Graph Tag -->
+<meta property="og:title"         content="마음데이터 - AI 데이터 가공의 시작">
+<meta property="og:type"          content="website"> <!-- 웹 페이지 타입 -->
+<!-- <meta property="og:url"           content=""> -->
+<meta property="og:image"         content="">
+<meta property="og:description"   content="비즈니스 맞춤형 AI 데이터를 제공합니다.">
+
+<!-- icon_favicon -->
+<!-- <link rel="apple-touch-icon-precomposed" href="">
+<link rel="shortcut icon" type="image/x-icon" href=""> -->
+
+<!---------------------- General Resources ---------------------->
+<!-- General CSS -->
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/dashboard.css">
+
+<!-- General Script -->
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-migrate-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/dashboard.js"></script>
+
+<title>삭제 목록 관리(Client) || Dashboard</title>
+</head>
+<body>
+<!-- #wrap -->
+<div id="wrap">
+    <!-- #container -->
+    <div id="container">
+        <!-- #snb -->
+        <div id="snb">
+            <div class="topBox">
+                <h1 class="logo">
+                    <a href="workspace_main.html">
+                        <img src="../../../../assets_renewal/images/logo_maumData_m.svg" alt="maum DATA logo">
+                    </a>
+                </h1>
+                <button type="button" class="btn_ham" title="전체메뉴">
+                    <span>전체 메뉴</span>
+                </button>
+            </div>
+            <div class="account"><span>H&M(=헤네스앤모리츠)슈퍼</span></div>
+            <ul class="nav">
+                <li>
+                    <a href="workspace_main.html"><span>워크스페이스 관리</span></a>
+                </li>
+                <li>
+                    <a href="project_main.html"><span>프로젝트 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업현황 통계</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업자 관리</span></a>
+                </li>
+                <li>
+                    <a href="inquiry_main.html"><span>문의 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>계약서 관리</span></a>
+                </li>
+                <li class="active">
+                    <a href="delete_project_list.html"><span>삭제 목록 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>로그아웃</span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- //#snb -->
+
+        <!-- #contents -->
+        <div id="contents">
+            <!-- .content -->
+            <div class="content">
+                <div class="titArea">
+                    <h3>삭제 목록 관리</h3>
+                </div>
+
+                <div class="tbl_tap_wrap">
+                    <ul class="tapBtn">
+                        <li class="active">삭제 프로젝트 <span class="caseNum">99999</span></li>
+                    </ul>
+
+                    <div class="tapCont">
+                        <div class="filterArea">
+                            <select class="select">
+                                <option value="">워크스페이스 명</option>
+                                <option value="">A 그룹</option>
+                                <option value="">B 그룹</option>
+                            </select>
+                            <select class="select">
+                                <option value="">데이터 유형</option>
+                                <option value="">이미지 Image</option>
+                                <option value="">텍스트 Text</option>
+                                <option value="">오디오 Audio</option>
+                                <option value="">비디오 Video</option>
+                            </select>
+                            <select class="select">
+                                <option value="">가공 유형</option>
+                                <option value="">유형1</option>
+                                <option value="">유형2</option>
+                                <option value="">유형3</option>
+                            </select>
+
+                            <div class="srchBox">
+                                <input type="text" placeholder="검색어를 입력해주세요.">
+                                <button type="button" class="btn_srch" title="검색">
+                                    <span class="hide">검색</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tblBox type01 icld_chk">
+                            <table summary="프로젝트 명, 워크스페이스 명, 데이터 유형, 가공 유형, 프로젝트 상태, 시작일, 종료일로 구성">
+                                <caption class="hide">프로젝트 목록</caption>
+                                <colgroup>
+                                    <col width="80px"><col width="20%"><col width="20%"><col><col>
+                                    <col><col><col>
+                                </colgroup>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="allChk">
+                                            </div>
+                                        </th>
+                                        <th scope="col">프로젝트 명</th>
+                                        <th scope="col">워크스페이스 명</th>
+                                        <th scope="col">데이터 유형</th>
+                                        <th scope="col">가공 유형</th>
+                                        <th scope="col">프로젝트 상태</th>
+                                        <th scope="col">시작일</th>
+                                        <th scope="col">종료일</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td class="empty" scope="row" colspan="8">등록된 프로젝트가 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="eachChk">
+                                            </div>
+                                        </td>
+                                        <td>영역지정ABCDEFFGHIJFGTTTRREEERRT그룹</td>
+                                        <td>A 그룹</td>
+                                        <td>Image</td>
+                                        <td>Bounding Box</td>
+                                        <td>가공 완료</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="eachChk">
+                                            </div>
+                                        </td>
+                                        <td>영역지정ABCDEFFGHIJFGTTTRREEERRT그룹</td>
+                                        <td>A 그룹</td>
+                                        <td>Image</td>
+                                        <td>Bounding Box</td>
+                                        <td>진행 중</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="eachChk">
+                                            </div>
+                                        </td>
+                                        <td>영역지정ABCDEFFGHIJFGTTTRREEERRT그룹</td>
+                                        <td>A 그룹</td>
+                                        <td>Image</td>
+                                        <td>Bounding Box</td>
+                                        <td>일시 중지</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="eachChk">
+                                            </div>
+                                        </td>
+                                        <td>영역지정ABCDEFFGHIJFGTTTRREEERRT그룹</td>
+                                        <td>A 그룹</td>
+                                        <td>Image</td>
+                                        <td>Bounding Box</td>
+                                        <td>대기</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="eachChk">
+                                            </div>
+                                        </td>
+                                        <td>영역지정ABCDEFFGHIJFGTTTRREEERRT그룹</td>
+                                        <td>A 그룹</td>
+                                        <td>Image</td>
+                                        <td>Bounding Box</td>
+                                        <td>기간 만료</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagingArea">
+					<div class="btnBox fl">
+						<button type="button" class="btn_primary_rect blue btn_list_restore" disabled>복원</button>
+					</div>
+
+					<div class="paging">
+						<a href="#none" class="btn_paging first">
+                            <span class="hide">처음 페이지</span>
+                        </a>
+						<a href="#none" class="btn_paging prev">
+                            <span class="hide">이전 페이지</span>
+                        </a>
+						<a href="#none" class="current">1</a>
+						<a href="#none">2</a>
+						<a href="#none">3</a>
+						<a href="#none">4</a>
+						<a href="#none">5</a>
+						<a href="#none" class="btn_paging next">
+                            <span class="hide">다음 페이지</span>
+                        </a>
+						<a href="#none" class="btn_paging last">
+                            <span class="hide">마지막 페이지</span>
+                        </a>
+					</div>
+				</div>
+            </div>
+            <!-- //.content -->
+        </div> 
+        <!-- //#contents -->
+    </div>
+    <!-- //#container -->
+</div>
+<!-- //#wrap -->
+
+<!---------------------- Local Resources ---------------------->
+<!-- Local Script -->
+<script type="text/javascript">
+jQuery.event.add(window,"load",function(){
+    $(document).ready(function(){
+        
+    });
+});
+</script>
+</body>
+</html>

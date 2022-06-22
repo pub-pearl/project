@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Cache reset -->
+<meta http-equiv="Expires" content="Mon, 06 Jan 2016 00:00:01 GMT">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<!-- Open Graph Tag -->
+<meta property="og:title"         content="마음데이터 - AI 데이터 가공의 시작">
+<meta property="og:type"          content="website"> <!-- 웹 페이지 타입 -->
+<!-- <meta property="og:url"           content=""> -->
+<meta property="og:image"         content="">
+<meta property="og:description"   content="비즈니스 맞춤형 AI 데이터를 제공합니다.">
+
+<!-- icon_favicon -->
+<!-- <link rel="apple-touch-icon-precomposed" href="">
+<link rel="shortcut icon" type="image/x-icon" href=""> -->
+
+<!---------------------- General Resources ---------------------->
+<!-- General CSS -->
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/dashboard.css">
+
+<!-- General Script -->
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-migrate-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/dashboard.js"></script>
+
+<title>워크스페이스 관리(Client) - Main || Dashboard</title>
+</head>
+<body>
+<!-- #wrap -->
+<div id="wrap">
+    <!-- #container -->
+    <div id="container">
+        <!-- #snb -->
+        <div id="snb">
+            <div class="topBox">
+                <h1 class="logo">
+                    <a href="workspace_main.html">
+                        <img src="../../../../assets_renewal/images/logo_maumData_m.svg" alt="maum DATA logo">
+                    </a>
+                </h1>
+                <button type="button" class="btn_ham">
+                    <span>전체 메뉴</span>
+                </button>
+            </div>
+            <div class="account"><span>H&M(=헤네스앤모리츠)슈퍼</span></div>
+            <ul class="nav">
+                <li class="active">
+                    <a href="workspace_main.html"><span>워크스페이스 관리</span></a>
+                </li>
+                <li>
+                    <a href="project_main.html"><span>프로젝트 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업현황 통계</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업자 관리</span></a>
+                </li>
+                <li>
+                    <a href="inquiry_main.html"><span>문의 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>계약서 관리</span></a>
+                </li>
+                <li>
+                    <a href="delete_project_list.html"><span>삭제 목록 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>로그아웃</span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- //#snb -->
+
+        <!-- #contents -->
+        <div id="contents">
+            <!-- .content -->
+            <div class="content">
+                <div class="titArea">
+                    <h3>워크스페이스 관리</h3>
+
+                    <div class="btnBox">
+                        <a href="workspace_regist_modify.html" class="btn_primary_rect blue btn_rgst">워크스페이스 등록</a>
+                    </div>
+                </div>
+
+                <div class="tbl_tap_wrap">
+                    <ul class="tapBtn">
+                        <li class="active">전체 워크스페이스 <span class="caseNum">99999</span></li>
+                        <li>공개 워크스페이스 <span class="caseNum">20</span></li>
+                        <li>비공개 워크스페이스 <span class="caseNum">20</span></li>
+                    </ul>
+
+                    <div class="tapCont">
+                        <div class="filterArea">
+                            <select class="select">
+                                <option value="">접근 권한</option>
+                                <option value="">제한 없음</option>
+                                <option value="">허용 필요</option>
+                            </select>
+                            <select class="select">
+                                <option value="">인력 모집 현황</option>
+                                <option value="">모집 중</option>
+                                <option value="">모집 완료</option>
+                                <option value="">해당 사항 없음</option>
+                            </select>
+
+                            <div class="switchBox">
+                                <!-- [D] input[type="checkbox"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                <input type="checkbox" id="expireWorkspace">
+                                <label for="expireWorkspace">기간만료 워크스페이스 숨김</label>
+                            </div>
+
+                            <div class="srchBox">
+                                <input type="text" placeholder="검색어를 입력해주세요.">
+                                <button type="button" class="btn_srch" title="검색">
+                                    <span class="hide">검색</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tblBox type01">
+                            <table data-tbl-name="workspace" summary="워크스페이스 명, 워크스페이스 상태, 접근 권한, 인력 모집 현황, 시작일, 종료일로 구성">
+                                <caption class="hide">워크스페이스 목록</caption>
+                                <colgroup>
+                                    <col width="30%"><col><col><col>
+                                    <col><col>
+                                </colgroup>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">워크스페이스 명</th>
+                                        <th scope="col">워크스페이스 상태</th>
+                                        <th scope="col">접근 권한 
+                                            <div class="help_msg">
+                                                <div class="viewBox">
+                                                    <dl>
+                                                        <dt>허용 필요</dt>
+                                                        <dd>지원자를 받은 후, 지정된 워커들만 접근하는 비공개 워크스페이스입니다.</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>제한 없음</dt>
+                                                        <dd>모든 크라우드 워커가 접근할 수 있는 공개 워크스페이스입니다.</dd>                                                   
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th scope="col">인력 모집 현황</th>
+                                        <th scope="col">시작일</th>
+                                        <th scope="col">종료일</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td class="empty" scope="row" colspan="6">등록된 워크스페이스가 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>영역지정ABCDEFFGHIJFGTTTRREEERRT그룹</td>
+                                        <td>기간 만료</td>
+                                        <td>제한 없음</td>
+                                        <td>모집 중</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>영역지정A그룹</td>
+                                        <td>게시 중</td>
+                                        <td>허용 필요</td>
+                                        <td>모집 완료</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>영역지정A그룹</td>
+                                        <td>게시 중</td>
+                                        <td>허용 필요</td>
+                                        <td>해당 사항 없음</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagingArea">
+					<div class="paging">
+						<a href="#none" class="btn_paging first">
+                            <span class="hide">처음 페이지</span>
+                        </a>
+						<a href="#none" class="btn_paging prev">
+                            <span class="hide">이전 페이지</span>
+                        </a>
+						<a href="#none" class="current">1</a>
+						<a href="#none">2</a>
+						<a href="#none">3</a>
+						<a href="#none">4</a>
+						<a href="#none">5</a>
+						<a href="#none" class="btn_paging next">
+                            <span class="hide">다음 페이지</span>
+                        </a>
+						<a href="#none" class="btn_paging last">
+                            <span class="hide">마지막 페이지</span>
+                        </a>
+					</div>
+				</div>
+            </div>
+            <!-- //.content -->
+
+            <!-- .asideWrap -->
+            <div id="workspace" class="asideWrap">
+                <div class="aside">
+                    <button type="button" class="btn_aside_close">
+                        <span class="hide">닫기</span>
+                    </button>
+
+                    <div class="contArea">
+                        <div class="contBox">
+                            <div class="tit">
+                                <h4>영역지정 A그룹</h4>
+
+                                <div class="fr">
+                                    <div class="switchBox">
+                                        <!-- [D] input[type="checkbox"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                        <input type="checkbox" id="post">
+                                        <label for="post">게시</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cont">
+                                <dl class="define">
+                                    <dt>워크스페이스 상태:</dt>
+                                    <dd>게시 대기</dd>
+                                </dl>
+                                <dl class="define">
+                                    <dt>접근 권한:</dt>
+                                    <dd>허용 필요</dd>
+                                </dl>
+                                <dl class="define">
+                                    <dt>담당자:</dt>
+                                    <dd>이현구</dd>
+                                </dl>
+                                <dl class="define">
+                                    <dt>시작 일자:</dt>
+                                    <dd>2021. 03. 01</dd>
+                                </dl>
+                                <dl class="define">
+                                    <dt>종료 일자:</dt>
+                                    <dd>2021. 09. 01</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="contBox">
+                            <div class="tit">
+                                <h4>작업자 지정 현황</h4>
+
+                                <div class="fr">
+                                    <a href="#none" class="btn_shortcut">작업자 지정 바로가기</a>
+                                    <div class="switchBox">
+                                        <!-- [D] input[type="checkbox"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                        <input type="checkbox" id="rcrt_cplt">
+                                        <label for="rcrt_cplt">모집완료</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cont">
+                                <div class="lineBox fl">
+                                    <!-- [D] 모집 상태에 따라 .state span에 addClass('on') 해주면 상태값 보여짐 -->
+                                    <div class="state">
+                                        <span class="on">모집 중</span>
+                                        <span>모집 완료</span>
+                                    </div>
+                                    <dl>
+                                        <dt>지원자</dt>
+                                        <dd>100</dd>
+                                    </dl>
+                                </div>
+                                <div class="fr">
+                                    <dl class="lineBox">
+                                        <dt>가공 작업자</dt>
+                                        <dd><span>700</span>명</dd>
+                                    </dl>
+                                    <dl class="lineBox">
+                                        <dt>검수 작업자</dt>
+                                        <dd><span>50</span>명</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contBox">
+                            <div class="tit">
+                                <h4>프로젝트 소개</h4>
+                            </div>
+
+                            <div class="cont">
+                                <div class="work_guide"><strong>&lt;주의사항&gt;</strong>                                   
+                                    1)가이드에 맞지 않는 사항은 반려되어 정산에서 제외됩니다.
+                                    꼭 확인해주세요.(메일로 확인)
+                                    2. 모든 사진은 선착순입니다.
+                                    수집이 끝난 카테고리는 제외되며, 가이드/공지사항에 표시됩니다.
+                                    3)라벨러스 홈페이지에서 작업 신청 후 참여해야 합니다.
+                                    외부로 공유된 작업 링크만 통해 이용하시면 정산 대상에서 제외됩니다.
+                                    1)가이드에 맞지 않는 사항은 반려되어 정산에서 제외됩니다.
+                                    꼭 확인해주세요.(메일로 확인)
+                                    2. 모든 사진은 선착순입니다.
+                                    수집이 끝난 카테고리는 제외되며, 가이드/공지사항에 표시됩니다.
+                                    3)라벨러스 홈페이지에서 작업 신청 후 참여해야 합니다.
+                                    외부로 공유된 작업 링크만 통해 이용하시면 정산 대상에서 제외됩니다.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btnBox">
+                        <a href="#none" class="btn_primary_rect btn_aside_modify">수정하기</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //.asideWrap -->
+        </div> 
+        <!-- //#contents -->
+    </div>
+    <!-- //#container -->
+</div>
+<!-- //#wrap -->
+
+<!---------------------- Local Resources ---------------------->
+<!-- Local Script -->
+<script type="text/javascript">
+jQuery.event.add(window,"load",function(){
+    $(document).ready(function(){
+        
+    });
+});
+</script>
+</body>
+</html>

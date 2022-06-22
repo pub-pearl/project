@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* MINDsLab. NBR. 20210803 */
+
+/* common */
+.ipt_txt[type="number"] {padding:0 12px;}
+.ipt_txt[name="temperature"] {width:110px;}
+
+/* aside */
+.aside {right:-336px; width:336px;}
+.aside .tabWrap .tab_cont > ul li .tagBox {height:auto; padding:16px;}
+.aside .tabWrap .tab_cont > ul li .tagBox .tagClass {display:inline-block; width:56px; margin:0; color:#adafc1; font-size:14px; letter-spacing:-0.14px;}
+.aside .tabWrap .tab_cont > ul li .tagBox > .select {width:100%; min-width:calc(100% - 92px);}
+.aside .tabWrap .tab_cont > ul li .tagBox .select_group {display:flex; flex-direction:column; width:82%;}
+.aside .tabWrap .tab_cont > ul li .tagBox .select_group .selectBox {display:flex;}
+.aside .tabWrap .tab_cont > ul li .tagBox .select_group .selectBox .select {flex:1; min-width:auto; max-width:100%; width:auto;}
+.aside .tabWrap .tab_cont > ul li .tagBox .select_group .selectBox + .selectBox {margin:12px 0 0;}

@@ -1,0 +1,33 @@
+<svg id="ico_dataworks_42px" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+    <defs>
+        <style>
+            .cls-3{fill:none;opacity:.998}.cls-4{fill:#03020f}.cls-5,.cls-6{stroke:none}.cls-6{fill:#03020f}
+        </style>
+    </defs>
+    <path id="사각형_2225" data-name="사각형 2225" style="fill:none" d="M0 0h42v42H0z"/>
+    <circle id="타원_101" data-name="타원 101" cx="8.668" cy="8.668" r="8.668" transform="translate(2.664 15.5)" style="fill:#316cbe"/>
+    <g id="그룹_2922" data-name="그룹 2922" transform="translate(12.702 7)">
+        <g id="그룹_2531" data-name="그룹 2531" transform="translate(1.798 1.338)">
+            <g id="패스_2973" data-name="패스 2973" class="cls-3">
+                <path class="cls-5" d="M.9 0h15.214a.9.9 0 0 1 .9.9v15.359a.9.9 0 0 1-.9.9H.9a.9.9 0 0 1-.9-.9V.9A.9.9 0 0 1 .9 0z"/>
+                <path class="cls-6" d="M1.3 1.3v14.562h14.41V1.3H1.3M.895 0h15.22a.9.9 0 0 1 .895.903V16.26a.9.9 0 0 1-.896.903H.895A.9.9 0 0 1 0 16.259V.903A.9.9 0 0 1 .895 0z"/>
+            </g>
+        </g>
+        <rect id="사각형_2834" data-name="사각형 2834" class="cls-4" width="3" height="3" rx="1" transform="translate(17.298)"/>
+        <rect id="사각형_2835" data-name="사각형 2835" class="cls-4" width="3" height="3" rx="1" transform="translate(.298)"/>
+        <rect id="사각형_2836" data-name="사각형 2836" class="cls-4" width="3" height="3" rx="1" transform="translate(17.298 17)"/>
+        <rect id="사각형_2837" data-name="사각형 2837" class="cls-4" width="3" height="3" rx="1" transform="translate(.298 17)"/>
+    </g>
+    <g id="그룹_2925" data-name="그룹 2925" transform="translate(22.202 18.5)">
+        <g id="그룹_2531-2" data-name="그룹 2531" transform="translate(1.302 .377)">
+            <g id="패스_2973-2" data-name="패스 2973" class="cls-3">
+                <path class="cls-5" d="M.684 0h11.629A.664.664 0 0 1 13 .643v10.924a.664.664 0 0 1-.684.643H.684A.664.664 0 0 1 0 11.567V.643A.664.664 0 0 1 .684 0z"/>
+                <path class="cls-6" d="M1.3 1.3v9.61h10.397V1.3H1.3M.684 0h11.629c.377 0 .684.288.684.643v10.924c0 .355-.307.643-.684.643H.684c-.378 0-.684-.288-.684-.643V.643C0 .288.306 0 .684 0z"/>
+            </g>
+        </g>
+        <rect id="사각형_2834-2" data-name="사각형 2834" class="cls-4" width="3" height="3" rx="1" transform="translate(12.798 -1.5)"/>
+        <rect id="사각형_2835-2" data-name="사각형 2835" class="cls-4" width="3" height="3" rx="1" transform="translate(-.202 -1.5)"/>
+        <rect id="사각형_2836-2" data-name="사각형 2836" class="cls-4" width="3" height="3" rx="1" transform="translate(12.798 11.5)"/>
+        <rect id="사각형_2837-2" data-name="사각형 2837" class="cls-4" width="3" height="3" rx="1" transform="translate(-.202 11.5)"/>
+    </g>
+</svg>

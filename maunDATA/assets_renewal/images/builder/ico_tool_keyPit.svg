@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-1{fill:#c9c9c9}
+        </style>
+    </defs>
+    <g id="ico_keypoint_20px" transform="translate(1424 -536)">
+        <path id="사각형_2352" d="M0 0H2V24H0z" class="cls-1" transform="rotate(-45 -61.905 1987.056)"/>
+        <path id="사각형_2353" d="M0 0H2V24H0z" class="cls-1" transform="rotate(45 -1351.096 -1429.056)"/>
+        <circle id="타원_155" cx="3" cy="3" r="3" class="cls-1" transform="translate(-1417 543)"/>
+        <circle id="타원_151" cx="2.5" cy="2.5" r="2.5" class="cls-1" transform="translate(-1424 536)"/>
+        <circle id="타원_152" cx="2.5" cy="2.5" r="2.5" class="cls-1" transform="translate(-1409 536)"/>
+        <circle id="타원_153" cx="2.5" cy="2.5" r="2.5" class="cls-1" transform="translate(-1424 551)"/>
+        <circle id="타원_154" cx="2.5" cy="2.5" r="2.5" class="cls-1" transform="translate(-1409 551)"/>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <g>
+        <path fill="none" d="M0 0H20V20H0z" transform="translate(-503 -169) translate(503 169)"/>
+        <g>
+            <g>
+                <path fill="#fff" stroke="#fff" d="M15.245 68.212a.8.8 0 0 0-1.094 0L4.883 77 1.32 73.62a.8.8 0 0 0-1.094 0 .706.706 0 0 0 0 1.037l4.109 3.9a.8.8 0 0 0 1.094 0l9.815-9.3a.706.706 0 0 0 .001-1.045z" transform="translate(-503 -169) translate(505 106.002) translate(0 67.997) translate(0 -67.997)"/>
+            </g>
+        </g>
+    </g>
+</svg>

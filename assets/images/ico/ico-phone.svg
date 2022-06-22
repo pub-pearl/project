@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <path data-name="사각형 116" style="fill:none" d="M0 0h20v20H0z"/>
+    <path data-name="패스 34" d="M15.6 7.2a.4.4 0 0 0-.4.4v4.8a.4.4 0 0 0 .4.4h1.2a1.6 1.6 0 0 0 1.6-1.6V8.8a1.6 1.6 0 0 0-1.6-1.6zm1.2 6.4h-1.2a1.2 1.2 0 0 1-1.2-1.2V7.6a1.2 1.2 0 0 1 1.2-1.2h1.2a2.4 2.4 0 0 1 2.4 2.4v2.4a2.4 2.4 0 0 1-2.4 2.4zM2.4 7.2A1.6 1.6 0 0 0 .8 8.8v2.4a1.6 1.6 0 0 0 1.6 1.6h1.2a.4.4 0 0 0 .4-.4V7.6a.4.4 0 0 0-.4-.4zm1.2 6.4H2.4A2.4 2.4 0 0 1 0 11.2V8.8a2.4 2.4 0 0 1 2.4-2.4h1.2a1.2 1.2 0 0 1 1.2 1.2v4.8a1.2 1.2 0 0 1-1.2 1.2z" style="fill:#8d8d8d;fill-rule:evenodd" transform="translate(.4 .4)"/>
+    <path data-name="패스 35" d="M15.6 7.2a.4.4 0 0 1-.4-.4V5.6A4.805 4.805 0 0 0 10.4.8H8.8A4.805 4.805 0 0 0 4 5.6v1.2a.4.4 0 0 1-.8 0V5.6A5.606 5.606 0 0 1 8.8 0h1.6A5.606 5.606 0 0 1 16 5.6v1.2a.4.4 0 0 1-.4.4z" style="fill:#8d8d8d;fill-rule:evenodd" transform="translate(.4 .4)"/>
+    <g data-name="그룹 21">
+        <path data-name="패스 36" d="M8.8 18.4h2.4v-1.6H8.8zm2.8.8H8.4a.4.4 0 0 1-.4-.4v-2.4a.4.4 0 0 1 .4-.4h3.2a.4.4 0 0 1 .4.4v2.4a.4.4 0 0 1-.4.4z" style="fill:#8d8d8d;fill-rule:evenodd" transform="translate(.4 .4)"/>
+        <path data-name="패스 37" d="M11.6 18a.4.4 0 0 1-.044-.8l1.863-.2a2 2 0 0 0 1.781-1.99V13.2a.4.4 0 0 1 .8 0v1.81a2.8 2.8 0 0 1-2.494 2.783l-1.862.2z" style="fill:#8d8d8d;fill-rule:evenodd" transform="translate(.4 .4)"/>
+    </g>
+</svg>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mindslab 퍼블 목록</title>
+<link rel="stylesheet" type="text/css" href="guide/css/guide.css"/>
+<style type="text/css">
+    img {width:auto !important}
+</style>
+<script type="text/javascript" src="guide/js/dtree.js"></script>
+
+<script src="guide/js/jquery.min.js"></script>
+<style>
+.dtree a { color:#222;}
+</style>
+</head>
+<body style="background:#f9f9f9;">
+
+<div id="content_guide_list">
+
+    <h1 style="height:50px;background:#26d1c1;line-height:50px;">퍼블리싱 화면목록</h1>
+
+	<h2>파일 목록 <span id="html-length"></span></h2>
+
+	<h2 style="margin-top:20px">프로세스</h2>
+	<ol>
+		<li><span class="txt_ing">진행중</span></li> <!-- 코딩진행중 -->
+		<li><span class="txt_confirm">코딩완료</span></li> <!-- 코딩완료 -->
+		<li><span class="txt_modify">수정</span></li> <!-- 수정 -->
+		<li><span class="txt_end">화면추가</span></li> <!-- 추가 -->
+	</ol>
+
+	<div class="dtree">
+
+	<!-- Front -->
+	<div class="area_btn">
+		<a href="javascript: d.openAll();"><img src="guide/img/btn_expand.gif" alt="Expand All" /></a>
+		<a href="javascript: d.closeAll();"><img src="guide/img/btn_collapse.gif" alt="Collapse All" /></a>
+	</div>
+
+	<script type="text/javascript">
+	//<![CDATA[
+
+	d = new dTree('d');
+
+	d.add(0,-1,'M-Studio');
+
+
+	d.add(99,0,'공통');
+
+		d.add(99.02,99,'Alert 팝업','m-studio/html/Minds-CM-002.html','코딩완료','mainFrame');
+		d.add(99.04,99,'기본 로딩','m-studio/html/Minds-CM-004.html','코딩완료','mainFrame');
+		d.add(99.01,99,'편집화면 로딩','m-studio/html/Minds-CM-001.html','코딩완료','mainFrame');
+		d.add(99.03,99,'목록형 로딩','m-studio/html/Minds-CM-003.html','코딩완료','mainFrame');
+
+
+	d.add(1,0,'영상편집화면(2차)');
+
+		d.add(1.01,1,'편집','m-studio/html/Minds-MS-001.html','코딩완료','mainFrame');
+		d.add(1.02,1,'없음','m-studio/html/Minds-MS-002.html','코딩완료','mainFrame');
+		d.add(1.03,1,'저장여부팝업','m-studio/html/Minds-MS-003.html','코딩완료','mainFrame');
+		d.add(1.04,1,'아바타편집','m-studio/html/Minds-MS-004.html','코딩완료','mainFrame');
+
+		d.add(1.05,1,'영상만들기팝업(출력)','m-studio/html/Minds-MS-005.html','코딩완료','mainFrame');
+		d.add(1.06,1,'영상만들기팝업(수정)','m-studio/html/Minds-MS-006.html','코딩완료','mainFrame');
+
+
+
+	d.add(2,0,'영상 목록 화면(2차)');
+
+		d.add(2.01,2,'영상 목록(더보기)','m-studio/html/Minds-MS-007.html','수정','mainFrame');
+		d.add(2.03,2,'영상미리보기팝업','m-studio/html/Minds-MS-008.html','코딩완료','mainFrame');
+		d.add(2.04,2,'영상 더보기(출력)','m-studio/html/Minds-MS-009.html','코딩완료','mainFrame');
+		d.add(2.05,2,'영상 더보기(수정)','m-studio/html/Minds-MS-010.html','코딩완료','mainFrame');
+		d.add(2.07,2,'영상삭제 팝업','m-studio/html/Minds-MS-011.html','코딩완료','mainFrame');
+		d.add(2.08,2,'파일 목록(편집툴)','m-studio/html/Minds-MS-012.html','수정','mainFrame');
+		d.add(2.09,2,'제목생성팝업','m-studio/html/Minds-MS-013.html','코딩완료','mainFrame');
+		d.add(2.10,2,'스크립트팝업','m-studio/html/Minds-MS-014.html','코딩완료','mainFrame');
+
+
+
+	d.add(3,0,'3차 개발 ');
+
+		d.add(3.01,3,'카드형(파일목록)','m-studio/html/Minds-MS-015.html','코딩진행중','mainFrame');
+		d.add(3.02,3,'카드형(영상목록)','m-studio/html/Minds-MS-016.html','코딩진행중','mainFrame');
+
+
+		document.write(d);
+		d.openAll();
+
+	//]]>
+
+
+	</script>
+	<!-- //Front -->
+
+	<!-- Front -->
+	<div class="area_btn">
+		<a href="javascript: e.openAll();"><img src="guide/img/btn_expand.gif" alt="Expand All" /></a>
+		<a href="javascript: e.closeAll();"><img src="guide/img/btn_collapse.gif" alt="Collapse All" /></a>
+	</div>
+
+	<script type="text/javascript">
+	//<![CDATA[
+
+	e = new dTree('e');
+
+	e.add(0,-1,'maum.ai');
+
+
+	// e.add(99,0,'공통');
+
+	// 	e.add(99.02,99,'Minds-CM-002 : Alert 팝업','m-studio/html/Minds-CM-002.html','코딩완료','mainFrame');
+	// 	e.add(99.04,99,'Minds-CM-004 : 기본 로딩','m-studio/html/Minds-CM-004.html','코딩완료','mainFrame');
+	// 	e.add(99.01,99,'Minds-CM-001 : 편집화면 로딩','m-studio/html/Minds-CM-001.html','코딩완료','mainFrame');
+	// 	e.add(99.03,99,'Minds-CM-003 : 목록형 로딩','m-studio/html/Minds-CM-003.html','코딩완료','mainFrame');
+
+
+	e.add(1,0,'제작의뢰');
+
+		e.add(1.01,1,'국문','event/kr/aiHumanEvent.html','코딩완료','mainFrame');
+		e.add(1.02,1,'영문','event/en/aiHumanEvent.html','코딩완료','mainFrame');
+
+
+	e.add(2,0,'회사소개');
+
+		e.add(2.01,2,'국문','company/kr/index.html','코딩완료','mainFrame');
+		e.add(2.02,2,'영문','company/en/index.html','코딩완료','mainFrame');
+
+	e.add(3,0,'공지사항');
+
+		e.add(3.01,3,'목록','news/html/news_notice.html','코딩완료','mainFrame');
+		e.add(3.02,3,'상세보기','news/html/news_detail.html','코딩완료','mainFrame');
+		e.add(3.03,3,'검색결과없음','news/html/news_no-data.html','코딩완료','mainFrame');
+		e.add(3.04,3,'보도자료','news/html/news_press.html','코딩완료','mainFrame');
+		
+
+		document.write(e);
+		e.openAll();
+
+	//]]>
+
+
+	</script>
+	<!-- //Front -->
+
+
+	<!-- Front -->
+	<div class="area_btn">
+		<a href="javascript: c.openAll();"><img src="guide/img/btn_expand.gif" alt="Expand All" /></a>
+		<a href="javascript: c.closeAll();"><img src="guide/img/btn_collapse.gif" alt="Collapse All" /></a>
+	</div>
+
+	<script type="text/javascript">
+	//<![CDATA[
+
+	c = new dTree('c');
+
+	c.add(0,-1,'maumDATA');
+
+
+	c.add(1,0,'Builder');
+
+		c.add(1.01,1,'로그인','maunDATA/html_renewal/ko/landing/builder/login.html','코딩완료','mainFrame');
+		c.add(1.02,1,'회원가입-이용약관','maunDATA/html_renewal/ko/landing/builder/join_step02.html','코딩완료','mainFrame');
+		c.add(1.03,1,'회원가입-본인인증','maunDATA/html_renewal/ko/landing/builder/join_step03.html','코딩완료','mainFrame');
+		c.add(1.04,1,'회원가입-회원정보 입력','maunDATA/html_renewal/ko/landing/builder/join_step04.html','코딩완료','mainFrame');
+		c.add(1.05,1,'회원가입-완료','maunDATA/html_renewal/ko/landing/builder/join_step05.html','코딩완료','mainFrame');
+		c.add(1.06,1,'아이디 찾기','maunDATA/html_renewal/ko/landing/builder/find_id.html','코딩완료','mainFrame');
+		c.add(1.07,1,'비밀번호 변경','maunDATA/html_renewal/ko/landing/builder/reset_pw.html','코딩완료','mainFrame');
+
+
+	// c.add(2,0,'회사소개');
+
+	// 	c.add(2.01,2,'국문','company/kr/index.html','코딩완료','mainFrame');
+	// 	c.add(2.02,2,'영문','company/en/index.html','코딩완료','mainFrame');
+
+		document.write(c);
+		c.openAll();
+
+	//]]>
+
+
+	</script>
+	<!-- //Front -->
+
+
+
+	<script>
+		let linkA = $('a').filter(function () {
+			var a = /html\//ig;
+			return a.test($(this).attr('href'));
+		})
+
+		let htmlSize = linkA.length;
+
+		$('#html-length').html(': ' + htmlSize + ' Files');
+
+		linkA.click(function (e) {
+			if (e.ctrlKey) {
+				window.open(this.href, '_blank')
+			} else {
+				parent.window.moveUrl(this.href)
+			}
+			return false;
+		})
+	//]]>
+	</script>
+
+	</div>
+	<div style="height:12rem"></div>
+
+</div>
+
+</body>
+</html>

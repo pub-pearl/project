@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-2{fill:#aaaeb2}
+        </style>
+    </defs>
+    <g id="ico_save_nextfile_20px" transform="translate(-385 -1732)">
+        <path id="사각형_2199" fill="none" d="M0 0H20V20H0z" transform="translate(385 1732)"/>
+        <g id="그룹_2662" transform="translate(234 471.076)">
+            <path id="패스_2990" d="M168.478 1264.67h-8.687a1.253 1.253 0 0 1-1.044-.56l-.571-.859a.732.732 0 0 0-.609-.327h-4.834a.732.732 0 0 0-.732.733v2.874h17.351v-.987a.873.873 0 0 0-.873-.873z" class="cls-2"/>
+            <path id="패스_2991" d="M152 1316.084a.873.873 0 0 0 .873.873h3.477a4.877 4.877 0 0 1-.092-.94 4.821 4.821 0 1 1 9.551.94h2.668a.873.873 0 0 0 .873-.873v-8H152v8z" class="cls-2" transform="translate(0 -40.803)"/>
+        </g>
+        <g id="그룹_2767" transform="translate(360.142 1709.851)">
+            <ellipse id="타원_188" cx="4.074" cy="4.073" class="cls-2" rx="4.074" ry="4.073" transform="translate(30.842 32.342)"/>
+            <path id="패스_3078" fill="#3340a8" d="M40.77 38.058a.347.347 0 0 0-.473.082l-1.9 2.631-1.342-1.061a.348.348 0 0 0-.478.045.319.319 0 0 0 .047.461L38.25 41.5a.349.349 0 0 0 .215.074h.047a.344.344 0 0 0 .232-.137l2.111-2.922a.32.32 0 0 0-.085-.457z" transform="translate(-3.571 -3.573)"/>
+        </g>
+    </g>
+</svg>

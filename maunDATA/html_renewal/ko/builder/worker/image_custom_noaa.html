@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Cache reset -->
+<meta http-equiv="Expires" content="Mon, 06 Jan 2016 00:00:01 GMT">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<!-- Open Graph Tag -->
+<meta property="og:title"         content="마음데이터 - AI 데이터 가공의 시작">
+<meta property="og:type"          content="website"> <!-- 웹 페이지 타입 -->
+<!-- <meta property="og:url"           content=""> -->
+<meta property="og:image"         content="">
+<meta property="og:description"   content="비즈니스 맞춤형 AI 데이터를 제공합니다.">
+
+<!-- icon_favicon -->
+<!-- <link rel="apple-touch-icon-precomposed" href="">
+<link rel="shortcut icon" type="image/x-icon" href=""> -->
+
+<!---------------------- General Resources ---------------------->
+<!-- General CSS -->
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/builder.css">
+
+<!-- General Script -->
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-migrate-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/builder_common.js"></script>
+
+<title>Image Worker || Builder</title>
+</head>
+<body>
+<!-- #wrap -->
+<div id="wrap">
+    <!-- #header -->
+    <div id="header">
+        <div class="sta">
+            <div class="btnBox">
+                <button type="button" class="btn_move_list">목록으로 나가기</button>
+                <span class="line"></span>
+                <!-- [D] .btn_history에 addClass('reject')하면 빨간색 뱃지 보여짐 -->
+                <button type="button" class="btn_history">히스토리</button>
+
+                <div class="historyBox">
+                    <ul class="history_list">
+                        <li><a href="#none" class="active">image_sample_001.jpg</a></li>
+                        <li><a href="#none">image_sample_002.jpg</a></li>
+                        <!-- [D] li에 addClass('rejectFile')하면 빨간색 뱃지 보여짐 -->
+                        <li class="rejectFile"><a href="#none">image_sample_003.jpg</a></li>
+                        <li><a href="#none">image_sample_004.jpg</a></li>
+                        <li><a href="#none">image_sample_005.jpg</a></li>
+                        <li><a href="#none">image_sample_006.jpg</a></li>
+                        <li><a href="#none">image_sample_007.jpg</a></li>
+                        <li><a href="#none">image_sample_008.jpg</a></li>
+                        <li><a href="#none">image_sample_009.jpg</a></li>
+                        <li><a href="#none">image_sample_010.jpg</a></li>
+                        <li><a href="#none">image_sample_010.jpg</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="titBox">
+                <span class="pjt_name">Annotation Sample Project</span>
+
+                <div class="guideViewer">
+                    <em class="fas fa-info-circle"><span class="hide">퀵가이드 보기</span></em>                        
+                    <div class="guideBox">
+                        <dl class="guideDetail">
+                            <dt>Quick 작업자 가이드</dt>
+                            <dd>
+                                <ul class="decimal">
+                                    <li>실외/실내 및 장소선택</li>
+                                    <li>방해물 유형 선택</li>
+                                    <li>더블 클릭하여 영역박스 생성</li>
+                                    <li>방해물 크기에 맞게 영역지정</li>
+                                </ul>
+                                <ul class="disc">
+                                    <li>한 이미지에 방해물의 최대 개수는 4개</li>
+                                    <li>작업 중간중간 임시저장 버튼을 눌러 작업한 내용을 저장.</li>
+                                </ul>
+                            </dd>
+                        </dl>       
+                    </div>
+                </div>
+            </div>
+            <div class="btnBox">
+                <button type="button" class="btn_temporary_save btn_toast_open" data-toast-name="temporarySave">임시저장</button>
+                <span class="line"></span>
+                <button type="button" class="btn_unable_work btn_lyr_open" data-lyr-name="unableWork">작업불가</button>  
+                <!-- [D] '가공완료', '수정하기' 버튼은 최초작업 및 재작업 여부에 따라 addClass('on')하면 보여짐 -->
+                <button type="button" class="btn_work_complete on">가공완료</button>
+                <button type="button" class="btn_edit_complete">수정하기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //#header -->
+
+    <!-- #container -->
+    <div id="container">
+        <!-- .toolMenuBar -->
+        <div class="toolMenuBar">
+            <ul class="menu_list">
+                <li>
+                    <button type="button" class="toggle btn_bounding_box" title="Bounding Box">
+                        <span class="hide">Bounding Box</span>
+                    </button>
+                    <div class="classBox">
+                        <div class="tit">Class</div>
+                        <ul class="class_list">
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class" checked>
+                                <label for="">자동차자동차</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">건물건물</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">오토바이오토바이</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">사람</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">강아지강아지</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">자전거</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">전봇대</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">건물</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">가스레인지입니다</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">그릇장</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">김치냉장고</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">돌침대</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">박스</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">밥솥</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">서랍장</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="boundingBox_class">
+                                <label for="">서랍장</label>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="toggle btn_segmentation" title="Segmentation">
+                        <span class="hide">Segmentation</span>
+                    </button>
+                    <div class="classBox">
+                        <div class="tit">Class</div>
+                        <ul class="class_list">
+                            <li>
+                                <input type="radio" id="" name="segmentation_class" checked>
+                                <label for="">자동차</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">건물</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">오토바이</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">사람</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">강아지</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">자전거</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">전봇대</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">건물</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">가스레인지입니다</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">그릇장</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">김치냉장고</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">돌침대</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">박스</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">밥솥</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">서랍장</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="segmentation_class">
+                                <label for="">서랍장</label>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="toggle btn_keyPoint" title="Keypoint">
+                        <span class="hide">Keypoint</span>
+                    </button>
+                    <div class="classBox">
+                        <div class="tit">Class</div>
+                        <ul class="class_list">
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class" checked>
+                                <label for="">dfgdsfg</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">건dfgsdf물</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">오토바이</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">사람</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">강아지</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">자전거</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">전봇대</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">건물</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">가스레인지입니다</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">그릇장</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">김치냉장고</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">돌침대</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">박스</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">밥솥</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="" name="Keypoint_class">
+                                <label for="">서랍장</label>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="toggle btn_move_object" title="Move Object">
+                        <span class="hide">Move Object</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="button btn_zoomIn" title="Zoom in">
+                        <span class="hide">Zoom in</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="button btn_zoomOut" title="Zoom out">
+                        <span class="hide">Zoom out</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="button btn_reset" title="Reset">
+                        <span class="hide">Reset</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="button btn_undo" title="Undo">
+                        <span class="hide">Undo</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="button btn_redo" title="Redo">
+                        <span class="hide">Redo</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!-- //#toolMenuBar -->
+
+        <!-- #contents -->
+        <div id="contents" class="edit_image">
+            <!-- .content -->
+            <div class="content">
+                <!-- .work_space -->
+                <div class="work_space">
+                    <!-- .imgArea -->
+                    <!-- [D] .imgArea에 작업이미지 들어가야함 -->
+                    <div class="imgArea"></div>
+                    <!-- //.imgArea -->
+                </div>
+                <!-- //.work_space --> 
+            </div>
+            <!-- //.content -->
+
+            <!-- .aside -->
+            <div class="aside on">
+                <div class="currentFile">
+                    파일명: <span class="fileName">image_sample_001.jpg</span>
+                    <button type="button" class="btn_clipboard" title="복사 하기">
+                        <span class="hide">복사 하기</span>
+                    </button>
+                </div>
+                <div class="guideFile">
+                    <span class="fileName">BoundingBox_작업가이드.pdf</span>
+                    <button type="button" class="btn_guide_download" title="가이드 다운로드">
+                        <span class="hide">가이드 다운로드</span>
+                    </button>
+                </div>
+                <div class="comments">
+                    <div class="tit">Comments</div>
+                    <!-- [D] 코멘트가 없는경우 닫힘 상태, 있는경우 .cmt_box에 addClass('open')해주면 열림 상태가 됨 -->
+                    <div class="cmt_box">
+                        <textarea class="textarea" disabled>코멘트가 없습니다.</textarea>
+                    </div>
+                </div>
+                <div class="tabWrap">
+                    <div class="tab_btn">
+                        <button type="button" class="btn_tag active" title="태그 리스트">
+                            <span class="hide">태그 리스트</span>
+                        </button>
+                        <button type="button" class="btn_reject" title="반려 태그 리스트">
+                            <span class="hide">반려 태그 리스트</span>
+                        </button>
+                    </div>
+                    <div class="tab_cont">
+                        <ul class="tag_list">
+                            <li>
+                                <div class="tagBox">
+                                    <span class="tagClass">Class</span>
+
+                                    <select class="select">
+                                        <option value="">조도 선택</option>
+                                        <option value="">주간</option>
+                                        <option value="">야간</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tagBox">
+                                    <span class="tagClass">Class</span>
+
+                                    <select class="select">
+                                        <option value="">기상 정보 선택</option>
+                                        <option value="">맑은 날</option>
+                                        <option value="">흐린 날</option>
+                                        <option value="">비오는 날</option>
+                                        <option value="">눈오는 날</option>
+                                        <option value="">안개 발생</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="reject">
+                                <div class="tagBox">
+                                    <span class="tagPoint"></span>
+                                    <span class="tagNum">1.</span>
+                                    <div class="select_group">
+                                        <div class="selectBox">
+                                            <select class="select">
+                                                <option value="">차량 선택</option>
+                                                <option value="">1톤 화물</option>
+                                                <option value="">3.5톤~5톤 화물</option>
+                                                <option value="">덤프트럭</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">불법 개조 선택</option>
+                                                <option value="">길이 연장</option>
+                                                <option value="">폭 연장</option>
+                                                <option value="">판스프링 부착</option>
+                                                <option value="">개조 무</option>
+                                            </select>
+                                        </div>
+                                        <div class="selectBox">
+                                            <select class="select">
+                                                <option value="">덮개 불량 선택</option>
+                                                <option value="">덮개 설치</option>
+                                                <option value="">덮개 미설치</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">화물 선택</option>
+                                                <option value="">돌</option>
+                                                <option value="">플라스틱</option>
+                                                <option value="">철</option>
+                                                <option value="">무</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">좌우 커브 선택</option>
+                                                <option value="">좌</option>
+                                                <option value="">우</option>
+                                                <option value="">없음</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn_bounding_box active" title="Bounding Box">
+                                        <span class="hide">Bounding Box</span>
+                                    </button>
+                                    <button type="button" class="btn_segmentation" title="Segmentation">
+                                        <span class="hide">Segmentation</span>
+                                    </button>
+                                </div>
+                                
+                                <div class="reject_txt">
+                                    <pre>
+                                        1. 자동차 태그를 좀 더 자동차에 맞게 줄여주세요.
+                                        1. 자동차 태그를 좀 더 자동차에 맞게 줄여주세요.
+                                    </pre>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tagBox">
+                                    <span class="tagPoint"></span>
+                                    <span class="tagNum">2.</span>
+                                    <div class="select_group">
+                                        <div class="selectBox">
+                                            <select class="select">
+                                                <option value="">차량 선택</option>
+                                                <option value="">1톤 화물</option>
+                                                <option value="">3.5톤~5톤 화물</option>
+                                                <option value="">덤프트럭</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">불법 개조 선택</option>
+                                                <option value="">길이 연장</option>
+                                                <option value="">폭 연장</option>
+                                                <option value="">판스프링 부착</option>
+                                                <option value="">개조 무</option>
+                                            </select>
+                                        </div>
+                                        <div class="selectBox">
+                                            <select class="select">
+                                                <option value="">덮개 불량 선택</option>
+                                                <option value="">덮개 설치</option>
+                                                <option value="">덮개 미설치</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">화물 선택</option>
+                                                <option value="">돌</option>
+                                                <option value="">플라스틱</option>
+                                                <option value="">철</option>
+                                                <option value="">무</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">좌우 커브 선택</option>
+                                                <option value="">좌</option>
+                                                <option value="">우</option>
+                                                <option value="">없음</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn_bounding_box" title="Bounding Box">
+                                        <span class="hide">Bounding Box</span>
+                                    </button>
+                                    <button type="button" class="btn_segmentation" title="Segmentation">
+                                        <span class="hide">Segmentation</span>
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tagBox">
+                                    <span class="tagPoint"></span>
+                                    <span class="tagNum">3.</span>
+                                    <div class="select_group">
+                                        <div class="selectBox">
+                                            <select class="select">
+                                                <option value="">차량 선택</option>
+                                                <option value="">1톤 화물</option>
+                                                <option value="">3.5톤~5톤 화물</option>
+                                                <option value="">덤프트럭</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">불법 개조 선택</option>
+                                                <option value="">길이 연장</option>
+                                                <option value="">폭 연장</option>
+                                                <option value="">판스프링 부착</option>
+                                                <option value="">개조 무</option>
+                                            </select>
+                                        </div>
+                                        <div class="selectBox">
+                                            <select class="select">
+                                                <option value="">덮개 불량 선택</option>
+                                                <option value="">덮개 설치</option>
+                                                <option value="">덮개 미설치</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">화물 선택</option>
+                                                <option value="">돌</option>
+                                                <option value="">플라스틱</option>
+                                                <option value="">철</option>
+                                                <option value="">무</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">좌우 커브 선택</option>
+                                                <option value="">좌</option>
+                                                <option value="">우</option>
+                                                <option value="">없음</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn_bounding_box active" title="Bounding Box">
+                                        <span class="hide">Bounding Box</span>
+                                    </button>
+                                    <button type="button" class="btn_segmentation" title="Segmentation">
+                                        <span class="hide">Segmentation</span>
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tagBox">
+                                    <span class="tagPoint"></span>
+                                    <span class="tagNum">3.</span>
+                                    <div class="select_group">
+                                        <div class="selectBox">
+                                            <select class="select">
+                                                <option value="">차량 선택</option>
+                                                <option value="">1톤 화물</option>
+                                                <option value="">3.5톤~5톤 화물</option>
+                                                <option value="">덤프트럭</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">불법 개조 선택</option>
+                                                <option value="">길이 연장</option>
+                                                <option value="">폭 연장</option>
+                                                <option value="">판스프링 부착</option>
+                                                <option value="">개조 무</option>
+                                            </select>
+                                        </div>
+                                        <div class="selectBox">
+                                            <select class="select">
+                                                <option value="">덮개 불량 선택</option>
+                                                <option value="">덮개 설치</option>
+                                                <option value="">덮개 미설치</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">화물 선택</option>
+                                                <option value="">돌</option>
+                                                <option value="">플라스틱</option>
+                                                <option value="">철</option>
+                                                <option value="">무</option>
+                                            </select>
+                                            <select class="select">
+                                                <option value="">좌우 커브 선택</option>
+                                                <option value="">좌</option>
+                                                <option value="">우</option>
+                                                <option value="">없음</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn_bounding_box active" title="Bounding Box">
+                                        <span class="hide">Bounding Box</span>
+                                    </button>
+                                    <button type="button" class="btn_segmentation" title="Segmentation">
+                                        <span class="hide">Segmentation</span>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- [D] .tag_list에서 반려목록(li.reject)만 clone해서 그려옴 -->
+                        <ul class="reject_list"></ul>
+                    </div>
+                </div>
+                <div class="deleteBox">
+                    <button type="button" class="btn_select_delete" title="선택삭제"><span class="hide">선택 삭제</span></button>
+                    <button type="button" class="btn_all_delete">전체삭제</button>
+                </div>
+                <button type="button" class="btn_expand" title="접기/열기">
+                    <span class="hide">접기/열기</span>
+                </button>
+            </div>
+            <!-- //.aside -->
+        </div> 
+        <!-- //#contents -->
+    </div>
+    <!-- //#container -->
+</div>
+<!-- //#wrap -->
+
+<!---------------------- Local Resources ---------------------->
+<!-- Local CSS -->
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/noaa.css">
+
+<!-- Local Script Library -->
+<script type="text/javascript" src="../../../../assets_renewal/js/builder_image.js"></script>
+
+<!-- Local Script -->
+<script type="text/javascript">
+jQuery.event.add(window,"load",function(){
+    $(document).ready(function(){
+        // classBox radio id와 for 값 동일한 값으로 부여하기
+        $('.class_list li input[type="radio"]').each(function(i){
+            var indexNum = i + 1;
+            $(this).attr('id', 'radio' + indexNum);
+            $(this).siblings('label').attr('for', 'radio' + indexNum);
+        });
+    });
+});
+</script>
+</body>
+</html>

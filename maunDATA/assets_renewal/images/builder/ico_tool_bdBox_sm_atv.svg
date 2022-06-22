@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-3{stroke:#3340a8;stroke-width:1.3px;fill:#262d3c;stroke-miterlimit:10}
+        </style>
+    </defs>
+    <g id="ico_box_active_20px" transform="translate(-1811 -302)">
+        <path id="사각형_2470" fill="none" d="M0 0H20V20H0z" transform="translate(1811 302)"/>
+        <g id="ico_box_20px" transform="translate(1731.087 191.784)">
+            <path id="패스_3050" fill="none" stroke="#3340a8" stroke-width="1.3px" d="M.638 0H11.92a.638.638 0 0 1 .638.638v11.388a.638.638 0 0 1-.638.638H.638A.638.638 0 0 1 0 12.026V.638A.638.638 0 0 1 .638 0z" transform="translate(83.499 113.761)"/>
+            <path id="선_1" d="M0 4.007L3.794 0" class="cls-3" transform="translate(83.526 113.882)"/>
+            <path id="선_2" d="M0 8.093L7.801 0" class="cls-3" transform="translate(83.393 113.855)"/>
+            <path id="선_3" d="M0 12.183L11.52 0" class="cls-3" transform="translate(83.526 113.696)"/>
+            <path id="선_4" d="M0 4.818L4.6 0" class="cls-3" transform="translate(91.519 121.633)"/>
+            <path id="선_5" d="M0 9.659L8.73 0" class="cls-3" transform="translate(87.43 116.805)"/>
+        </g>
+    </g>
+</svg>

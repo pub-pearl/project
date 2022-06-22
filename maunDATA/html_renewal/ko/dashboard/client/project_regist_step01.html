@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Cache reset -->
+<meta http-equiv="Expires" content="Mon, 06 Jan 2016 00:00:01 GMT">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<!-- Open Graph Tag -->
+<meta property="og:title"         content="마음데이터 - AI 데이터 가공의 시작">
+<meta property="og:type"          content="website"> <!-- 웹 페이지 타입 -->
+<!-- <meta property="og:url"           content=""> -->
+<meta property="og:image"         content="">
+<meta property="og:description"   content="비즈니스 맞춤형 AI 데이터를 제공합니다.">
+
+<!-- icon_favicon -->
+<!-- <link rel="apple-touch-icon-precomposed" href="">
+<link rel="shortcut icon" type="image/x-icon" href=""> -->
+
+<!---------------------- General Resources ---------------------->
+<!-- General CSS -->
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/dashboard.css">
+
+<!-- General Script -->
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-migrate-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/dashboard.js"></script>
+
+<title>프로젝트 관리(Client) - step01 || Dashboard</title>
+</head>
+<body>
+<!-- #wrap -->
+<div id="wrap">
+    <!-- #container -->
+    <div id="container">
+        <!-- #snb -->
+        <div id="snb">
+            <div class="topBox">
+                <h1 class="logo">
+                    <a href="workspace_main.html">
+                        <img src="../../../../assets_renewal/images/logo_maumData_m.svg" alt="maum DATA logo">
+                    </a>
+                </h1>
+                <button type="button" class="btn_ham" title="전체메뉴">
+                    <span>전체 메뉴</span>
+                </button>
+            </div>
+            <div class="account"><span>H&M(=헤네스앤모리츠)슈퍼</span></div>
+            <ul class="nav">
+                <li>
+                    <a href="workspace_main.html"><span>워크스페이스 관리</span></a>
+                </li>
+                <li class="active">
+                    <a href="project_main.html"><span>프로젝트 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업현황 통계</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업자 관리</span></a>
+                </li>
+                <li>
+                    <a href="inquiry_main.html"><span>문의 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>계약서 관리</span></a>
+                </li>
+                <li>
+                    <a href="delete_project_list.html"><span>삭제 목록 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>로그아웃</span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- //#snb -->
+
+        <!-- #contents -->
+        <div id="contents">
+            <!-- .content -->
+            <div class="content project_regist step01">
+                <div class="titArea">
+                    <h3>프로젝트 등록</h3>
+                </div>
+
+                <div class="contArea">
+                    <div class="step_wrap">
+                        <!-- [D] .step_list li에 addClass('active')하면 활성화됨 -->
+                        <ul class="step_list">
+                            <li class="active">Step1. 프로젝트 정보</li>
+                            <li>Step2. 태그 설정</li>
+                            <li>Step3. 데이터 업로드</li>
+                            <li>Step4. 가이드 설정</li>
+                        </ul>
+                    </div>
+
+                    <div class="contBox define_group">
+                        <dl>
+                            <dt>워크스페이스 선택</dt>
+                            <dd>
+                                <select class="select">
+                                    <option value="">워크스페이스 선택</option>
+                                    <option value="">워크스페이스1</option>
+                                    <option value="">워크스페이스2</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>프로젝트 명</dt>
+                            <dd>
+                                <input type="text" class="ipt_txt ipt_project" placeholder="프로젝트 명을 입력하세요.">
+                                <div class="txtCount"><span>0</span>/30</div>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <!-- [D] 건별 지급 포인트 영역이 필요 없을 시 하단 .contBox 코드 제거하면됨 -->
+                    <div class="contBox define_group">
+                        <dl>
+                            <dt>건별 지급 포인트</dt>
+                            <dd>
+                                <input type="text" class="ipt_txt price" placeholder="작업자 포인트">
+                                <input type="text" class="ipt_txt price" placeholder="검수자 포인트">
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="contBox edit_type_slt">
+                        <dl>
+                            <dt>데이터 유형 및 가공 유형 선택</dt>
+                            <dd>
+                                <ul class="tapBtn">
+                                    <li class="active">이미지 Image</li>
+                                    <li>텍스트 Text</li>
+                                    <li>오디오 Audio</li>
+                                    <li>비디오 Video</li>
+                                </ul>
+
+                                <div class="tapCont">
+                                    <dl>
+                                        <dt>
+                                            단일 이미지 파일 가공
+                                            <div class="help_msg">
+                                                <div class="viewBox">
+                                                    <div class="imgBox">
+                                                        <img src="../../../../assets_renewal/images/dashboard/img_imageEdit_sample.png" alt="image edit sample">
+                                                    </div>
+
+                                                    <dl class="txtBox">
+                                                        <dt>단일 이미지 파일가공</dt>
+                                                        <dd>각 이미지 파일별로 작업이 생성됩니다.</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            <ul>
+                                                <!-- [D] input[type="radio"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                                <!-- [D] 같은 선택범위의 input[type="radio"]은 name을 동일하게 줘야함 -->
+                                                <li> 
+                                                    <div class="radioBox">
+                                                        <input type="radio" name="data_type01" id="" checked>
+                                                        <label for="">바운딩 박스 Bounding Box</label>
+                                                    </div>                                                    
+                                                </li>
+                                                <li> 
+                                                    <div class="radioBox">
+                                                        <input type="radio" name="data_type01" id="">
+                                                        <label for="">이미지 세그멘테이션 Image Segmentation</label>
+                                                    </div>                                                   
+                                                </li>
+                                                <li> 
+                                                    <div class="radioBox">
+                                                        <input type="radio" name="data_type01" id="">
+                                                        <label for="">키포인트 Keypoint Detection</label>
+                                                    </div>                                                    
+                                                </li>
+                                                <li> 
+                                                    <div class="radioBox">
+                                                        <input type="radio" name="data_type01" id="">
+                                                        <label for="">QA Augmentation</label>
+                                                    </div>                                                   
+                                                </li>
+                                                <li> 
+                                                    <div class="radioBox multiple">
+                                                        <input type="radio" name="data_type01" id="">
+                                                        <label for="">복수 가공 유형</label>                                               
+                                                    </div>
+
+                                                    <div class="chkBox">
+                                                        <!-- [D] input[type="checkbox"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                                        <input type="checkbox" id="chk01" name="multipleChk">
+                                                        <label for="chk01">바운딩 박스 Bounding Box</label>
+                                                        <input type="checkbox" id="chk02" name="multipleChk">
+                                                        <label for="chk02">이미지 세그멘테이션Image Segmentation</label>
+                                                        <input type="checkbox" id="chk03" name="multipleChk">
+                                                        <label for="chk03">키포인트 Keypoint Detection</label>
+                                                    </div>
+                                                </li>    
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                            이미지 파일 셋 가공
+                                            <div class="help_msg">
+                                                <div class="viewBox">
+                                                    <div class="imgBox">
+                                                        <img src="../../../../assets_renewal/images/dashboard/img_frameEdit_sample.png" alt="image edit sample">
+                                                    </div>
+
+                                                    <dl class="txtBox">
+                                                        <dt>이미지 파일 셋 가공</dt>
+                                                        <dd>여러 이미지 파일을 이미지 셋으로 묶어 여러 이미지를 동시에 작업할 수 있습니다.</dd>
+
+                                                        <dt>데이터 업로드 순서</dt>
+                                                        <dd>
+                                                            <ol>
+                                                                <li>1. 데이터 업로드 전 이미지 셋으로 만들 파일들을 압축합니다.</li>
+                                                                <li>2. STEP 3 데이터 업로드 단계에서 압축 폴더를 업로드 합니다.</li>
+                                                            </ol>
+                                                        </dd>
+
+                                                        <dt>*주의사항</dt>
+                                                        <dd>.zip, .zzip 형식으로 압축하세요.</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            <ul>
+                                                <!-- [D] input[type="radio"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                                <!-- [D] 같은 선택범위의 input[type="radio"]은 name을 동일하게 줘야함 -->
+                                                <li> 
+                                                    <div class="radioBox">
+                                                        <input type="radio" name="data_type02" id="" checked>
+                                                        <label for="">바운딩 박스 Bounding Box</label>
+                                                    </div>                                                    
+                                                </li>
+                                                <li> 
+                                                    <div class="radioBox">
+                                                        <input type="radio" name="data_type02" id="">
+                                                        <label for="">이미지 세그멘테이션 Image Segmentation</label>
+                                                    </div>                                                   
+                                                </li>
+                                                <li> 
+                                                    <div class="radioBox">
+                                                        <input type="radio" name="data_type02" id="">
+                                                        <label for="">키포인트 Keypoint Detection</label>
+                                                    </div>                                                    
+                                                </li>
+                                                <li> 
+                                                    <div class="radioBox">
+                                                        <input type="radio" name="data_type02" id="">
+                                                        <label for="">QA Augmentation</label>
+                                                    </div>                                                   
+                                                </li>
+                                                <li> 
+                                                    <div class="radioBox multiple">
+                                                        <input type="radio" name="data_type02" id="">
+                                                        <label for="">복수 가공 유형</label>                                               
+                                                    </div>
+
+                                                    <div class="chkBox">
+                                                        <!-- [D] input[type="checkbox"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                                        <input type="checkbox" id="chk04" name="multipleChk">
+                                                        <label for="chk04">바운딩 박스 Bounding Box</label>
+                                                        <input type="checkbox" id="chk05" name="multipleChk">
+                                                        <label for="chk05">이미지 세그멘테이션Image Segmentation</label>
+                                                        <input type="checkbox" id="chk06" name="multipleChk">
+                                                        <label for="chk06">키포인트 Keypoint Detection</label>
+                                                    </div>
+                                                </li>  
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="btnBox">
+                        <a href="project_regist_step02.html" class="btn_primary_rect blue">다음</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //.content -->
+        </div> 
+        <!-- //#contents -->
+    </div>
+    <!-- //#container -->
+</div>
+<!-- //#wrap -->
+
+<!---------------------- Local Resources ---------------------->
+<!-- Local Script -->
+<script type="text/javascript">
+jQuery.event.add(window,"load",function(){
+    $(document).ready(function(){
+        // 프로젝트 명 30자 입력 제한
+        $('.ipt_project').keyup(function(e){
+			var content = $(this).val();
+        	$('.txtCount span').html(content.length);
+
+            if(content.length > 30){
+                $(this).val(content.substring(0, 30));
+                $('.txtCount span').html(30);
+            }
+        });
+
+        // 데이터 유형 버튼 클릭 시 활성화 
+        $('.edit_type_slt .tapBtn li').on('click', function(){
+            $('.edit_type_slt .tapBtn li').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        // input[type="radio"] id와 for 값 동일한 값으로 부여하기
+        $('.edit_type_slt .tapCont input[type="radio"]').each(function(i){
+            var indexNum = i + 1;
+            $(this).attr('id', 'radio' + indexNum);
+            $(this).siblings('label').attr('for', 'radio' + indexNum);
+        });
+
+        // 복수 가공 유형 선택 시 체크 리스트 보여주기
+        $('.edit_type_slt .tapCont input[type="radio"]').on('click', function(){
+            var thisList = $(this).parents('ul'),
+                thisRadioBox = $(this).parent('.radioBox');
+
+            if(thisRadioBox.hasClass('multiple')){
+                thisList.find('.chkBox').addClass('on');
+            }else{
+                thisList.find('.chkBox').removeClass('on');
+                thisList.find('input[name="multipleChk"]').prop('checked', false);
+            }
+        });
+
+        // 파일 업로드 가이드 위치 설정
+        function helpMsgOffset(){
+            $('.edit_type_slt .help_msg').each(function(){
+                var thisScrollTop = $(window).scrollTop(),
+                    thisOffsetX = $(this).offset().left + 38,
+                    thisOffsetY = $(this).offset().top - thisScrollTop - 213,
+                    thisViewBox = $(this).find('.viewBox');
+
+                thisViewBox.css({
+                    position: 'fixed',
+                    top: thisOffsetY,
+                    left: thisOffsetX,
+                    background: '#e2e3e5'
+                });
+            });
+        }
+        helpMsgOffset();
+
+        $(window).scroll(function(){
+            helpMsgOffset();
+        });
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:#aaaeb2;stroke:#aaaeb2;stroke-width:.1px}
+        </style>
+    </defs>
+    <g id="ico_download_24px" transform="translate(-0.213)">
+        <path id="사각형_2266" fill="none" d="M0 0H24V24H0z" transform="translate(0.213)"/>
+        <g id="Solid" transform="translate(5.213 4.88)">
+            <path id="패스_3037" d="M144.4 34.584a.724.724 0 0 0 1.012 0l2.7-2.654a.7.7 0 0 0 0-1 .724.724 0 0 0-1.012 0l-1.477 1.453V24.7a.716.716 0 0 0-1.431 0v7.684l-1.477-1.453a.724.724 0 0 0-1.012 0 .7.7 0 0 0 0 1z" class="cls-2" transform="translate(-137.987 -24)"/>
+            <path id="패스_3038" d="M37.176 232a.729.729 0 0 0-.719.739v5.668h-11.02v-5.668a.719.719 0 1 0-1.437 0v5.915a1.215 1.215 0 0 0 1.2 1.232h11.5a1.215 1.215 0 0 0 1.2-1.232v-5.915a.729.729 0 0 0-.724-.739z" class="cls-2" transform="translate(-24 -225.636)"/>
+        </g>
+    </g>
+</svg>

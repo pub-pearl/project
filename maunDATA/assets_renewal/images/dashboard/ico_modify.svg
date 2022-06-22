@@ -1,0 +1,20 @@
+<svg id="ico_edit_20px" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+    <defs>
+        <style>
+            .cls-2{fill:#1054b2}
+        </style>
+    </defs>
+    <path id="사각형_2747" data-name="사각형 2747" style="fill:none" d="M0 0h20v20H0z"/>
+    <g id="그룹_2863" data-name="그룹 2863" transform="translate(-17.817 -4.068)">
+        <g id="그룹_2860" data-name="그룹 2860" transform="translate(22.817 18.669)">
+            <g id="그룹_2859" data-name="그룹 2859">
+                <rect id="사각형_2746" data-name="사각형 2746" class="cls-2" width="9.822" height=".912" rx=".456"/>
+            </g>
+        </g>
+        <g id="그룹_2862" data-name="그룹 2862" transform="translate(23.939 9.068)">
+            <g id="그룹_2861" data-name="그룹 2861">
+                <path id="패스_4369" data-name="패스 4369" class="cls-2" d="M69.525 6.178 64.094 11.3a.3.3 0 0 0-.094.214v2.062a.313.313 0 0 0 .321.3h2.184a.331.331 0 0 0 .227-.089l5.43-5.127a.291.291 0 0 0 0-.429l-2.183-2.053a.335.335 0 0 0-.454 0zM66.118 13h-.865a.313.313 0 0 1-.321-.3v-.816a.3.3 0 0 1 .094-.214l4.5-4.247a.335.335 0 0 1 .454 0l.865.816a.291.291 0 0 1 0 .429l-4.5 4.247a.331.331 0 0 1-.227.085z" transform="translate(-64 -6.089)"/>
+            </g>
+        </g>
+    </g>
+</svg>

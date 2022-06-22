@@ -1,0 +1,15 @@
+<svg id="ico_voice_20px" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+    <defs>
+        <style>
+            .cls-2{fill:#c9c9c9}
+        </style>
+    </defs>
+    <path id="사각형_2559" data-name="사각형 2559" style="fill:none" d="M0 0h20v20H0z"/>
+    <g id="그룹_2854" data-name="그룹 2854" transform="translate(-14 -140)">
+        <rect id="사각형_2553" data-name="사각형 2553" class="cls-2" width="2" height="16" rx="1" transform="translate(23 142)"/>
+        <rect id="사각형_2554" data-name="사각형 2554" class="cls-2" width="2" height="12" rx="1" transform="translate(19 144)"/>
+        <rect id="사각형_2555" data-name="사각형 2555" class="cls-2" width="2" height="12" rx="1" transform="translate(27 144)"/>
+        <rect id="사각형_2556" data-name="사각형 2556" class="cls-2" width="2" height="6" rx="1" transform="translate(15 147)"/>
+        <rect id="사각형_2557" data-name="사각형 2557" class="cls-2" width="2" height="6" rx="1" transform="translate(31 147)"/>
+    </g>
+</svg>

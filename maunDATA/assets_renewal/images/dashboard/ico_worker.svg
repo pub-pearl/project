@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.094" height="24" viewBox="0 0 24.094 24">
+    <defs>
+        <style>
+            .cls-2{fill:#5488d6;stroke:#5488d6;stroke-width:.3px}
+        </style>
+    </defs>
+    <g id="ico_worker_24px" transform="translate(-36 -324)">
+        <path id="사각형_27" fill="none" d="M0 0H24V24H0z" transform="translate(36 324)"/>
+        <g id="그룹_18" transform="translate(37 243.667)">
+            <g id="그룹_7" transform="translate(7.98 85.333)">
+                <g id="그룹_6" transform="translate(0 0)">
+                    <path id="패스_2940" d="M174.157 85.333a3.491 3.491 0 1 0 3.491 3.491 3.5 3.5 0 0 0-3.491-3.491zm0 5.985a2.494 2.494 0 1 1 2.494-2.494 2.5 2.5 0 0 1-2.494 2.494z" class="cls-2" transform="translate(-170.666 -85.333)"/>
+                </g>
+            </g>
+            <g id="그룹_9" transform="translate(15.961 89.323)">
+                <g id="그룹_8">
+                    <path id="패스_2941" d="M343.828 170.667a2.494 2.494 0 1 0 2.494 2.494 2.5 2.5 0 0 0-2.494-2.494zm0 3.99a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5z" class="cls-2" transform="translate(-341.334 -170.667)"/>
+                </g>
+            </g>
+            <g id="그룹_11" transform="translate(2.066 89.323)">
+                <g id="그룹_10">
+                    <path id="패스_2942" d="M46.676 170.667a2.494 2.494 0 1 0 2.494 2.494 2.5 2.5 0 0 0-2.494-2.494zm0 3.99a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5z" class="cls-2" transform="translate(-44.182 -170.667)"/>
+                </g>
+            </g>
+            <g id="그룹_13" transform="translate(4.988 93.313)">
+                <g id="그룹_12">
+                    <path id="패스_2943" d="M113.15 256a6.492 6.492 0 0 0-6.484 6.484.5.5 0 0 0 1 0 5.487 5.487 0 0 1 10.973 0 .5.5 0 0 0 1 0A6.492 6.492 0 0 0 113.15 256z" class="cls-2" transform="translate(-106.666 -256)"/>
+                </g>
+            </g>
+            <g id="그룹_15" transform="translate(15.89 95.309)">
+                <g id="그룹_14">
+                    <path id="패스_2944" d="M342.378 298.667a4.489 4.489 0 0 0-2.325.648.5.5 0 0 0 .518.853 3.492 3.492 0 0 1 5.3 2.988.5.5 0 0 0 1 0 4.5 4.5 0 0 0-4.493-4.489z" class="cls-2" transform="translate(-339.813 -298.667)"/>
+                </g>
+            </g>
+            <g id="그룹_17" transform="translate(0 95.309)">
+                <g id="그룹_16">
+                    <path id="패스_2945" d="M6.813 299.314A4.491 4.491 0 0 0 0 303.156a.5.5 0 0 0 1 0 3.493 3.493 0 0 1 5.3-2.989.5.5 0 0 0 .518-.853z" class="cls-2" transform="translate(0 -298.667)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

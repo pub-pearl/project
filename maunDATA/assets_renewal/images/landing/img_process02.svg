@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="356" viewBox="0 0 720 356">
+    <defs>
+        <style>
+            .cls-1{fill:#f6f8fb}.cls-2{fill:#fff}.cls-3,.cls-4,.cls-5,.cls-6{fill:#03020f;letter-spacing:-.01em}.cls-3{font-size:18px;font-family:NotoSansCJKkr-Black,Noto Sans CJK KR;font-weight:800}.cls-4{font-size:16px}.cls-4,.cls-6{font-family:NotoSansCJKkr-Bold,Noto Sans CJK KR;font-weight:700}.cls-5{font-size:14px;font-family:NotoSansCJKkr-Regular,Noto Sans CJK KR}.cls-6{font-size:35px}
+        </style>
+    </defs>
+    <g id="img_datasetup" transform="translate(-435 -112)">
+        <path id="사각형_2687" d="M0 0H720V356H0z" class="cls-1" transform="translate(435 112)"/>
+        <rect id="사각형_2718" width="310" height="316" class="cls-2" rx="10" transform="translate(470 134)"/>
+        <rect id="사각형_2719" width="310" height="316" class="cls-2" rx="10" transform="translate(810 134)"/>
+        <rect id="사각형_2720" width="278" height="64" class="cls-1" rx="9" transform="translate(826 150)"/>
+        <rect id="사각형_2721" width="278" height="64" class="cls-1" rx="9" transform="translate(486 150)"/>
+        <text id="Project_Setup" class="cls-3" transform="translate(625 192)">
+            <tspan x="-60.777" y="0">Project Setup</tspan>
+        </text>
+        <text id="Project_Guide" class="cls-3" transform="translate(965 192)">
+            <tspan x="-60.615" y="0">Project Guide</tspan>
+        </text>
+        <text id="CLIENT" class="cls-4" transform="translate(625 243)">
+            <tspan x="-28.024" y="0">CLIENT</tspan>
+        </text>
+        <text id="IMAGE" class="cls-5" transform="translate(625 322)">
+            <tspan x="-20.566" y="0">IMAGE</tspan>
+        </text>
+        <text id="DATA_TYPE" class="cls-4" transform="translate(625 298)">
+            <tspan x="-40.824" y="0">DATA TYPE</tspan>
+        </text>
+        <text id="마음_Co." class="cls-5" transform="translate(600 251)">
+            <tspan x=".325" y="16">마음 </tspan><tspan y="16">Co.</tspan>
+        </text>
+        <text id="BOUNDING_BOX" class="cls-5" transform="translate(625 379)">
+            <tspan x="-51.1" y="0">BOUNDING BOX</tspan>
+        </text>
+        <text id="ANNOTATION_TYPE" class="cls-4" transform="translate(625 355)">
+            <tspan x="-72.416" y="0">ANNOTATION TYPE</tspan>
+        </text>
+        <text id="_52_000건" class="cls-5" transform="translate(625 433)">
+            <tspan x="-27.391" y="0">52,000건</tspan>
+        </text>
+        <text id="AMOUNT" class="cls-4" transform="translate(625 412)">
+            <tspan x="-34.696" y="0">AMOUNT</tspan>
+        </text>
+        <text id="WORKERS" class="cls-4" transform="translate(965 243)">
+            <tspan x="-39.16" y="0">WORKERS</tspan>
+        </text>
+        <text id="_53" class="cls-6" transform="translate(965 289)">
+            <tspan x="-20.44" y="0">53</tspan>
+        </text>
+        <text id="INSPECTORS" class="cls-4" transform="translate(965 322)">
+            <tspan x="-49.52" y="0">INSPECTORS</tspan>
+        </text>
+        <text id="_17" class="cls-6" transform="translate(965 368)">
+            <tspan x="-20.44" y="0">17</tspan>
+        </text>
+        <rect id="사각형_2722" width="278" height="28" class="cls-1" rx="10" transform="translate(826 378)"/>
+        <rect id="사각형_2723" width="278" height="28" class="cls-1" rx="10" transform="translate(826 412)"/>
+        <text id="BB_검수가이드.pdf" class="cls-5" transform="translate(965 398)">
+            <tspan x="-57.442" y="0">BB_</tspan><tspan y="0">검수가이드.</tspan><tspan y="0">pdf</tspan>
+        </text>
+        <text id="BB_검수가이드.pdf-2" class="cls-5" transform="translate(965 432)">
+            <tspan x="-57.442" y="0">BB_</tspan><tspan y="0">검수가이드.</tspan><tspan y="0">pdf</tspan>
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="ico_plus_20px" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-1{fill:#1054b2}
+        </style>
+    </defs>
+    <path id="사각형_1358" d="M0 0H20V4H0z" class="cls-1" transform="translate(0 8)"/>
+    <path id="사각형_1359" d="M0 0H4V20H0z" class="cls-1" transform="translate(8)"/>
+</svg>

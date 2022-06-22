@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="29" viewBox="0 0 46 29">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <path fill="#FDCBCA" d="M3.362 0.862L5.862 5.862 0.862 5.862z" transform="translate(-88.000000, -166.000000) translate(88.137507, 166.137507) translate(3.362493, 3.362493) scale(1, -1) rotate(-153.000000) translate(-3.362493, -3.362493)"/>
+                <path stroke="#FDCBCA" stroke-dasharray="2 2" d="M4.408 3.925c2.626 20.18 22.31 22.391 40.738 24.1" transform="translate(-88.000000, -166.000000) translate(88.137507, 166.137507)"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-4{fill:none}.cls-3{fill:#03020f}.cls-4{stroke:#03020f;stroke-linecap:round;stroke-linejoin:round;stroke-width:3.3px}
+        </style>
+    </defs>
+    <g id="ico_signup_120px" transform="translate(-582 -2763)">
+        <path id="사각형_2783" fill="none" d="M0 0H120V120H0z" transform="translate(582 2763)"/>
+        <g id="그룹_3414" transform="translate(9 .892)">
+            <circle id="타원_101" cx="20" cy="20" r="20" fill="#316cbe" transform="translate(590 2830)"/>
+            <g id="그룹_2906" transform="translate(-97.7 12.108)">
+                <rect id="사각형_2525" width="41" height="4" class="cls-3" rx="2" transform="translate(720 2780)"/>
+                <path id="패스_4296" d="M246.955 327.372H236.87a12.748 12.748 0 0 1-12.748-12.748v-54.4a12.749 12.749 0 0 1 12.748-12.744h35.267a12.748 12.748 0 0 1 12.748 12.748v19.337" class="cls-4" transform="translate(485.878 2515.52)"/>
+                <rect id="사각형_2526" width="41" height="4" class="cls-3" rx="2" transform="translate(720 2793)"/>
+                <rect id="사각형_2527" width="26" height="4" class="cls-3" rx="2" transform="translate(720 2805)"/>
+                <g id="그룹_2905" transform="translate(435.779 2522.089)">
+                    <path id="패스_4296-2" d="M16.677 0L3.083 13.594 0 24.46l11.522-3.234L25.167 7.682z" class="cls-4" transform="translate(310.221 290.067)"/>
+                    <path id="패스_4297" fill="none" stroke="#03020f" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.342px" d="M8.468 10.16c2.446-2.6 2.664-6.451.463-8.658C6.8-.631 3.19-.461.652 1.813L0 2.476z" transform="rotate(-3 5652.237 -6093.723)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

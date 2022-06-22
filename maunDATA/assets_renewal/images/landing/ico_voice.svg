@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="140" viewBox="0 0 100 140">
+    <defs>
+        <style>
+            .cls-4,.cls-5{stroke:#03020f;fill:#03020f}.cls-4{stroke-width:.8px}.cls-5{stroke-width:1.2px}
+        </style>
+    </defs>
+    <g id="ico_sound_100x140px" transform="translate(-1228 -1909)">
+        <path id="사각형_2522" fill="none" d="M0 0H100V140H0z" transform="translate(1228 1909)"/>
+        <g id="그룹_2898" transform="translate(0 8.002)">
+            <circle id="타원_100" cx="30" cy="30" r="30" fill="#316cbe" transform="translate(1234 1934)"/>
+            <g id="그룹_2886" transform="translate(891.002 1804.996)">
+                <rect id="사각형_2505" width="54" height="79.162" fill="none" stroke="#03020f" stroke-miterlimit="10" stroke-width="3.3px" rx="27" transform="translate(375.498 114.002)"/>
+                <path id="패스_4287" d="M0 0h55.632v2.812H0z" class="cls-4" transform="rotate(180 215.315 71.549)"/>
+                <path id="사각형_2507" d="M0 0H54.378V2.812H0z" class="cls-4" transform="rotate(180 214.904 84.579)"/>
+                <path id="사각형_2508" d="M0 0H23.147V2.812H0z" class="cls-5" transform="rotate(-90 309.355 -92.143)"/>
+                <rect id="사각형_2509" width="31.104" height="2.812" class="cls-5" rx="1" transform="translate(387.498 215.191)"/>
+            </g>
+        </g>
+    </g>
+</svg>

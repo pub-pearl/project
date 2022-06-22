@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Cache reset -->
+<meta http-equiv="Expires" content="Mon, 06 Jan 2016 00:00:01 GMT">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<!-- Open Graph Tag -->
+<meta property="og:title"         content="마음데이터 - AI 데이터 가공의 시작">
+<meta property="og:type"          content="website"> <!-- 웹 페이지 타입 -->
+<!-- <meta property="og:url"           content=""> -->
+<meta property="og:image"         content="">
+<meta property="og:description"   content="비즈니스 맞춤형 AI 데이터를 제공합니다.">
+
+<!-- icon_favicon -->
+<!-- <link rel="apple-touch-icon-precomposed" href="">
+<link rel="shortcut icon" type="image/x-icon" href=""> -->
+
+<!---------------------- General Resources ---------------------->
+<!-- General CSS -->
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/dashboard.css">
+
+<!-- General Script -->
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-migrate-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/dashboard.js"></script>
+
+<title>프로젝트 관리(Client) - Main || Dashboard</title>
+</head>
+<body>
+<!-- #wrap -->
+<div id="wrap">
+    <!-- #container -->
+    <div id="container">
+        <!-- #snb -->
+        <div id="snb">
+            <div class="topBox">
+                <h1 class="logo">
+                    <a href="workspace_main.html">
+                        <img src="../../../../assets_renewal/images/logo_maumData_m.svg" alt="maum DATA logo">
+                    </a>
+                </h1>
+                <button type="button" class="btn_ham" title="전체메뉴">
+                    <span>전체 메뉴</span>
+                </button>
+            </div>
+            <div class="account"><span>H&M(=헤네스앤모리츠)슈퍼</span></div>
+            <ul class="nav">
+                <li>
+                    <a href="workspace_main.html"><span>워크스페이스 관리</span></a>
+                </li>
+                <li class="active">
+                    <a href="project_main.html"><span>프로젝트 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업현황 통계</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>작업자 관리</span></a>
+                </li>
+                <li>
+                    <a href="inquiry_main.html"><span>문의 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>계약서 관리</span></a>
+                </li>
+                <li>
+                    <a href="delete_project_list.html"><span>삭제 목록 관리</span></a>
+                </li>
+                <li>
+                    <a href="#none"><span>로그아웃</span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- //#snb -->
+
+        <!-- #contents -->
+        <div id="contents">
+            <!-- .content -->
+            <div class="content">
+                <div class="titArea">
+                    <h3>프로젝트 관리</h3>
+
+                    <div class="btnBox">
+                        <a href="project_regist_step01.html" class="btn_primary_rect blue btn_rgst">프로젝트 등록</a>
+                    </div>
+                </div>
+
+                <div class="tbl_tap_wrap">
+                    <ul class="tapBtn">
+                        <li class="active">전체 프로젝트 <span class="caseNum">99999</span></li>
+                        <li>가공완료 프로젝트 <span class="caseNum">20</span></li>
+                        <li>진행중인 프로젝트 <span class="caseNum">20</span></li>
+                        <li>가공대기 프로젝트 <span class="caseNum">20</span></li>
+                        <li>중단 프로젝트 <span class="caseNum">20</span></li>
+                    </ul>
+
+                    <div class="tapCont">
+                        <div class="filterArea">
+                            <select class="select">
+                                <option value="">워크스페이스 명</option>
+                                <option value="">A 그룹</option>
+                                <option value="">B 그룹</option>
+                            </select>
+                            <select class="select">
+                                <option value="">데이터 유형</option>
+                                <option value="">이미지 Image</option>
+                                <option value="">텍스트 Text</option>
+                                <option value="">오디오 Audio</option>
+                                <option value="">비디오 Video</option>
+                            </select>
+                            <select class="select">
+                                <option value="">가공 유형</option>
+                                <option value="">유형1</option>
+                                <option value="">유형2</option>
+                                <option value="">유형3</option>
+                            </select>
+
+                            <div class="switchBox">
+                                <!-- [D] input[type="checkbox"]의 id와 label의 for값을 동일하게 줘야함 -->
+                                <input type="checkbox" id="expireWorkspace">
+                                <label for="expireWorkspace">기간만료 프로젝트 숨김</label>
+                            </div>
+
+                            <div class="srchBox">
+                                <input type="text" placeholder="검색어를 입력해주세요.">
+                                <button type="button" class="btn_srch" title="검색">
+                                    <span class="hide">검색</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tblBox type01 icld_chk">
+                            <table data-tbl-name="project" summary="프로젝트 명, 워크스페이스 명, 데이터 유형, 가공 유형, 프로젝트 상태, 시작일, 종료일로 구성">
+                                <caption class="hide">프로젝트 목록</caption>
+                                <colgroup>
+                                    <col width="80px"><col width="20%"><col width="20%"><col><col>
+                                    <col><col><col>
+                                </colgroup>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="allChk">
+                                            </div>
+                                        </th>
+                                        <th scope="col">프로젝트 명</th>
+                                        <th scope="col">워크스페이스 명</th>
+                                        <th scope="col">데이터 유형</th>
+                                        <th scope="col">가공 유형</th>
+                                        <th scope="col">프로젝트 상태</th>
+                                        <th scope="col">시작일</th>
+                                        <th scope="col">종료일</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td class="empty" scope="row" colspan="8">등록된 프로젝트가 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="eachChk">
+                                            </div>
+                                        </td>
+                                        <td>영역지정ABCDEFFGHIJFGTTTRREEERRT그룹</td>
+                                        <td>A 그룹</td>
+                                        <td>Image</td>
+                                        <td>Bounding Box</td>
+                                        <td>가공 완료</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="eachChk">
+                                            </div>
+                                        </td>
+                                        <td>영역지정ABCDEFFGHIJFGTTTRREEERRT그룹</td>
+                                        <td>A 그룹</td>
+                                        <td>Image</td>
+                                        <td>Bounding Box</td>
+                                        <td>진행 중</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="eachChk">
+                                            </div>
+                                        </td>
+                                        <td>영역지정ABCDEFFGHIJFGTTTRREEERRT그룹</td>
+                                        <td>A 그룹</td>
+                                        <td>Image</td>
+                                        <td>Bounding Box</td>
+                                        <td>중단</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="eachChk">
+                                            </div>
+                                        </td>
+                                        <td>영역지정ABCDEFFGHIJFGTTTRREEERRT그룹</td>
+                                        <td>A 그룹</td>
+                                        <td>Image</td>
+                                        <td>Bounding Box</td>
+                                        <td>대기</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                            <div class="chkBoxOnly">
+                                                <input type="checkbox" class="eachChk">
+                                            </div>
+                                        </td>
+                                        <td>영역지정ABCDEFFGHIJFGTTTRREEERRT그룹</td>
+                                        <td>A 그룹</td>
+                                        <td>Image</td>
+                                        <td>Bounding Box</td>
+                                        <td>기간 만료</td>
+                                        <td>2021-07-01</td>
+                                        <td>2021-07-30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagingArea">
+					<div class="btnBox fl">
+						<button type="button" class="btn_primary_rect blue btn_list_remove" disabled>삭제</button>
+					</div>
+
+					<div class="paging">
+						<a href="#none" class="btn_paging first">
+                            <span class="hide">처음 페이지</span>
+                        </a>
+						<a href="#none" class="btn_paging prev">
+                            <span class="hide">이전 페이지</span>
+                        </a>
+						<a href="#none" class="current">1</a>
+						<a href="#none">2</a>
+						<a href="#none">3</a>
+						<a href="#none">4</a>
+						<a href="#none">5</a>
+						<a href="#none" class="btn_paging next">
+                            <span class="hide">다음 페이지</span>
+                        </a>
+						<a href="#none" class="btn_paging last">
+                            <span class="hide">마지막 페이지</span>
+                        </a>
+					</div>
+				</div>
+            </div>
+            <!-- //.content -->
+
+            <!-- .asideWrap -->
+            <div id="project" class="asideWrap">
+                <div class="aside">
+                    <button type="button" class="btn_aside_close">
+                        <span class="hide">닫기</span>
+                    </button>
+
+                    <div class="contArea">
+                        <div class="contBox">
+                            <div class="tit">
+                                <h4>보행 방해물 영역지정 작업_B그룹123456789001</h4>
+
+                                <div class="fr">
+                                    <a href="#none" class="btn_shortcut">가공화면 보기</a>
+                                </div>
+                            </div>
+
+                            <div class="cont">
+                                <dl class="define">
+                                    <dt>워크스페이스 명:</dt>
+                                    <dd>A그룹</dd>
+                                </dl>
+                                <dl class="define">
+                                    <dt>담당자:</dt>
+                                    <dd>이현구</dd>
+                                </dl>
+                                <dl class="define">
+                                    <dt>건당 지급 포인트:</dt>
+                                    <dd>(가공: <span>200</span>원 &vert; 검수: <span>150</span>원)</dd>
+                                </dl>
+                                <dl class="define">
+                                    <dt>시작 일자:</dt>
+                                    <dd>2021. 03. 01</dd>
+                                </dl>
+                                <dl class="define">
+                                    <dt>종료 일자:</dt>
+                                    <dd>2021. 09. 01</dd>
+                                </dl>
+                                <dl class="define">
+                                    <dt>프로젝트 상태:</dt>
+                                    <dd>진행중</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="contBox">
+                            <div class="cont">
+                                <div class="lineBox fl">
+                                    <dl>
+                                        <dt>태그 목록 <div class="fr">총 <span>30</span>개</div></dt>
+                                        <dd>
+                                            <ul class="decimal">
+                                                <li>자동차</li>
+                                                <li>건물</li>
+                                                <li>오토바이</li>
+                                                <li>자전거</li>
+                                                <li>리어카</li>
+                                                <li>자동차</li>
+                                                <li>건물</li>
+                                                <li>오토바이</li>
+                                                <li>자동차</li>
+                                                <li>건물</li>
+                                                <li>오토바이</li>
+                                                <li>자전거</li>
+                                                <li>리어카</li>
+                                                <li>자동차</li>
+                                                <li>건물</li>
+                                                <li>오토바이</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="lineBox fr">
+                                    <dl>
+                                        <dt>퀵가이드</dt>
+                                        <dd>
+                                            <ul class="decimal">
+                                                <li>실외/실내 및 장소선택</li>
+                                                <li>방해물 유형 선택</li>
+                                                <li>더블 클릭하여 영역박스 생성</li>
+                                                <li>방해물 크기에 맞게 영역지정</li>
+                                            </ul>
+                                            <ul class="disc">
+                                                <li>한 이미지에 방해물의 최대 개수는 4개</li>
+                                                <li>작업 중간중간 임시저장 버튼을 눌러 작업한 내용을 저장.</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contBox">
+                            <div class="tit">
+                                <h4>프로젝트 진행률</h4>
+
+                                <div class="fr">
+                                    <a href="#none" class="btn_shortcut">데이터 추출 바로가기</a>
+                                </div>
+                            </div>
+
+                            <div class="cont">
+                                <div class="progress_wrap">
+                                    <div class="txt">가공 진행률 <div class="fr"><span>1,000</span> &sol; <span>9,999</span></div></div>
+                                    <div class="progress_bar">
+                                        <!-- [D] .current의 width값으로 진행바 조절 -->
+                                        <div class="current"></div>
+                                    </div>
+                                </div>
+                                <div class="progress_wrap">
+                                    <div class="txt">검수 진행률 <div class="fr"><span>1,000</span> &sol; <span>9,999</span></div></div>
+                                    <div class="progress_bar">
+                                        <!-- [D] .current의 width값으로 진행바 조절 -->
+                                        <div class="current"></div>
+                                    </div>
+                                </div>
+                                <div class="progress_wrap">
+                                    <div class="txt">가공완료 데이터 비율 <div class="fr"><span>1,000</span> &sol; <span>9,999</span></div></div>
+                                    <div class="progress_bar">
+                                        <!-- [D] .current의 width값으로 진행바 조절 -->
+                                        <div class="current"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btnBox">
+                        <!-- [D] '작업중단, 시작하기' 버튼에 addClass('active')하면 나타남 -->
+                        <button class="btn_primary_rect btn_prjt_stop active">작업중단</button>
+                        <button class="btn_primary_rect btn_prjt_start">시작하기</button>
+                        <a href="#none" class="btn_primary_rect btn_aside_modify">수정하기</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //.asideWrap -->
+        </div> 
+        <!-- //#contents -->
+    </div>
+    <!-- //#container -->
+</div>
+<!-- //#wrap -->
+
+<!---------------------- Local Resources ---------------------->
+<!-- Local Script -->
+<script type="text/javascript">
+jQuery.event.add(window,"load",function(){
+    $(document).ready(function(){
+        // aside '작업중단, 시작하기' 버튼
+        $('#project .aside .btnBox button').on('click', function(){
+            $(this).removeClass('active');
+
+            if($(this).is('.btn_prjt_stop')){
+                $('.btn_prjt_start').addClass('active');
+            }else if($(this).is('.btn_prjt_start')){
+                $('.btn_prjt_stop').addClass('active');
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

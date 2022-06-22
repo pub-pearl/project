@@ -1,0 +1,22 @@
+<svg id="ico_defaultcorrection_20px" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+    <defs>
+        <style>
+            .cls-1{fill:#aaaeb2}
+        </style>
+    </defs>
+    <g id="그룹_2713" data-name="그룹 2713">
+        <g id="그룹_2712" data-name="그룹 2712">
+            <path id="패스_3043" data-name="패스 3043" class="cls-1" d="M10 0a10 10 0 1 0 10 10A9.994 9.994 0 0 0 10 0zm0 18.438A8.438 8.438 0 1 1 18.438 10 8.433 8.433 0 0 1 10 18.438z"/>
+        </g>
+    </g>
+    <g id="그룹_2715" data-name="그룹 2715" transform="translate(9.238 5.026)">
+        <g id="그룹_2714" data-name="그룹 2714">
+            <path id="패스_3044" data-name="패스 3044" class="cls-1" d="M236.762 128.877a.773.773 0 0 0-.762.784v5.048a.762.762 0 1 0 1.524 0v-5.048a.773.773 0 0 0-.762-.784z" transform="translate(-236 -128.877)"/>
+        </g>
+    </g>
+    <g id="그룹_2717" data-name="그룹 2717" transform="translate(8.971 12.579)">
+        <g id="그룹_2716" data-name="그룹 2716">
+            <ellipse id="타원_148" data-name="타원 148" class="cls-1" cx="1.029" cy="1.058" rx="1.029" ry="1.058"/>
+        </g>
+    </g>
+</svg>

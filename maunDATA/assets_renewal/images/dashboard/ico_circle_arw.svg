@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+    <defs>
+        <style>
+            .cls-1{fill:none}
+        </style>
+    </defs>
+    <g id="ico_go_16px" transform="translate(-456 -37)">
+        <path id="사각형_2305" data-name="사각형 2305" class="cls-1" transform="translate(456 37)" d="M0 0h16v16H0z"/>
+        <g id="그룹_38" data-name="그룹 38" transform="translate(457 38)">
+            <g id="그룹_37" data-name="그룹 37">
+                <path id="패스_2961" data-name="패스 2961" d="M6.835 0a6.835 6.835 0 1 0 6.835 6.835A6.843 6.843 0 0 0 6.835 0zm0 12.612a5.776 5.776 0 1 1 5.776-5.776 5.783 5.783 0 0 1-5.776 5.776z" style="fill:#fff"/>
+            </g>
+        </g>
+        <g id="그룹_2720" data-name="그룹 2720" transform="translate(1 -.752)">
+            <g id="사각형_2626" data-name="사각형 2626" transform="translate(459 45.157)" style="stroke:#fff;fill:#a84c4c">
+                <rect width="6.754" height="1.126" rx=".563" style="stroke:none"/>
+                <rect class="cls-1" x=".5" y=".5" width="5.754" height=".126" rx=".063"/>
+            </g>
+            <path id="패스_4345" data-name="패스 4345" d="m10486.955 21553.051 1.363 2.021-1.363 1.914" transform="translate(-10022.556 -21509.299)" style="stroke-linecap:round;stroke:#fff;fill:none"/>
+        </g>
+    </g>
+</svg>

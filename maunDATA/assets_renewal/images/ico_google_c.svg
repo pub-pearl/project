@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <path data-name="사각형 2687" style="fill:none" d="M0 0h18v18H0z"/>
+    <g data-name="그룹 2850">
+        <path data-name="패스 4356" d="M700.833 709.632a10.312 10.312 0 0 0-.163-1.837h-8.458v3.474h4.833a4.132 4.132 0 0 1-1.792 2.711v2.253h2.9a8.759 8.759 0 0 0 2.678-6.6z" transform="translate(-683.031 -700.409)" style="fill-rule:evenodd;fill:#3e82f1"/>
+        <path data-name="패스 4357" d="M605.379 754.537a8.574 8.574 0 0 0 5.944-2.176l-2.9-2.253a5.418 5.418 0 0 1-8.067-2.845h-3v2.327a8.977 8.977 0 0 0 8.026 4.948z" transform="translate(-596.199 -736.537)" style="fill:#32a753;fill-rule:evenodd"/>
+        <path data-name="패스 4358" d="M590.018 685.164a5.31 5.31 0 0 1 0-3.413v-2.327h-3a8.991 8.991 0 0 0 0 8.067l3-2.327z" transform="translate(-585.863 -674.438)" style="fill:#f9bb00;fill-rule:evenodd"/>
+        <path data-name="패스 4359" d="M605.379 624.517a4.852 4.852 0 0 1 3.433 1.343l2.576-2.576a8.631 8.631 0 0 0-6.009-2.339 8.977 8.977 0 0 0-8.026 4.948l3 2.327a5.352 5.352 0 0 1 5.025-3.7z" transform="translate(-596.199 -620.907)" style="fill:#e74133;fill-rule:evenodd"/>
+    </g>
+</svg>

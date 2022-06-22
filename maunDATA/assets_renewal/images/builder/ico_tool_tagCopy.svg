@@ -1,0 +1,15 @@
+<svg id="ico_copy_20px" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="사각형_2566" data-name="사각형 2566" style="fill:none" d="M0 0h20v20H0z"/>
+        </clipPath>
+        <style>
+            .cls-3{fill:none;stroke:#c9c9c9}
+        </style>
+    </defs>
+    <g id="그룹_2872" data-name="그룹 2872" style="clip-path:url(#clip-path)">
+        <path id="패스_4367" data-name="패스 4367" class="cls-3" d="M17.763.8H6.652A1.851 1.851 0 0 0 4.8 2.652V4.5h.741V2.652a1.111 1.111 0 0 1 1.111-1.111h11.111a1.111 1.111 0 0 1 1.111 1.111v11.111a1.111 1.111 0 0 1-1.111 1.111h-1.852v.741h1.852a1.852 1.852 0 0 0 1.852-1.852V2.652A1.852 1.852 0 0 0 17.763.8z" transform="translate(-.356 -.059)"/>
+        <path id="패스_4368" data-name="패스 4368" class="cls-3" d="M14.874 17.763a1.111 1.111 0 0 1-1.111 1.111H2.652a1.111 1.111 0 0 1-1.111-1.111V6.652a1.111 1.111 0 0 1 1.111-1.111H4.5V4.8H2.652A1.851 1.851 0 0 0 .8 6.652v11.111a1.851 1.851 0 0 0 1.852 1.852h11.111a1.851 1.851 0 0 0 1.852-1.852v-1.852h-.741z" transform="translate(-.059 -.356)"/>
+        <path id="패스_4369" data-name="패스 4369" class="cls-3" d="M14.119 5.541a1.111 1.111 0 0 1 1.111 1.111v8.518h.741V6.652A1.852 1.852 0 0 0 14.119 4.8H5.6v.741z" transform="translate(-.415 -.356)"/>
+    </g>
+</svg>

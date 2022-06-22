@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Cache reset -->
+<meta http-equiv="Expires" content="Mon, 06 Jan 2016 00:00:01 GMT">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<!-- Open Graph Tag -->
+<meta property="og:title"         content="마음데이터 - AI 데이터 가공의 시작">
+<meta property="og:type"          content="website"> <!-- 웹 페이지 타입 -->
+<!-- <meta property="og:url"           content=""> -->
+<meta property="og:image"         content="">
+<meta property="og:description"   content="비즈니스 맞춤형 AI 데이터를 제공합니다.">
+
+<!-- icon_favicon -->
+<!-- <link rel="apple-touch-icon-precomposed" href="">
+<link rel="shortcut icon" type="image/x-icon" href=""> -->
+
+<!---------------------- General Resources ---------------------->
+<!-- General CSS -->
+<link rel="stylesheet" type="text/css" href="../../../../assets_renewal/css/builder.css">
+
+<!-- General Script -->
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets_renewal/js/jquery-migrate-3.3.1.min.js"></script>
+
+<title>Video Worker (Script) || Builder</title>
+</head>
+<body>
+<!-- #scriptPop -->
+<div id="scriptPop" class="script">
+    <div class="script_box">
+        <div class="srch_box">
+            <input type="text" class="ipt_txt" placeholder="텍스트를 검색해주세요.">
+
+            <div class="srch_txt_paging">
+                <div class="index">
+                    <span class="current">0</span>
+                    &sol;
+                    <span class="total">0</span>
+                </div>
+
+                <div class="btnBox">
+                    <a href="#none" class="btn_move_txt btn_txt_prev" title="이전">
+                        <span class="hide">이전</span>
+                    </a>
+                    <a href="#none" class="btn_move_txt btn_txt_next" title="다음">
+                        <span class="hide">다음</span>
+                    </a>
+                </div>
+            </div> 
+            
+            <button type="button" class="btn_srch" title="검색">
+                <span class="hide">검색</span>
+            </button>
+        </div>
+        <div class="scrt_txt"></div>
+    </div>
+</div>
+<!-- //#scriptPop -->
+
+<!-- Local Script -->
+<script type="text/javascript">  
+	// 부모창에서 script 복사해오기
+    var scriptText = window.opener.document.querySelector('.scrt_txt').innerText;
+    document.querySelector('.scrt_txt').innerHTML = scriptText;
+</script>
+
+<script type="text/javascript"> 
+    $(document).ready(function(){
+        // script 검색 기능 - keyboard trigger    
+        $('.script_box .srch_box .ipt_txt').keydown(function(key){
+            if(key.keyCode == 13){
+                $('.script_box .srch_box .btn_srch').trigger('click');
+            }else if(key.keyCode == 38){
+                $('.script_box .btn_txt_prev').trigger('click');
+            }else if(key.keyCode == 40){
+                $('.script_box .btn_txt_next').trigger('click');
+            }
+        });
+
+        // script 검색 기능 - click
+        $('.script_box .srch_box .btn_srch').on('click',function(){
+            var findTxtField = $('.script_box .srch_box .ipt_txt').val();
+
+            // 검색어 갯수, 검색어 활성화 reset 
+            $('.srch_txt_paging .index, .srch_txt_paging .btnBox').remove();
+
+            $('.scrt_txt').find('span.findElement').queue(function() {
+                $(this).removeClass('findElement');
+                $(this).attr('id', '');
+            });
+
+            //검색 단어 표시
+            $('.scrt_txt:contains("'+ findTxtField +'")').each(function(){
+                var regex = new RegExp(findTxtField, 'gi');
+
+                $(this).html(
+                    $(this).text().replace(regex, '<span class="findElement">'+ findTxtField +'</span>')
+                );
+                // 검색 단어 ID 선언
+                $(this).find('.findElement').each(function(){
+                    var findElementIndex = $(this).index();
+
+                    findElementIndex = parseInt(findElementIndex) + 1;
+                    $(this).attr('id', 'findElement'+ findElementIndex);
+                });
+            });
+
+            if(findTxtField != '' && $('#findElement1').text() == findTxtField){
+                // 검색어 갯수 표시
+                var findElementAllNum = $('.findElement').length,
+                    page_prev_num = 1,
+                    page_next_num = 2;
+
+                $('.srch_txt_paging').append('\
+                    <div class="index">\
+                        <span class="current">'+ page_prev_num + '</span>\
+                        &sol;\
+                        <span class="total">'+ findElementAllNum + '</span>\
+                    </div>\
+                    <div class="btnBox">\
+                        <a href="#findElement' + page_prev_num + '" class="btn_move_txt btn_txt_prev" title="이전">\
+                            <span class="hide">이전</span>\
+                        </a>\
+                        <a href="#findElement' + page_next_num + '" class="btn_move_txt btn_txt_next" title="다음">\
+                            <span class="hide">다음</span>\
+                        </a>\
+                    </div>\
+                ');
+
+                // 첫번째 검색어에 스크롤 이동
+                $('.scrt_txt').animate({
+                    scrollTop: $('#findElement1').offset().top - $('.scrt_txt').offset().top * 2 + $('.scrt_txt').scrollTop() + 50
+                }, 200);
+
+                $('.findElement').removeClass('selected');
+                $('#findElement1').addClass('selected');
+
+                // next button
+                $('.script_box .btn_txt_next').on('click',function(e){
+                    if(findElementAllNum > page_prev_num){
+                        e.preventDefault();
+
+                        page_prev_num++;
+                        page_next_num++;
+
+                        $('.srch_txt_paging .current').text(page_prev_num);
+                        $('.script_box .btn_txt_prev').attr('href', '#findElement' + page_prev_num + '');
+                        $('.script_box .btn_txt_next').attr('href', '#findElement' + page_next_num + '');
+
+                        $('.findElement').removeClass('selected');
+                        $('#findElement' + page_prev_num + '').addClass('selected');
+                        
+                        var findElementOffset = $('.selected').offset().top,
+                            scriptOffsetTop = $('.scrt_txt').offset().top,
+                            scriptScrollTop = $('.scrt_txt').scrollTop();
+
+                        $('.scrt_txt').animate({
+                            scrollTop: findElementOffset - scriptOffsetTop * 2 + scriptScrollTop + 50
+                        }, 200);                    
+                    }
+                });
+
+                // prev button
+                $('.script_box .btn_txt_prev').on('click',function(e){
+                    if(1 < page_prev_num){
+                        e.preventDefault();
+
+                        page_prev_num--;
+                        page_next_num--;
+
+                        $('.srch_txt_paging .current').text(page_prev_num);
+                        $('.script_box .btn_txt_prev').attr('href', '#findElement' + page_prev_num + '');
+                        $('.script_box .btn_txt_next').attr('href', '#findElement' + page_next_num + '');
+
+                        $('.findElement').removeClass('selected');
+                        $('#findElement' + page_prev_num + '').addClass('selected');
+                        
+                        var findElementOffset = $('.selected').offset().top,
+                            scriptOffsetTop = $('.scrt_txt').offset().top,
+                            scriptScrollTop = $('.scrt_txt').scrollTop();
+
+                        $('.scrt_txt').animate({
+                            scrollTop: findElementOffset - scriptOffsetTop * 2 + scriptScrollTop + 50
+                        }, 200);                   
+                    }
+                });
+            }else{
+                $('.srch_txt_paging').append('\
+                    <div class="index">\
+                        <span class="current">0</span>\
+                        &sol;\
+                        <span class="total">0</span>\
+                    </div>\
+                    <div class="btnBox">\
+                        <a href="#none" class="btn_move_txt btn_txt_prev" title="이전">\
+                            <span class="hide">이전</span>\
+                        </a>\
+                        <a href="#none"  class="btn_move_txt btn_txt_next" title="다음">\
+                            <span class="hide">다음</span>\
+                        </a>\
+                    </div>\
+                ');
+            }
+        });
+
+        // script 복사 시 태그 제외 순수 텍스트만 복사하기
+        window.addEventListener('paste', function(e) {
+            e.preventDefault();
+            var pastedData = event.clipboardData ||  window.clipboardData;
+            var textData = pastedData.getData('text/plain');
+            window.document.execCommand('insertHTML', false, textData);
+        });
+    });
+</script>
+</body>
+</html>

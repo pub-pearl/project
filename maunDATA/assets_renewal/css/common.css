@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* MINDsLab. NBR. 20210422 */
+
+/* 공통 CSS */
+@import url("reset.css"); 
+@import url("font.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css");
+
+/* -------------------- common -------------------- */
+/* scroll bar */
+::-webkit-scrollbar {width: 6px; height: 6px; border-radius: 3px;}  /* 스크롤바의 width */
+::-webkit-scrollbar-track {background: transparent;}  /* 스크롤바의 전체 배경색 */
+::-webkit-scrollbar-thumb {border-radius: 3px; background: rgb(174, 176, 179);}  /* 스크롤바 색 */
+::-webkit-scrollbar-button {display: none;}  /* 위 아래 버튼 (버튼 없애기를 함) */
+
+/* pc & mobile */
+.mobile {display:none !important;}
+
+/* float */
+.fl {float:left;}
+.fr {float:right;}
+
+/* hide */
+.hide {display:inline-block; overflow:hidden; text-indent:-9999px; line-height:0; white-space:nowrap;}
+
+/* layer popup */
+.lyrWrap {display:none; position:fixed; top:0; right:0; bottom:0; left:0; width:100%; height:100%; z-index:100;}
+.lyr_bg {position:absolute; top:0; right:0; bottom:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.82);}
+.lyrCont {position:absolute; top:50%; left:50%; max-width:1000px; min-height:300px; max-height:500px; border-radius:10px; background:#fff; transform:translate(-50%, -50%);}
+.lyrCont .lyr_top {position:relative; padding:20px;}
+.lyrCont .lyr_top .tit {color:#1054b2; font-size:20px; font-weight:500; text-align:center;}
+.lyrCont .lyr_top .btn_lyr_close {position:absolute; top:10px; right:10px; width:40px; height:40px;}
+.lyrCont .lyr_top .btn_lyr_close:before {content:'\f00d'; font-family:'Font Awesome 5 Free'; color:#2c2c44; font-size:14px; font-weight:700; display:block; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
+.lyrCont .lyr_top .btn_lyr_close span {display:block; overflow:hidden; text-indent:-9999px; white-space:nowrap;}
+.lyrCont .lyr_mid {padding:0 0 20px;}
+
+/* 이용약관 */
+.termsBox {overflow:auto; width:100%; height:420px; padding:0 20px; box-sizing:border-box;}
+.termsBox pre {font-size:14px; word-break:keep-all;}
+
+/* -------------------- media query -------------------- */
+@media screen and (max-width:768px) {
+    /* pc & mobile */
+    .pc {display:none !important;}
+    .mobile {display:block !important;}
+
+    /* layer popup */
+    .lyrCont {width:100%;}
+}

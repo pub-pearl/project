@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="356" viewBox="0 0 720 356">
+    <defs>
+        <filter id="사각형_2731" width="96" height="55" x="428" y="195" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-color="#082b6e" flood-opacity=".129"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_2733" width="96" height="55" x="536" y="195" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-2" stdDeviation="3"/>
+            <feFlood flood-color="#082b6e" flood-opacity=".129"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-1{fill:#f6f8fb}.cls-2{fill:#fff}.cls-3,.cls-4,.cls-5,.cls-6{fill:#03020f;letter-spacing:-.01em}.cls-3{font-size:18px;font-family:NotoSansCJKkr-Black,Noto Sans CJK KR;font-weight:800}.cls-4,.cls-6{font-size:16px}.cls-4{font-family:NotoSansCJKkr-Bold,Noto Sans CJK KR;font-weight:700}.cls-5{font-size:14px;font-family:NotoSansCJKkr-Regular,Noto Sans CJK KR}.cls-6{font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500}
+        </style>
+    </defs>
+    <g id="img_datadelivery" transform="translate(-435 -2061)">
+        <path id="사각형_2726" d="M0 0H720V356H0z" class="cls-1" transform="translate(435 2061)"/>
+        <rect id="사각형_2727" width="310" height="316" class="cls-2" rx="10" transform="translate(470 2081)"/>
+        <rect id="사각형_2728" width="310" height="316" class="cls-2" rx="10" transform="translate(810 2081)"/>
+        <rect id="사각형_2729" width="278" height="64" class="cls-1" rx="9" transform="translate(826 2097)"/>
+        <rect id="사각형_2730" width="278" height="64" class="cls-1" rx="9" transform="translate(486 2097)"/>
+        <text id="Project_info." class="cls-3" transform="translate(625 2139)">
+            <tspan x="-55.026" y="0">Project info.</tspan>
+        </text>
+        <text id="Data_Export" class="cls-3" transform="translate(965 2137)">
+            <tspan x="-52.641" y="0">Data Export</tspan>
+        </text>
+        <text id="CLIENT" class="cls-4" transform="translate(625 2190)">
+            <tspan x="-28.024" y="0">CLIENT</tspan>
+        </text>
+        <text id="IMAGE" class="cls-5" transform="translate(625 2269)">
+            <tspan x="-20.566" y="0">IMAGE</tspan>
+        </text>
+        <text id="DATA_TYPE" class="cls-4" transform="translate(625 2245)">
+            <tspan x="-40.824" y="0">DATA TYPE</tspan>
+        </text>
+        <text id="마음_Co." class="cls-5" transform="translate(625 2214)">
+            <tspan x="-24.675" y="0">마음 </tspan><tspan y="0">Co.</tspan>
+        </text>
+        <text id="BOUNDING_BOX" class="cls-5" transform="translate(625 2326)">
+            <tspan x="-51.1" y="0">BOUNDING BOX</tspan>
+        </text>
+        <text id="ANNOTATION_TYPE" class="cls-4" transform="translate(625 2302)">
+            <tspan x="-72.416" y="0">ANNOTATION TYPE</tspan>
+        </text>
+        <text id="_52_000건" class="cls-5" transform="translate(625 2380)">
+            <tspan x="-27.391" y="0">52,000건</tspan>
+        </text>
+        <text id="AMOUNT" class="cls-4" transform="translate(625 2359)">
+            <tspan x="-34.696" y="0">AMOUNT</tspan>
+        </text>
+        <g filter="url(#사각형_2731)" transform="translate(435 2061)">
+            <rect id="사각형_2731-2" width="78" height="37" class="cls-2" rx="7" transform="translate(437 204)"/>
+        </g>
+        <text id="STATUS" class="cls-4" transform="translate(964 2190)">
+            <tspan x="-29.44" y="0">STATUS</tspan>
+        </text>
+        <text id="Completed" class="cls-5" transform="translate(964 2211)">
+            <tspan x="-35.518" y="0">Completed</tspan>
+        </text>
+        <text id="EXTENSION" class="cls-4" transform="translate(965 2257)">
+            <tspan x="-44.808" y="0">EXTENSION</tspan>
+        </text>
+        <g filter="url(#사각형_2733)" transform="translate(435 2061)">
+            <rect id="사각형_2733-2" width="78" height="37" class="cls-2" rx="7" transform="translate(545 204)"/>
+        </g>
+        <text id="_.Png" class="cls-6" transform="translate(911 2291)">
+            <tspan x="-16.936" y="0">.Png</tspan>
+        </text>
+        <text id="_.Json" class="cls-6" transform="translate(1019 2291)">
+            <tspan x="-20.208" y="0">.Json</tspan>
+        </text>
+        <text id="AMOUNT-2" class="cls-4" transform="translate(965 2346)">
+            <tspan x="-34.696" y="0">AMOUNT</tspan>
+        </text>
+        <text id="_52_000_52_000" class="cls-5" transform="translate(965 2367)">
+            <tspan x="-44.646" y="0">52,000/52,000</tspan>
+        </text>
+    </g>
+</svg>
